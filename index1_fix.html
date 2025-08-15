@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Chat Santai</title>
+  <style>
+    :root { --maxw: 520px; }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0; padding: 0; height: 100%;
+      background: #f5f7fb; color: #111;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+    .app {
+      max-width: var(--maxw); margin: 0 auto; height: 100%;
+      display: flex; flex-direction: column;
+      border-left: 1px solid #e8ebf0; border-right: 1px solid #e8ebf0;
+      background: #fff;
+    }
+    header {
+      padding: 12px 16px; font-weight: 700;
+      background: #ffffffcc; backdrop-filter: blur(6px);
+      border-bottom: 1px solid #e8ebf0;
+      position: sticky; top: 0; z-index: 10;
+      text-align: center;
+    }
+    #messages {
+      flex: 1; overflow-y: auto; padding: 12px;
+      background: #f5f7fb;
+    }
+    .msg {
+      display: flex; align-items: flex-start; gap: 8px;
+      background: #fff; border: 1px solid #e8ebf0;
+      padding: 10px 12px; margin: 8px 0; border-radius: 10px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    }
+    .msg-text { flex: 1; word-wrap: break-word; }
+    .msg-time { font-size: 11px; color: #6b7280; margin-top: 4px; }
+    .msg-actions { display: flex; gap: 6px; }
+    .btn-del {
+      background: #ef4444; color: #fff; border: 0;
+      padding: 4px 8px; border-radius: 6px; cursor: pointer; font-size: 12px;
+    }
+    .btn-del:active { opacity: .9; }
+
+    footer {
+      border-top: 1px solid #e8ebf0; background: #fff;
+      padding: 10px; position: sticky; bottom: 0;
+    }
+    .send-row { display: flex; gap: 8px; }
+    #text {
+      flex: 1; padding: 12px; border: 1px solid #d1d5db;
+      border-radius: 10px; outline: none; font-size: 15px;
+    }
+    #text:focus { border-color: #3b82f6; }
+    .btn {
+      background: #22c55e; color: #fff; border: 0;
+      padding: 12px 14px; border-radius: 10px; font-weight: 600;
+      cursor: pointer; white-space: nowrap;
+    }
+    .btn:active { transform: translateY(1px); }
+    .hint {
+      text-align: right; font-size: 12px; color: #6b7280; margin-top: 6px;
+    }
+
+    /* Panel pengaturan */
+    .settings {
+      margin-top: 10px; padding: 10px; border: 1px solid #e5e7eb; border-radius: 10px;
+      background: #fafafa;
+    }
+    .settings h4 { margin: 0 0 8px 0; font-size: 14px; color: #111827; }
+    .row { display: flex; align-items: center; gap: 8px; margin: 6px 0; }
+    .row label { font-size: 14px; color: #374151; }
+    input[type="range"] { width: 100%; }
+    .radios { display: flex; gap: 12px; }
+    .small { font-size: 12px; color: #6b7280; }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header>💬 Chat Santai</header>
+
+    <div id="messages" aria-live="polite"></div>
+
+    <footer>
+      <div class="send-row">
+        <input id="text" type="text" placeholder="Tulis pesan (maks 200 karakter)..." maxlength="200" />
+        <button id="sendBtn" class="btn">Kirim</button>
+      </div>
+      <div class="hint"><span id="count">0</span>/200</div>
+
+      <!-- Panel Pengaturan -->
+      <div class="settings">
+        <h4>Pengaturan</h4>
+
+        <div class="row">
+          <label for="volRange">Volume Notif:</label>
+          <input id="volRange" type="range" min="0" max="100" step="1">
+          <span id="volLabel" class="small">50%</span>
+        </div>
+
+        <div class="row">
+          <label>Nada:</label>
+          <div class="radios">
+            <label><input type="radio" name="tone" value="0"> 1</label>
+            <label><input type="radio" name="tone" value="1"> 2</label>
+            <label><input type="radio" name="tone" value="2"> 3</label>
+          </div>
+        </div>
+
+        <div class="row small">Area ini bisa ditambah pengaturan lain (tema, font, dll) nanti.</div>
+      </div>
+    </footer>
+  </div>
+
+  <script type="module">
+    // Firebase SDK
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+    import {
+      getDatabase, ref, push, onValue, remove,
+      query, orderByChild, limitToLast
+    } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
+
+    // === Config proyek kamu ===
+    const firebaseConfig = {
+      apiKey: "AIzaSyBFxx4epV2oRNLJJ4n2kBIQ0RusjUsXDX0",
+      authDomain: "chat-santai-89927.firebaseapp.com",
+      databaseURL: "https://chat-santai-89927-default-rtdb.firebaseio.com", // ganti jika URL di Console berbeda
+      projectId: "chat-santai-89927",
+      storageBucket: "chat-santai-89927.firebasestorage.app",
+      messagingSenderId: "681846167278",
+      appId: "1:681846167278:web:afac9c346f07b589bd45ff"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db  = getDatabase(app);
+
+    // Elemen UI
+    const input = document.getElementById("text");
+    const sendBtn = document.getElementById("sendBtn");
+    const messagesDiv = document.getElementById("messages");
+    const counter = document.getElementById("count");
+
+    // Pengaturan (volume + nada)
+    const volRange = document.getElementById("volRange");
+    const volLabel = document.getElementById("volLabel");
+    const toneRadios = document.querySelectorAll('input[name="tone"]');
+
+    // === Notifikasi suara ===
+    // 3 nada: kamu bisa ganti URL suara ini kapan saja
+    const soundURLs = [
+      "https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg", // nada 1
+      "https://actions.google.com/sounds/v1/alarms/beep_short.ogg",        // nada 2
+      "https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg"  // nada 3
+    ];
+    let sounds = soundURLs.map(url => new Audio(url));
+
+    // Simpan/ambil preferensi dari localStorage
+    function getPref(key, def) {
+      try { const v = localStorage.getItem(key); return (v === null ? def : JSON.parse(v)); }
+      catch { return def; }
+    }
+    function setPref(key, val) {
+      try { localStorage.setItem(key, JSON.stringify(val)); } catch {}
+    }
+
+    // Inisialisasi pengaturan
+    let notifVolume = getPref("notifVolume", 50); // 0..100
+    let toneIndex   = getPref("toneIndex", 0);    // 0..2
+
+    function applyVolumeUI() {
+      volRange.value = notifVolume;
+      volLabel.textContent = notifVolume + "%";
+    }
+    function applyToneUI() {
+      toneRadios.forEach(r => r.checked = Number(r.value) === toneIndex);
+    }
+    applyVolumeUI(); applyToneUI();
+
+    volRange.addEventListener("input", () => {
+      notifVolume = Number(volRange.value);
+      volLabel.textContent = notifVolume + "%";
+      setPref("notifVolume", notifVolume);
+    });
+    toneRadios.forEach(r => {
+      r.addEventListener("change", () => {
+        toneIndex = Number(r.value);
+        setPref("toneIndex", toneIndex);
+      });
+    });
+
+    // Supaya audio bisa diputar di mobile (butuh interaksi dulu)
+    let audioUnlocked = false;
+    function unlockAudioOnce() {
+      if (audioUnlocked) return;
+      audioUnlocked = true;
+      try { sounds[toneIndex].play().then(a=>a && a.pause()).catch(()=>{}); } catch {}
+    }
+    document.addEventListener("touchstart", unlockAudioOnce, { once: true });
+    document.addEventListener("click", unlockAudioOnce, { once: true });
+
+    function playNotif() {
+      const a = new Audio(soundURLs[toneIndex]); // clone agar tumpuk aman
+      a.volume = Math.max(0, Math.min(1, notifVolume / 100));
+      a.play().catch(()=>{});
+    }
+
+    // Batasan
+    const MAX_LEN = 200;
+    const LIMIT_LAST = 50; // ambil 50 pesan terakhir agar ringan
+
+    // Hitung karakter
+    function updateCounter() {
+      counter.textContent = input.value.length;
+    }
+    input.addEventListener("input", updateCounter);
+    updateCounter();
+
+    // Kirim pesan (tanpa login), enforce 200 char
+    function sendMessage() {
+      const text = (input.value || "").trim();
+      if (!text) return;
+      if (text.length > MAX_LEN) {
+        alert("Pesan maksimal 200 karakter.");
+        return;
+      }
+      push(ref(db, "messages"), { text, time: Date.now() })
+        .catch((e) => {
+          console.error("Gagal kirim:", e);
+          alert("Gagal kirim (cek rules/akses).");
+        });
+      input.value = "";
+      updateCounter();
+      input.focus();
+    }
+    sendBtn.addEventListener("click", sendMessage);
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") sendMessage();
+    });
+
+    // Hapus pesan
+    function deleteMessage(id) {
+      if (!confirm("Hapus pesan ini?")) return;
+      remove(ref(db, "messages/" + id)).catch((e) => {
+        console.error("Gagal hapus:", e);
+        alert("Gagal hapus (cek rules/akses).");
+      });
+    }
+
+    // Render pesan + notifikasi suara kalau ada pesan baru
+    let lastCount = 0;
+    const q = query(ref(db, "messages"), orderByChild("time"), limitToLast(LIMIT_LAST));
+    onValue(q, (snap) => {
+      const data = snap.val() || {};
+      messagesDiv.innerHTML = "";
+
+      // urut terlama -> terbaru (karena limitToLast)
+      const ids = Object.keys(data).sort((a,b) => data[a].time - data[b].time);
+      ids.forEach((id) => {
+        const m = data[id];
+        const item = document.createElement("div");
+        item.className = "msg";
+
+        const textBox = document.createElement("div");
+        textBox.className = "msg-text";
+        textBox.textContent = m.text;
+
+        const side = document.createElement("div");
+        side.className = "msg-actions";
+
+        const ts = document.createElement("div");
+        ts.className = "msg-time";
+        ts.textContent = new Date(m.time).toLocaleTimeString();
+
+        const del = document.createElement("button");
+        del.className = "btn-del";
+        del.textContent = "Hapus";
+        del.onclick = () => deleteMessage(id);
+
+        side.appendChild(del);
+
+        item.appendChild(textBox);
+        item.appendChild(side);
+        item.appendChild(ts);
+        messagesDiv.appendChild(item);
+      });
+
+      // notif suara kalau jumlah pesan bertambah (bukan render pertama)
+      if (ids.length > lastCount && lastCount > 0) {
+        playNotif();
+      }
+      lastCount = ids.length;
+
+      // auto-scroll ke bawah
+      messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    });
+  </script>
+</body>
+</html>
