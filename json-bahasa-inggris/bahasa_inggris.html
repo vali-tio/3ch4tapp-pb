@@ -1,0 +1,413 @@
+<!DOCTYPE html><html lang="id"><head><meta name="x-poe-datastore-behavior" content="local_only"><meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unduh Flashcards JSON (3 Tahap x 100)</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; padding: 1rem; line-height: 1.4; }
+  header { margin-bottom: 1rem; }
+  .card { border: 1px solid rgba(0,0,0,.15); border-radius: 12px; padding: 1rem; max-width: 900px; margin: 0 auto; box-shadow: 0 2px 10px rgba(0,0,0,.06); }
+  h1 { font-size: 1.25rem; margin: 0 0 .5rem; }
+  button { padding: .8rem 1rem; border-radius: 10px; border: 1px solid rgba(0,0,0,.2); background: #0d6efd; color: #fff; cursor: pointer; font-weight: 600; }
+  button:hover { filter: brightness(0.95); }
+  .row { display: grid; grid-template-columns: 1fr; gap: .75rem; }
+  @media (min-width: 720px) { .row { grid-template-columns: repeat(2, 1fr); } }
+  textarea { width: 100%; min-height: 180px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12px; padding: .75rem; border-radius: 8px; border: 1px solid rgba(0,0,0,.2); }
+  .muted { color: #666; font-size: .9rem; }
+</style>
+<script src="https://puc.poecdn.net/authenticated_preview_page/syncedState.bd4eeeb8e8e02052ee92.js"></script></head>
+<body>
+  <header class="card">
+    <h1>Unduh Flashcards JSON — 3 Tahap (Fondasi, Penerapan, Otomatisasi)</h1>
+    <p class="muted">Klik tombol untuk mengunduh file JSON. File kompatibel dengan struktur contoh Anda.</p>
+    <div class="row" style="margin:.75rem 0 0">
+      <button onclick="downloadPart('Fondasi')">Download Fondasi (100)</button>
+      <button onclick="downloadPart('Penerapan')">Download Penerapan (100)</button>
+      <button onclick="downloadPart('Otomatisasi')">Download Otomatisasi (100)</button>
+      <button onclick="downloadAll()">Download Gabungan (3-in-1)</button>
+    </div>
+  </header>
+
+  <section class="card">
+    <h2 style="margin-top:0">Pratinjau &amp; Edit (opsional)</h2>
+    <p class="muted">Anda bisa mengedit isi sebelum mengunduh. Perubahan hanya memengaruhi unduhan.</p>
+    <textarea id="jsonArea" spellcheck="false"></textarea>
+    <div style="margin-top:.5rem; display:flex; gap:.5rem; flex-wrap:wrap;">
+      <button onclick="applyEdits()">Terapkan Perubahan ke Memori</button>
+      <button onclick="formatJSON()">Format JSON</button>
+      <button onclick="copyJSON()">Salin ke Clipboard</button>
+    </div>
+  </section>
+
+<script>
+/* ====== Data JSON (100 entri per tahap) ====== */
+const data = {
+  "Fondasi": [
+    { "q": "I am a student", "a": "Saya seorang pelajar" },
+    { "q": "You are my friend", "a": "Kamu adalah temanku" },
+    { "q": "He is my brother", "a": "Dia adalah saudaraku (laki-laki)" },
+    { "q": "She is my sister", "a": "Dia adalah saudariku (perempuan)" },
+    { "q": "We are in the same class", "a": "Kami berada di kelas yang sama" },
+    { "q": "They are at home", "a": "Mereka berada di rumah" },
+    { "q": "It is a sunny day", "a": "Ini hari yang cerah" },
+    { "q": "This is my book", "a": "Ini adalah bukuku" },
+    { "q": "That is your pen", "a": "Itu adalah penamu" },
+    { "q": "These are my shoes", "a": "Ini adalah sepatu-sepatuku" },
+    { "q": "Those are her bags", "a": "Itu adalah tas-tasnya" },
+    { "q": "I have a cat", "a": "Saya punya seekor kucing" },
+    { "q": "You have a new phone", "a": "Kamu punya ponsel baru" },
+    { "q": "He has a car", "a": "Dia punya mobil" },
+    { "q": "She has a red dress", "a": "Dia punya gaun merah" },
+    { "q": "We have a meeting", "a": "Kami punya rapat" },
+    { "q": "They have a big house", "a": "Mereka punya rumah besar" },
+    { "q": "I like coffee", "a": "Saya suka kopi" },
+    { "q": "She likes tea", "a": "Dia suka teh" },
+    { "q": "He likes music", "a": "Dia suka musik" },
+    { "q": "We like swimming", "a": "Kami suka berenang" },
+    { "q": "They like reading", "a": "Mereka suka membaca" },
+    { "q": "I don’t like spicy food", "a": "Saya tidak suka makanan pedas" },
+    { "q": "He doesn’t like rain", "a": "Dia tidak suka hujan" },
+    { "q": "Do you like movies?", "a": "Apakah kamu suka film?" },
+    { "q": "Does she like cats?", "a": "Apakah dia suka kucing?" },
+    { "q": "I live in Jakarta", "a": "Saya tinggal di Jakarta" },
+    { "q": "She lives near the school", "a": "Dia tinggal dekat sekolah" },
+    { "q": "We live with our parents", "a": "Kami tinggal dengan orang tua kami" },
+    { "q": "They live in a small town", "a": "Mereka tinggal di kota kecil" },
+    { "q": "I work every day", "a": "Saya bekerja setiap hari" },
+    { "q": "He works at a shop", "a": "Dia bekerja di sebuah toko" },
+    { "q": "She studies English", "a": "Dia belajar Bahasa Inggris" },
+    { "q": "We study together", "a": "Kami belajar bersama" },
+    { "q": "They study at night", "a": "Mereka belajar pada malam hari" },
+    { "q": "I get up at six", "a": "Saya bangun jam enam" },
+    { "q": "I have breakfast at seven", "a": "Saya sarapan jam tujuh" },
+    { "q": "I go to school by bus", "a": "Saya pergi ke sekolah dengan bus" },
+    { "q": "I go to work by train", "a": "Saya pergi kerja dengan kereta" },
+    { "q": "I come home at five", "a": "Saya pulang jam lima" },
+    { "q": "I go to bed at ten", "a": "Saya tidur jam sepuluh" },
+    { "q": "What is your name?", "a": "Siapa namamu?" },
+    { "q": "My name is Andi", "a": "Namaku Andi" },
+    { "q": "How old are you?", "a": "Berapa umurmu?" },
+    { "q": "I am twenty years old", "a": "Saya berumur dua puluh tahun" },
+    { "q": "Where are you from?", "a": "Kamu dari mana?" },
+    { "q": "I am from Indonesia", "a": "Saya dari Indonesia" },
+    { "q": "What do you do?", "a": "Apa pekerjaanmu?" },
+    { "q": "I am a teacher", "a": "Saya seorang guru" },
+    { "q": "Nice to meet you", "a": "Senang bertemu denganmu" },
+    { "q": "See you later", "a": "Sampai jumpa lagi" },
+    { "q": "Good morning", "a": "Selamat pagi" },
+    { "q": "Good afternoon", "a": "Selamat siang" },
+    { "q": "Good evening", "a": "Selamat malam" },
+    { "q": "Good night", "a": "Selamat tidur" },
+    { "q": "Please sit down", "a": "Silakan duduk" },
+    { "q": "Thank you very much", "a": "Terima kasih banyak" },
+    { "q": "You are welcome", "a": "Sama-sama" },
+    { "q": "Excuse me", "a": "Permisi" },
+    { "q": "I am sorry", "a": "Maaf" },
+    { "q": "No problem", "a": "Tidak masalah" },
+    { "q": "Can you help me?", "a": "Bisakah kamu membantu saya?" },
+    { "q": "I don’t understand", "a": "Saya tidak mengerti" },
+    { "q": "Could you repeat that?", "a": "Bisakah kamu mengulanginya?" },
+    { "q": "Please speak slowly", "a": "Tolong bicara pelan" },
+    { "q": "What time is it?", "a": "Jam berapa sekarang?" },
+    { "q": "It is three o’clock", "a": "Sekarang jam tiga" },
+    { "q": "Where is the toilet?", "a": "Di mana toilet?" },
+    { "q": "How much is this?", "a": "Berapa harganya ini?" },
+    { "q": "I am hungry", "a": "Saya lapar" },
+    { "q": "I am thirsty", "a": "Saya haus" },
+    { "q": "I am tired", "a": "Saya lelah" },
+    { "q": "I am happy", "a": "Saya senang" },
+    { "q": "I am sad", "a": "Saya sedih" },
+    { "q": "It is hot today", "a": "Hari ini panas" },
+    { "q": "It is cold today", "a": "Hari ini dingin" },
+    { "q": "It is raining", "a": "Sedang hujan" },
+    { "q": "The sun is shining", "a": "Matahari bersinar" },
+    { "q": "The sky is blue", "a": "Langit berwarna biru" },
+    { "q": "The coffee is hot", "a": "Kopinya panas" },
+    { "q": "The water is cold", "a": "Airnya dingin" },
+    { "q": "I want some water", "a": "Saya ingin sedikit air" },
+    { "q": "I need some help", "a": "Saya butuh bantuan" },
+    { "q": "I like this song", "a": "Saya suka lagu ini" },
+    { "q": "I like that movie", "a": "Saya suka film itu" },
+    { "q": "This food is delicious", "a": "Makanan ini enak" },
+    { "q": "That place is beautiful", "a": "Tempat itu indah" },
+    { "q": "I can swim", "a": "Saya bisa berenang" },
+    { "q": "She can cook", "a": "Dia bisa memasak" },
+    { "q": "He can drive", "a": "Dia bisa menyetir" },
+    { "q": "We can help you", "a": "Kami bisa membantumu" },
+    { "q": "They can play chess", "a": "Mereka bisa bermain catur" },
+    { "q": "I can’t hear you", "a": "Saya tidak bisa mendengarmu" },
+    { "q": "I am learning English", "a": "Saya sedang belajar Bahasa Inggris" },
+    { "q": "I am reading a book", "a": "Saya sedang membaca buku" },
+    { "q": "She is cooking dinner", "a": "Dia sedang memasak makan malam" },
+    { "q": "He is watching TV", "a": "Dia sedang menonton TV" },
+    { "q": "We are playing football", "a": "Kami sedang bermain sepak bola" },
+    { "q": "They are studying now", "a": "Mereka sedang belajar sekarang" },
+    { "q": "I went to the market", "a": "Saya pergi ke pasar" },
+    { "q": "She visited her friend", "a": "Dia mengunjungi temannya" },
+    { "q": "He watched a movie", "a": "Dia menonton film" },
+    { "q": "We cooked together", "a": "Kami memasak bersama" },
+    { "q": "They studied last night", "a": "Mereka belajar tadi malam" }
+  ],
+  "Penerapan": [
+    { "q": "I usually wake up at six", "a": "Saya biasanya bangun jam enam" },
+    { "q": "I often take a shower in the morning", "a": "Saya sering mandi di pagi hari" },
+    { "q": "I sometimes eat breakfast at home", "a": "Saya kadang sarapan di rumah" },
+    { "q": "I rarely drink soda", "a": "Saya jarang minum soda" },
+    { "q": "I never smoke", "a": "Saya tidak pernah merokok" },
+    { "q": "She always brings her notebook", "a": "Dia selalu membawa buku catatannya" },
+    { "q": "He usually goes to work by bus", "a": "Dia biasanya pergi kerja naik bus" },
+    { "q": "We sometimes study at the library", "a": "Kami kadang belajar di perpustakaan" },
+    { "q": "They often play games together", "a": "Mereka sering bermain gim bersama" },
+    { "q": "Do you usually cook dinner?", "a": "Apakah kamu biasanya memasak makan malam?" },
+    { "q": "What do you do on weekends?", "a": "Apa yang kamu lakukan di akhir pekan?" },
+    { "q": "Where do you usually eat lunch?", "a": "Di mana kamu biasanya makan siang?" },
+    { "q": "Who do you live with?", "a": "Dengan siapa kamu tinggal?" },
+    { "q": "When do you finish work?", "a": "Kapan kamu selesai kerja?" },
+    { "q": "Why do you study English?", "a": "Mengapa kamu belajar Bahasa Inggris?" },
+    { "q": "How do you go to school?", "a": "Bagaimana kamu pergi ke sekolah?" },
+    { "q": "I am going to visit my friend", "a": "Saya akan mengunjungi teman saya" },
+    { "q": "I am going to buy some fruits", "a": "Saya akan membeli beberapa buah" },
+    { "q": "We are going to travel next month", "a": "Kami akan bepergian bulan depan" },
+    { "q": "She is going to start a new job", "a": "Dia akan memulai pekerjaan baru" },
+    { "q": "They are going to move to a new house", "a": "Mereka akan pindah ke rumah baru" },
+    { "q": "I will call you tonight", "a": "Saya akan menelpon kamu malam ini" },
+    { "q": "I will help you with your homework", "a": "Saya akan membantumu dengan PR-mu" },
+    { "q": "She will send an email later", "a": "Dia akan mengirim email nanti" },
+    { "q": "He will come back soon", "a": "Dia akan segera kembali" },
+    { "q": "We will see you tomorrow", "a": "Kami akan bertemu kamu besok" },
+    { "q": "I have finished my homework", "a": "Saya sudah menyelesaikan PR saya" },
+    { "q": "She has visited Bali twice", "a": "Dia sudah dua kali mengunjungi Bali" },
+    { "q": "He has just left the office", "a": "Dia baru saja meninggalkan kantor" },
+    { "q": "We have never tried sushi", "a": "Kami tidak pernah mencoba sushi" },
+    { "q": "Have you ever been to Japan?", "a": "Pernahkah kamu ke Jepang?" },
+    { "q": "I have been busy lately", "a": "Akhir-akhir ini saya sibuk" },
+    { "q": "I had dinner at a new restaurant", "a": "Saya makan malam di restoran baru" },
+    { "q": "I didn’t watch TV last night", "a": "Saya tidak menonton TV tadi malam" },
+    { "q": "Did you see the game yesterday?", "a": "Apakah kamu melihat pertandingan kemarin?" },
+    { "q": "She didn’t come to class", "a": "Dia tidak datang ke kelas" },
+    { "q": "We watched a movie together", "a": "Kami menonton film bersama" },
+    { "q": "I must finish this report", "a": "Saya harus menyelesaikan laporan ini" },
+    { "q": "You should take a rest", "a": "Kamu sebaiknya beristirahat" },
+    { "q": "He can speak three languages", "a": "Dia bisa berbicara tiga bahasa" },
+    { "q": "We may be late", "a": "Kami mungkin akan terlambat" },
+    { "q": "Could you pass the salt?", "a": "Bisakah kamu mengoper garam?" },
+    { "q": "Would you like some tea?", "a": "Apakah kamu mau teh?" },
+    { "q": "Can I use your phone?", "a": "Bolehkah saya memakai ponselmu?" },
+    { "q": "May I open the window?", "a": "Bolehkah saya membuka jendela?" },
+    { "q": "Shall we go now?", "a": "Apakah kita pergi sekarang?" },
+    { "q": "If it rains, I will stay at home", "a": "Jika hujan, saya akan tinggal di rumah" },
+    { "q": "If I have time, I will call you", "a": "Jika saya punya waktu, saya akan menelponmu" },
+    { "q": "When I get home, I will rest", "a": "Saat saya sampai rumah, saya akan istirahat" },
+    { "q": "Before you leave, call me", "a": "Sebelum kamu pergi, telepon saya" },
+    { "q": "After I finish work, I exercise", "a": "Setelah saya selesai kerja, saya berolahraga" },
+    { "q": "I am interested in art", "a": "Saya tertarik pada seni" },
+    { "q": "She is good at singing", "a": "Dia pandai bernyanyi" },
+    { "q": "He is afraid of dogs", "a": "Dia takut anjing" },
+    { "q": "We are excited about the trip", "a": "Kami bersemangat tentang perjalanan itu" },
+    { "q": "They are worried about the exam", "a": "Mereka khawatir tentang ujian" },
+    { "q": "There is a book on the table", "a": "Ada sebuah buku di atas meja" },
+    { "q": "There are two chairs in the room", "a": "Ada dua kursi di dalam ruangan" },
+    { "q": "There isn’t any milk left", "a": "Tidak ada susu tersisa" },
+    { "q": "There aren’t many people here", "a": "Tidak banyak orang di sini" },
+    { "q": "Is there a bank near here?", "a": "Apakah ada bank di dekat sini?" },
+    { "q": "I am looking for a supermarket", "a": "Saya sedang mencari supermarket" },
+    { "q": "Can you tell me the way to the station?", "a": "Bisakah kamu tunjukkan jalan ke stasiun?" },
+    { "q": "Turn left at the corner", "a": "Belok kiri di pojokan" },
+    { "q": "Go straight for two blocks", "a": "Jalan lurus dua blok" },
+    { "q": "It’s next to the bank", "a": "Itu di sebelah bank" },
+    { "q": "It’s across from the park", "a": "Itu di seberang taman" },
+    { "q": "How much is this ticket?", "a": "Berapa harga tiket ini?" },
+    { "q": "Can I pay by card?", "a": "Bisakah saya bayar dengan kartu?" },
+    { "q": "Do you have any discounts?", "a": "Apakah ada diskon?" },
+    { "q": "I would like to return this", "a": "Saya ingin mengembalikan ini" },
+    { "q": "Could I get a receipt, please?", "a": "Bisakah saya minta struk, tolong?" },
+    { "q": "What time does the train leave?", "a": "Jam berapa kereta berangkat?" },
+    { "q": "When does the museum open?", "a": "Kapan museum buka?" },
+    { "q": "Where can I buy a ticket?", "a": "Di mana saya bisa membeli tiket?" },
+    { "q": "Which bus goes to the airport?", "a": "Bus mana yang menuju bandara?" },
+    { "q": "How long does it take?", "a": "Berapa lama waktunya?" },
+    { "q": "I am writing an email", "a": "Saya sedang menulis email" },
+    { "q": "I am reading the news", "a": "Saya sedang membaca berita" },
+    { "q": "I am cooking dinner now", "a": "Saya sedang memasak makan malam sekarang" },
+    { "q": "I am cleaning my room", "a": "Saya sedang membersihkan kamar saya" },
+    { "q": "I am doing my homework", "a": "Saya sedang mengerjakan PR saya" },
+    { "q": "She is talking on the phone", "a": "Dia sedang berbicara di telepon" },
+    { "q": "He is working from home", "a": "Dia bekerja dari rumah" },
+    { "q": "We are waiting for the bus", "a": "Kami sedang menunggu bus" },
+    { "q": "They are having lunch", "a": "Mereka sedang makan siang" },
+    { "q": "Are you listening to me?", "a": "Apakah kamu mendengarkan saya?" },
+    { "q": "Do you mind if I sit here?", "a": "Apakah kamu keberatan jika saya duduk di sini?" },
+    { "q": "Could you open the door, please?", "a": "Bisakah kamu membuka pintu, tolong?" },
+    { "q": "Please turn off your phone", "a": "Tolong matikan ponselmu" },
+    { "q": "Let’s take a break", "a": "Ayo kita istirahat" },
+    { "q": "I think this is a good idea", "a": "Saya pikir ini ide yang bagus" },
+    { "q": "In my opinion, it’s too expensive", "a": "Menurut saya, itu terlalu mahal" },
+    { "q": "I agree with you", "a": "Saya setuju denganmu" },
+    { "q": "I don’t agree with that", "a": "Saya tidak setuju dengan itu" },
+    { "q": "That sounds great", "a": "Kedengarannya bagus" }
+  ],
+  "Otomatisasi": [
+    { "q": "I have been learning English for two years", "a": "Saya telah belajar Bahasa Inggris selama dua tahun" },
+    { "q": "She has been working here since 2022", "a": "Dia telah bekerja di sini sejak 2022" },
+    { "q": "They have been waiting for an hour", "a": "Mereka telah menunggu selama satu jam" },
+    { "q": "I have been reading this book all day", "a": "Saya telah membaca buku ini sepanjang hari" },
+    { "q": "He has been studying hard lately", "a": "Akhir-akhir ini dia belajar dengan giat" },
+    { "q": "If I had more time, I would travel more", "a": "Jika saya punya lebih banyak waktu, saya akan lebih sering bepergian" },
+    { "q": "If I were you, I would take the job", "a": "Jika saya jadi kamu, saya akan mengambil pekerjaan itu" },
+    { "q": "I wish I could speak French", "a": "Saya berharap bisa berbicara bahasa Prancis" },
+    { "q": "I wish it were sunny today", "a": "Saya berharap hari ini cerah" },
+    { "q": "I would rather stay at home", "a": "Saya lebih suka tinggal di rumah" },
+    { "q": "I used to play basketball", "a": "Dulu saya bermain bola basket" },
+    { "q": "She used to live abroad", "a": "Dulu dia tinggal di luar negeri" },
+    { "q": "He used to wake up late", "a": "Dulu dia bangun terlambat" },
+    { "q": "We used to go camping every summer", "a": "Dulu kami berkemah setiap musim panas" },
+    { "q": "They used to have a dog", "a": "Dulu mereka punya seekor anjing" },
+    { "q": "I will have finished by tomorrow", "a": "Saya akan sudah selesai besok" },
+    { "q": "She will have left by noon", "a": "Dia akan sudah pergi saat siang" },
+    { "q": "They will have arrived by 6 pm", "a": "Mereka akan sudah tiba jam 6 sore" },
+    { "q": "By next year, we will have moved", "a": "Pada tahun depan, kami akan sudah pindah" },
+    { "q": "By Monday, he will have completed it", "a": "Pada hari Senin, dia akan sudah menyelesaikannya" },
+    { "q": "I might have lost my keys", "a": "Saya mungkin telah kehilangan kunci saya" },
+    { "q": "She must have forgotten the meeting", "a": "Dia pasti telah lupa rapatnya" },
+    { "q": "He could have taken the wrong bus", "a": "Dia mungkin telah naik bus yang salah" },
+    { "q": "They should have told us earlier", "a": "Mereka seharusnya memberi tahu kami lebih awal" },
+    { "q": "You would have liked the show", "a": "Kamu pasti akan menyukai pertunjukannya" },
+    { "q": "I got my phone repaired", "a": "Saya memperbaiki ponsel saya (dibetulkan)" },
+    { "q": "She had her hair cut", "a": "Dia memotong rambutnya (dengan jasa orang lain)" },
+    { "q": "We had our house painted", "a": "Kami mengecat rumah kami (oleh orang lain)" },
+    { "q": "He had his car washed", "a": "Dia mencuci mobilnya (oleh orang lain)" },
+    { "q": "They got their laptop fixed", "a": "Mereka memperbaiki laptop mereka (dibetulkan)" },
+    { "q": "I am used to waking up early", "a": "Saya sudah terbiasa bangun pagi" },
+    { "q": "She is used to spicy food", "a": "Dia sudah terbiasa makanan pedas" },
+    { "q": "He is used to working at night", "a": "Dia sudah terbiasa bekerja malam" },
+    { "q": "We are used to the cold weather", "a": "Kami sudah terbiasa cuaca dingin" },
+    { "q": "They are used to speaking English", "a": "Mereka sudah terbiasa berbicara Bahasa Inggris" },
+    { "q": "Not only is it cheap, but it is also healthy", "a": "Bukan hanya murah, tetapi juga sehat" },
+    { "q": "Only after I arrived did I realize my mistake", "a": "Baru setelah saya tiba saya menyadari kesalahan saya" },
+    { "q": "Rarely do we see such talent", "a": "Jarang kita melihat bakat seperti itu" },
+    { "q": "Never have I felt so happy", "a": "Tidak pernah saya merasa sebahagia ini" },
+    { "q": "Seldom does he make mistakes", "a": "Jarang dia membuat kesalahan" },
+    { "q": "By the time we arrived, the show had started", "a": "Saat kami tiba, pertunjukan sudah dimulai" },
+    { "q": "He had finished when I called", "a": "Dia sudah selesai ketika saya menelepon" },
+    { "q": "She had left before noon", "a": "Dia sudah pergi sebelum siang" },
+    { "q": "They had eaten when we got there", "a": "Mereka sudah makan ketika kami sampai di sana" },
+    { "q": "I had never seen it before", "a": "Saya belum pernah melihatnya sebelumnya" },
+    { "q": "Let’s grab a bite, shall we?", "a": "Ayo kita makan sedikit, ya?" },
+    { "q": "You’d better take an umbrella", "a": "Sebaiknya kamu membawa payung" },
+    { "q": "I’d rather not talk about it", "a": "Saya lebih baik tidak membicarakannya" },
+    { "q": "We’d better leave now", "a": "Sebaiknya kita pergi sekarang" },
+    { "q": "She’d rather stay at home", "a": "Dia lebih suka tinggal di rumah" },
+    { "q": "He ended up missing the flight", "a": "Akhirnya dia ketinggalan penerbangan" },
+    { "q": "We ran out of time", "a": "Waktu kami habis" },
+    { "q": "They came up with a solution", "a": "Mereka menemukan solusi" },
+    { "q": "I look forward to hearing from you", "a": "Saya menantikan kabar darimu" },
+    { "q": "She takes care of her grandparents", "a": "Dia merawat kakek neneknya" },
+    { "q": "He is responsible for the project", "a": "Dia bertanggung jawab atas proyek itu" },
+    { "q": "We are committed to improving quality", "a": "Kami berkomitmen meningkatkan kualitas" },
+    { "q": "They are interested in collaboration", "a": "Mereka tertarik bekerja sama" },
+    { "q": "As far as I know, he is honest", "a": "Setahu saya, dia jujur" },
+    { "q": "As soon as I arrive, I will text you", "a": "Begitu saya tiba, saya akan mengirim pesan padamu" },
+    { "q": "As long as you try, I will support you", "a": "Selama kamu berusaha, saya akan mendukungmu" },
+    { "q": "Even though it was late, we kept working", "a": "Walaupun sudah larut, kami terus bekerja" },
+    { "q": "Although it’s raining, I’ll go out", "a": "Meskipun hujan, saya akan keluar" },
+    { "q": "Despite the traffic, we arrived on time", "a": "Meskipun macet, kami tiba tepat waktu" },
+    { "q": "In spite of the rain, they played football", "a": "Walaupun hujan, mereka bermain sepak bola" },
+    { "q": "Because of the storm, the flight was delayed", "a": "Karena badai, penerbangan ditunda" },
+    { "q": "Due to maintenance, the shop is closed", "a": "Karena perawatan, toko ditutup" },
+    { "q": "I will try to cut down on sugar", "a": "Saya akan mencoba mengurangi gula" },
+    { "q": "We need to figure out the problem", "a": "Kita perlu mencari tahu masalahnya" },
+    { "q": "Let’s go over the plan again", "a": "Mari kita meninjau rencananya lagi" },
+    { "q": "Can you point out the main issue?", "a": "Bisakah kamu menunjukkan masalah utamanya?" },
+    { "q": "I want to follow up on our meeting", "a": "Saya ingin menindaklanjuti rapat kita" },
+    { "q": "He managed to solve the task", "a": "Dia berhasil menyelesaikan tugas itu" },
+    { "q": "She failed to meet the deadline", "a": "Dia gagal memenuhi tenggat" },
+    { "q": "We decided to postpone the trip", "a": "Kami memutuskan menunda perjalanan" },
+    { "q": "They agreed to share the costs", "a": "Mereka setuju berbagi biaya" },
+    { "q": "I refused to join the team", "a": "Saya menolak bergabung dengan tim" },
+    { "q": "He apologized for being late", "a": "Dia minta maaf karena terlambat" },
+    { "q": "She thanked me for the help", "a": "Dia berterima kasih atas bantuannya" },
+    { "q": "We blamed the delay on the traffic", "a": "Kami menyalahkan keterlambatan pada kemacetan" },
+    { "q": "They congratulated him on his success", "a": "Mereka memberinya selamat atas kesuksesannya" },
+    { "q": "I warned them about the risks", "a": "Saya memperingatkan mereka tentang risikonya" },
+    { "q": "It is important to be punctual", "a": "Penting untuk tepat waktu" },
+    { "q": "It is hard to find a good job", "a": "Sulit menemukan pekerjaan yang bagus" },
+    { "q": "It is easy to make mistakes", "a": "Mudah membuat kesalahan" },
+    { "q": "It is better to ask than to assume", "a": "Lebih baik bertanya daripada berasumsi" },
+    { "q": "It is necessary to save money", "a": "Perlu menabung" },
+    { "q": "The more you practice, the better you get", "a": "Semakin banyak kamu berlatih, semakin baik kemampuanmu" },
+    { "q": "The sooner we start, the sooner we finish", "a": "Semakin cepat kita mulai, semakin cepat kita selesai" },
+    { "q": "The harder you work, the luckier you get", "a": "Semakin keras kamu bekerja, semakin beruntung kamu" },
+    { "q": "The more I read, the more I understand", "a": "Semakin banyak saya membaca, semakin saya paham" },
+    { "q": "The less you spend, the more you save", "a": "Semakin sedikit kamu belanja, semakin banyak kamu menabung" },
+    { "q": "What I need is a short break", "a": "Yang saya butuhkan adalah istirahat sebentar" },
+    { "q": "What matters is consistency", "a": "Yang penting adalah konsistensi" },
+    { "q": "What surprises me is his patience", "a": "Yang membuat saya terkejut adalah kesabarannya" },
+    { "q": "What I want is clear feedback", "a": "Yang saya inginkan adalah umpan balik yang jelas" },
+    { "q": "What we lack is experience", "a": "Yang kurang dari kita adalah pengalaman" }
+  ]
+};
+
+/* Isi pratinjau */
+const area = document.getElementById('jsonArea');
+area.value = JSON.stringify(data, null, 2);
+
+/* Utilitas unduh */
+function saveJSON(obj, filename) {
+  const blob = new Blob([JSON.stringify(obj, null, 2)], { type: 'application/json;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(() => {
+    URL.revokeObjectURL(url);
+    a.remove();
+  }, 0);
+}
+
+function downloadPart(key) {
+  if (!data[key]) return alert('Bagian tidak ditemukan');
+  saveJSON({ [key]: data[key] }, key.toLowerCase() + '.json');
+}
+
+function downloadAll() {
+  saveJSON(data, 'flashcards_3_tahap_300.json');
+}
+
+/* Edit & validasi */
+function applyEdits() {
+  try {
+    const parsed = JSON.parse(area.value);
+    // Validasi ringan: cek kunci utama
+    const keys = Object.keys(parsed);
+    if (!keys.length) throw new Error('Objek kosong.');
+    area.value = JSON.stringify(parsed, null, 2);
+    Object.assign(data, parsed); // update in-memory
+    alert('Perubahan diterapkan.');
+  } catch (e) {
+    alert('JSON tidak valid: ' + e.message);
+  }
+}
+
+function formatJSON() {
+  try {
+    const parsed = JSON.parse(area.value);
+    area.value = JSON.stringify(parsed, null, 2);
+  } catch (e) {
+    alert('JSON tidak valid: ' + e.message);
+  }
+}
+
+async function copyJSON() {
+  try {
+    await navigator.clipboard.writeText(area.value);
+    alert('JSON disalin ke clipboard.');
+  } catch (e) {
+    alert('Gagal menyalin: ' + e.message);
+  }
+}
+</script>
+
+
+</body></html>
