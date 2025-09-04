@@ -1,0 +1,5607 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Generator Soal — Prediksi 2025 • Gabungan 5 Mapel</title>
+<style>
+  :root { --bg:#0f172a; --card:#111827; --fg:#e2e8f0; --muted:#94a3b8; --pri:#059669; --sec:#475569; }
+  * { box-sizing:border-box; }
+  body { font-family: system-ui,-apple-system,Roboto,Arial,sans-serif; padding:1rem; background:var(--bg); color:var(--fg); }
+  .card { max-width:1100px; margin:0 auto; background:var(--card); border-radius:14px; padding:1rem; box-shadow:0 10px 30px rgba(0,0,0,.35); }
+  h1 { margin-top:0; }
+  .sub { margin:.25rem 0 1rem 0; color:var(--muted); }
+  .controls { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px; margin:.75rem 0 1rem 0; }
+  button { padding:.7rem 1rem; border-radius:10px; border:0; background:var(--pri); color:#fff; font-weight:700; cursor:pointer; }
+  button.secondary { background:var(--sec); }
+  button.ghost { background:transparent; border:1px solid rgba(255,255,255,.15); color:var(--fg); }
+  textarea { width:100%; min-height:520px; background:#0b1220; color:var(--fg); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size:12px; padding:.9rem; border-radius:10px; border:1px solid rgba(255,255,255,.08); }
+  .muted { color:var(--muted); font-size:.95rem; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:.5rem; }
+  .chip { display:inline-flex; align-items:center; gap:.4rem; padding:.25rem .55rem; border-radius:999px; border:1px solid rgba(255,255,255,.15); font-size:.8rem; color:var(--muted); }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1>Generator Soal — Prediksi 2025 • 5 Mapel</h1>
+    <div class="grid">
+      <div class="chip">Total Pack: <strong style="color:#fff;margin-left:.25rem">5</strong></div>
+      <div class="chip">Total Soal: <strong style="color:#fff;margin-left:.25rem">500</strong></div>
+    </div>
+    <p class="sub">Klik untuk unduh pack per-mapel atau gunakan tombol gabungan di bawah. Format kompatibel: <code>jadwal</code>, <code>todo</code>, <code>packs</code>.</p>
+    <div class="controls">
+      <button onclick="downloadPack(`Bahasa Indonesia • Prediksi 2025`)">Bahasa Indonesia • Prediksi 2025</button>
+      <button onclick="downloadPack(`Bahasa Inggris • Prediksi 2025`)">Bahasa Inggris • Prediksi 2025</button>
+      <button onclick="downloadPack(`IPA • Prediksi 2025`)">IPA • Prediksi 2025</button>
+      <button onclick="downloadPack(`IPS • Prediksi 2025`)">IPS • Prediksi 2025</button>
+      <button onclick="downloadPack(`Matematika • Prediksi 2025`)">Matematika • Prediksi 2025</button>
+      <button class="secondary" onclick="downloadAll()">Download Gabungan (5 pack)</button>
+      <button class="secondary" onclick="formatJSON()">Preview JSON Gabungan</button>
+      <button class="secondary" onclick="copyJSON()">Salin JSON</button>
+    </div>
+    <textarea id="jsonArea" spellcheck="false"></textarea>
+    <p class="muted">Catatan: Data digabung dari ZIP <code>paket_5mapel_prediksi2025_FULL.zip</code>.</p>
+  </div>
+
+<script>
+const data = {
+  "jadwal": [],
+  "todo": [],
+  "packs": {
+    "Matematika • Prediksi 2025": {
+      "tag": "Matematika",
+      "qs": [
+        {
+          "q": "Sebuah barang seharga Rp120,000 didiskon 10%. Harga setelah diskon adalah ...",
+          "opts": [
+            "Rp108,000",
+            "Rp113,000",
+            "Rp103,000",
+            "Rp110,000"
+          ],
+          "a": 0,
+          "exp": "Harga setelah diskon = 120000 × (100−10)/100 = Rp108,000."
+        },
+        {
+          "q": "Sebuah barang seharga Rp150,000 didiskon 20%. Harga setelah diskon adalah ...",
+          "opts": [
+            "Rp120,000",
+            "Rp130,000",
+            "Rp115,000",
+            "Rp118,000"
+          ],
+          "a": 0,
+          "exp": "Harga setelah diskon = 150000 × (100−20)/100 = Rp120,000."
+        },
+        {
+          "q": "Sebuah barang seharga Rp80,000 didiskon 15%. Harga setelah diskon adalah ...",
+          "opts": [
+            "Rp68,000",
+            "Rp73,000",
+            "Rp58,000",
+            "Rp70,000"
+          ],
+          "a": 0,
+          "exp": "Harga setelah diskon = 80000 × (100−15)/100 = Rp68,000."
+        },
+        {
+          "q": "Sebuah barang seharga Rp200,000 didiskon 25%. Harga setelah diskon adalah ...",
+          "opts": [
+            "Rp150,000",
+            "Rp160,000",
+            "Rp145,000",
+            "Rp148,000"
+          ],
+          "a": 0,
+          "exp": "Harga setelah diskon = 200000 × (100−25)/100 = Rp150,000."
+        },
+        {
+          "q": "Sebuah barang seharga Rp96,000 didiskon 12%. Harga setelah diskon adalah ...",
+          "opts": [
+            "Rp84,480",
+            "Rp89,480",
+            "Rp79,480",
+            "Rp86,480"
+          ],
+          "a": 0,
+          "exp": "Harga setelah diskon = 96000 × (100−12)/100 = Rp84,480."
+        },
+        {
+          "q": "Sebuah barang seharga Rp175,000 didiskon 30%. Harga setelah diskon adalah ...",
+          "opts": [
+            "Rp122,500",
+            "Rp132,500",
+            "Rp112,500",
+            "Rp120,500"
+          ],
+          "a": 0,
+          "exp": "Harga setelah diskon = 175000 × (100−30)/100 = Rp122,500."
+        },
+        {
+          "q": "Sebuah barang seharga Rp54,000 didiskon 5%. Harga setelah diskon adalah ...",
+          "opts": [
+            "Rp51,300",
+            "Rp56,300",
+            "Rp46,300",
+            "Rp53,300"
+          ],
+          "a": 0,
+          "exp": "Harga setelah diskon = 54000 × (100−5)/100 = Rp51,300."
+        },
+        {
+          "q": "Sebuah barang seharga Rp220,000 didiskon 15%. Harga setelah diskon adalah ...",
+          "opts": [
+            "Rp187,000",
+            "Rp197,000",
+            "Rp182,000",
+            "Rp185,000"
+          ],
+          "a": 0,
+          "exp": "Harga setelah diskon = 220000 × (100−15)/100 = Rp187,000."
+        },
+        {
+          "q": "Sebuah barang seharga Rp134,000 didiskon 10%. Harga setelah diskon adalah ...",
+          "opts": [
+            "Rp120,600",
+            "Rp125,600",
+            "Rp110,600",
+            "Rp122,600"
+          ],
+          "a": 0,
+          "exp": "Harga setelah diskon = 134000 × (100−10)/100 = Rp120,600."
+        },
+        {
+          "q": "Sebuah barang seharga Rp99,000 didiskon 20%. Harga setelah diskon adalah ...",
+          "opts": [
+            "Rp79,200",
+            "Rp89,200",
+            "Rp74,200",
+            "Rp77,200"
+          ],
+          "a": 0,
+          "exp": "Harga setelah diskon = 99000 × (100−20)/100 = Rp79,200."
+        },
+        {
+          "q": "Diketahui perbandingan senilai 3:12. Jika nilai pertama 5, maka nilai kedua adalah ...",
+          "opts": [
+            "20",
+            "22",
+            "18",
+            "24"
+          ],
+          "a": 0,
+          "exp": "Perbandingan senilai: x2 = (b/a)×c = (12/3)×5 = 20."
+        },
+        {
+          "q": "Diketahui perbandingan senilai 4:20. Jika nilai pertama 6, maka nilai kedua adalah ...",
+          "opts": [
+            "30",
+            "32",
+            "28",
+            "34"
+          ],
+          "a": 0,
+          "exp": "Perbandingan senilai: x2 = (b/a)×c = (20/4)×6 = 30."
+        },
+        {
+          "q": "Diketahui perbandingan senilai 5:15. Jika nilai pertama 9, maka nilai kedua adalah ...",
+          "opts": [
+            "27",
+            "29",
+            "25",
+            "31"
+          ],
+          "a": 0,
+          "exp": "Perbandingan senilai: x2 = (b/a)×c = (15/5)×9 = 27."
+        },
+        {
+          "q": "Diketahui perbandingan senilai 7:21. Jika nilai pertama 14, maka nilai kedua adalah ...",
+          "opts": [
+            "42",
+            "44",
+            "40",
+            "46"
+          ],
+          "a": 0,
+          "exp": "Perbandingan senilai: x2 = (b/a)×c = (21/7)×14 = 42."
+        },
+        {
+          "q": "Diketahui perbandingan senilai 8:32. Jika nilai pertama 12, maka nilai kedua adalah ...",
+          "opts": [
+            "48",
+            "50",
+            "46",
+            "52"
+          ],
+          "a": 0,
+          "exp": "Perbandingan senilai: x2 = (b/a)×c = (32/8)×12 = 48."
+        },
+        {
+          "q": "Perbandingan berbalik nilai: jika 6 pekerja menyelesaikan pekerjaan dalam 3 hari, maka 8 pekerja akan selesai dalam ... hari",
+          "opts": [
+            "2",
+            "3",
+            "1",
+            "4"
+          ],
+          "a": 0,
+          "exp": "Berbalik nilai: n×t = konstan → x = 6×3/8 = 2 hari."
+        },
+        {
+          "q": "Perbandingan berbalik nilai: jika 10 pekerja menyelesaikan pekerjaan dalam 4 hari, maka 15 pekerja akan selesai dalam ... hari",
+          "opts": [
+            "2",
+            "3",
+            "1",
+            "4"
+          ],
+          "a": 0,
+          "exp": "Berbalik nilai: n×t = konstan → x = 10×4/15 = 2 hari."
+        },
+        {
+          "q": "Perbandingan berbalik nilai: jika 12 pekerja menyelesaikan pekerjaan dalam 6 hari, maka 9 pekerja akan selesai dalam ... hari",
+          "opts": [
+            "8",
+            "9",
+            "7",
+            "10"
+          ],
+          "a": 0,
+          "exp": "Berbalik nilai: n×t = konstan → x = 12×6/9 = 8 hari."
+        },
+        {
+          "q": "Perbandingan berbalik nilai: jika 9 pekerja menyelesaikan pekerjaan dalam 3 hari, maka 12 pekerja akan selesai dalam ... hari",
+          "opts": [
+            "2",
+            "3",
+            "1",
+            "4"
+          ],
+          "a": 0,
+          "exp": "Berbalik nilai: n×t = konstan → x = 9×3/12 = 2 hari."
+        },
+        {
+          "q": "Perbandingan berbalik nilai: jika 14 pekerja menyelesaikan pekerjaan dalam 7 hari, maka 10 pekerja akan selesai dalam ... hari",
+          "opts": [
+            "9",
+            "10",
+            "8",
+            "11"
+          ],
+          "a": 0,
+          "exp": "Berbalik nilai: n×t = konstan → x = 14×7/10 = 9 hari."
+        },
+        {
+          "q": "Nilai x yang memenuhi 2x + 3 = 15 adalah ...",
+          "opts": [
+            "6.0",
+            "7.0",
+            "5.0",
+            "8.0"
+          ],
+          "a": 0,
+          "exp": "x = (c−b)/a = (15−3)/2 = 6.0."
+        },
+        {
+          "q": "Nilai x yang memenuhi 3x + 4 = 19 adalah ...",
+          "opts": [
+            "5.0",
+            "6.0",
+            "4.0",
+            "7.0"
+          ],
+          "a": 0,
+          "exp": "x = (c−b)/a = (19−4)/3 = 5.0."
+        },
+        {
+          "q": "Nilai x yang memenuhi 4x + -5 = 7 adalah ...",
+          "opts": [
+            "3.0",
+            "4.0",
+            "2.0",
+            "5.0"
+          ],
+          "a": 0,
+          "exp": "x = (c−b)/a = (7−-5)/4 = 3.0."
+        },
+        {
+          "q": "Nilai x yang memenuhi 5x + 2 = 17 adalah ...",
+          "opts": [
+            "3.0",
+            "4.0",
+            "2.0",
+            "5.0"
+          ],
+          "a": 0,
+          "exp": "x = (c−b)/a = (17−2)/5 = 3.0."
+        },
+        {
+          "q": "Nilai x yang memenuhi 7x + -3 = 11 adalah ...",
+          "opts": [
+            "2.0",
+            "3.0",
+            "1.0",
+            "4.0"
+          ],
+          "a": 0,
+          "exp": "x = (c−b)/a = (11−-3)/7 = 2.0."
+        },
+        {
+          "q": "Tentukan nilai x dari 6x + (-4) = 14.",
+          "opts": [
+            "3.0",
+            "3.5",
+            "2.0",
+            "4.0"
+          ],
+          "a": 0,
+          "exp": "x = (14−(-4))/6 = 3.0."
+        },
+        {
+          "q": "Tentukan nilai x dari 8x + (5) = 21.",
+          "opts": [
+            "2.0",
+            "2.5",
+            "1.0",
+            "3.0"
+          ],
+          "a": 0,
+          "exp": "x = (21−(5))/8 = 2.0."
+        },
+        {
+          "q": "Tentukan nilai x dari 9x + (-3) = 24.",
+          "opts": [
+            "3.0",
+            "3.5",
+            "2.0",
+            "4.0"
+          ],
+          "a": 0,
+          "exp": "x = (24−(-3))/9 = 3.0."
+        },
+        {
+          "q": "Tentukan nilai x dari 10x + (7) = 27.",
+          "opts": [
+            "2.0",
+            "2.5",
+            "1.0",
+            "3.0"
+          ],
+          "a": 0,
+          "exp": "x = (27−(7))/10 = 2.0."
+        },
+        {
+          "q": "Tentukan nilai x dari 12x + (-6) = 18.",
+          "opts": [
+            "2.0",
+            "2.5",
+            "1.0",
+            "3.0"
+          ],
+          "a": 0,
+          "exp": "x = (18−(-6))/12 = 2.0."
+        },
+        {
+          "q": "Selesaikan SPLDV: { 1x + 1y = 10 ; 1x + -1y = 2 }. Nilai (x, y) adalah ...",
+          "opts": [
+            "(6.0, 4.0)",
+            "(7.0, 4.0)",
+            "(6.0, 5.0)",
+            "(5.0, 4.0)"
+          ],
+          "a": 0,
+          "exp": "Eliminasi/substitusi menghasilkan x=6.0 dan y=4.0."
+        },
+        {
+          "q": "Selesaikan SPLDV: { 2x + 1y = 14 ; 1x + 1y = 9 }. Nilai (x, y) adalah ...",
+          "opts": [
+            "(5.0, 4.0)",
+            "(6.0, 4.0)",
+            "(5.0, 5.0)",
+            "(4.0, 4.0)"
+          ],
+          "a": 0,
+          "exp": "Eliminasi/substitusi menghasilkan x=5.0 dan y=4.0."
+        },
+        {
+          "q": "Selesaikan SPLDV: { 3x + 2y = 19 ; 1x + 1y = 8 }. Nilai (x, y) adalah ...",
+          "opts": [
+            "(3.0, 5.0)",
+            "(4.0, 5.0)",
+            "(3.0, 6.0)",
+            "(2.0, 5.0)"
+          ],
+          "a": 0,
+          "exp": "Eliminasi/substitusi menghasilkan x=3.0 dan y=5.0."
+        },
+        {
+          "q": "Selesaikan SPLDV: { 2x + -1y = 3 ; 1x + 2y = 11 }. Nilai (x, y) adalah ...",
+          "opts": [
+            "(3.4, 3.8)",
+            "(4.4, 3.8)",
+            "(3.4, 4.8)",
+            "(2.4, 3.8)"
+          ],
+          "a": 0,
+          "exp": "Eliminasi/substitusi menghasilkan x=3.4 dan y=3.8."
+        },
+        {
+          "q": "Selesaikan SPLDV: { 1x + 3y = 18 ; 2x + 1y = 13 }. Nilai (x, y) adalah ...",
+          "opts": [
+            "(4.2, 4.6)",
+            "(5.2, 4.6)",
+            "(4.2, 5.6)",
+            "(3.2, 4.6)"
+          ],
+          "a": 0,
+          "exp": "Eliminasi/substitusi menghasilkan x=4.2 dan y=4.6."
+        },
+        {
+          "q": "Selesaikan SPLDV: { 1x + 2y = 11 ; 2x + 1y = 10 }. Nilai x adalah ...",
+          "opts": [
+            "3.0",
+            "4.0",
+            "2.0",
+            "4.0"
+          ],
+          "a": 0,
+          "exp": "Dengan eliminasi diperoleh x=3.0."
+        },
+        {
+          "q": "Selesaikan SPLDV: { 3x + 1y = 13 ; 1x + 2y = 9 }. Nilai x adalah ...",
+          "opts": [
+            "3.4",
+            "4.4",
+            "2.4",
+            "2.8"
+          ],
+          "a": 0,
+          "exp": "Dengan eliminasi diperoleh x=3.4."
+        },
+        {
+          "q": "Selesaikan SPLDV: { 2x + 3y = 16 ; 1x + 1y = 7 }. Nilai x adalah ...",
+          "opts": [
+            "5.0",
+            "6.0",
+            "4.0",
+            "2.0"
+          ],
+          "a": 0,
+          "exp": "Dengan eliminasi diperoleh x=5.0."
+        },
+        {
+          "q": "Selesaikan SPLDV: { 4x + 1y = 17 ; 1x + 3y = 16 }. Nilai x adalah ...",
+          "opts": [
+            "3.1818181818181817",
+            "4.181818181818182",
+            "2.1818181818181817",
+            "4.2727272727272725"
+          ],
+          "a": 0,
+          "exp": "Dengan eliminasi diperoleh x=3.1818181818181817."
+        },
+        {
+          "q": "Selesaikan SPLDV: { 2x + -1y = 4 ; 3x + 1y = 13 }. Nilai x adalah ...",
+          "opts": [
+            "3.4",
+            "4.4",
+            "2.4",
+            "2.8"
+          ],
+          "a": 0,
+          "exp": "Dengan eliminasi diperoleh x=3.4."
+        },
+        {
+          "q": "Jika persamaan x² -5x +6 = 0, jumlah akar-akarnya adalah ...",
+          "opts": [
+            "5.0",
+            "6.0",
+            "6.0",
+            "4.0"
+          ],
+          "a": 0,
+          "exp": "Jumlah akar = -b/a = -(-5)/1 = 5.0."
+        },
+        {
+          "q": "Jika persamaan x² -7x +12 = 0, jumlah akar-akarnya adalah ...",
+          "opts": [
+            "7.0",
+            "12.0",
+            "8.0",
+            "6.0"
+          ],
+          "a": 0,
+          "exp": "Jumlah akar = -b/a = -(-7)/1 = 7.0."
+        },
+        {
+          "q": "Jika persamaan x² -3x -10 = 0, jumlah akar-akarnya adalah ...",
+          "opts": [
+            "3.0",
+            "-10.0",
+            "4.0",
+            "2.0"
+          ],
+          "a": 0,
+          "exp": "Jumlah akar = -b/a = -(-3)/1 = 3.0."
+        },
+        {
+          "q": "Jika persamaan x² +5x +6 = 0, jumlah akar-akarnya adalah ...",
+          "opts": [
+            "-5.0",
+            "6.0",
+            "-4.0",
+            "-6.0"
+          ],
+          "a": 0,
+          "exp": "Jumlah akar = -b/a = -(5)/1 = -5.0."
+        },
+        {
+          "q": "Jika persamaan x² +2x -15 = 0, jumlah akar-akarnya adalah ...",
+          "opts": [
+            "-2.0",
+            "-15.0",
+            "-1.0",
+            "-3.0"
+          ],
+          "a": 0,
+          "exp": "Jumlah akar = -b/a = -(2)/1 = -2.0."
+        },
+        {
+          "q": "Salah satu akar dari persamaan 2x² -8x +6 = 0 adalah ...",
+          "opts": [
+            "1.0",
+            "3.0",
+            "1.0",
+            "tidak ada akar real"
+          ],
+          "a": 0,
+          "exp": "Diskriminan = b²−4ac = 16. Akar ≈ 3.0 dan 1.0."
+        },
+        {
+          "q": "Salah satu akar dari persamaan 1x² -4x -12 = 0 adalah ...",
+          "opts": [
+            "-2.0",
+            "6.0",
+            "-2.0",
+            "tidak ada akar real"
+          ],
+          "a": 0,
+          "exp": "Diskriminan = b²−4ac = 64. Akar ≈ 6.0 dan -2.0."
+        },
+        {
+          "q": "Salah satu akar dari persamaan 3x² +6x -9 = 0 adalah ...",
+          "opts": [
+            "-3.0",
+            "1.0",
+            "-3.0",
+            "tidak ada akar real"
+          ],
+          "a": 0,
+          "exp": "Diskriminan = b²−4ac = 144. Akar ≈ 1.0 dan -3.0."
+        },
+        {
+          "q": "Salah satu akar dari persamaan 2x² +5x -12 = 0 adalah ...",
+          "opts": [
+            "-4.0",
+            "1.5",
+            "-4.0",
+            "tidak ada akar real"
+          ],
+          "a": 0,
+          "exp": "Diskriminan = b²−4ac = 121. Akar ≈ 1.5 dan -4.0."
+        },
+        {
+          "q": "Salah satu akar dari persamaan 1x² -1x -6 = 0 adalah ...",
+          "opts": [
+            "-2.0",
+            "3.0",
+            "-2.0",
+            "tidak ada akar real"
+          ],
+          "a": 0,
+          "exp": "Diskriminan = b²−4ac = 25. Akar ≈ 3.0 dan -2.0."
+        },
+        {
+          "q": "Sebuah segitiga siku-siku memiliki kaki 3 cm dan 4 cm. Panjang sisi miringnya adalah ...",
+          "opts": [
+            "5 cm",
+            "6 cm",
+            "4 cm",
+            "7 cm"
+          ],
+          "a": 0,
+          "exp": "c=√(a²+b²)=√(3²+4²)=5 cm."
+        },
+        {
+          "q": "Sebuah segitiga siku-siku memiliki kaki 5 cm dan 12 cm. Panjang sisi miringnya adalah ...",
+          "opts": [
+            "13 cm",
+            "14 cm",
+            "12 cm",
+            "17 cm"
+          ],
+          "a": 0,
+          "exp": "c=√(a²+b²)=√(5²+12²)=13 cm."
+        },
+        {
+          "q": "Sebuah segitiga siku-siku memiliki kaki 8 cm dan 15 cm. Panjang sisi miringnya adalah ...",
+          "opts": [
+            "17 cm",
+            "18 cm",
+            "16 cm",
+            "23 cm"
+          ],
+          "a": 0,
+          "exp": "c=√(a²+b²)=√(8²+15²)=17 cm."
+        },
+        {
+          "q": "Sebuah segitiga siku-siku memiliki kaki 7 cm dan 24 cm. Panjang sisi miringnya adalah ...",
+          "opts": [
+            "25 cm",
+            "26 cm",
+            "24 cm",
+            "31 cm"
+          ],
+          "a": 0,
+          "exp": "c=√(a²+b²)=√(7²+24²)=25 cm."
+        },
+        {
+          "q": "Sebuah segitiga siku-siku memiliki kaki 9 cm dan 40 cm. Panjang sisi miringnya adalah ...",
+          "opts": [
+            "41 cm",
+            "42 cm",
+            "40 cm",
+            "49 cm"
+          ],
+          "a": 0,
+          "exp": "c=√(a²+b²)=√(9²+40²)=41 cm."
+        },
+        {
+          "q": "Sebuah lingkaran berjari-jari 7 cm. Keliling lingkaran (π≈3,14) adalah ...",
+          "opts": [
+            "43.96 cm",
+            "48.96 cm",
+            "38.96 cm",
+            "98 cm"
+          ],
+          "a": 0,
+          "exp": "Keliling = 2πr = 2×3,14×7 = 43.96 cm."
+        },
+        {
+          "q": "Sebuah lingkaran berjari-jari 14 cm. Keliling lingkaran (π≈3,14) adalah ...",
+          "opts": [
+            "87.92 cm",
+            "92.92 cm",
+            "82.92 cm",
+            "392 cm"
+          ],
+          "a": 0,
+          "exp": "Keliling = 2πr = 2×3,14×14 = 87.92 cm."
+        },
+        {
+          "q": "Sebuah lingkaran berjari-jari 10 cm. Keliling lingkaran (π≈3,14) adalah ...",
+          "opts": [
+            "62.8 cm",
+            "67.8 cm",
+            "57.8 cm",
+            "200 cm"
+          ],
+          "a": 0,
+          "exp": "Keliling = 2πr = 2×3,14×10 = 62.8 cm."
+        },
+        {
+          "q": "Sebuah lingkaran berjari-jari 21 cm. Keliling lingkaran (π≈3,14) adalah ...",
+          "opts": [
+            "131.88 cm",
+            "136.88 cm",
+            "126.88 cm",
+            "882 cm"
+          ],
+          "a": 0,
+          "exp": "Keliling = 2πr = 2×3,14×21 = 131.88 cm."
+        },
+        {
+          "q": "Sebuah lingkaran berjari-jari 8 cm. Keliling lingkaran (π≈3,14) adalah ...",
+          "opts": [
+            "50.24 cm",
+            "55.24 cm",
+            "45.24 cm",
+            "128 cm"
+          ],
+          "a": 0,
+          "exp": "Keliling = 2πr = 2×3,14×8 = 50.24 cm."
+        },
+        {
+          "q": "Sebuah balok berukuran 10 cm × 8 cm × 6 cm. Volumenya adalah ...",
+          "opts": [
+            "480 cm³",
+            "530 cm³",
+            "430 cm³",
+            "376 cm²"
+          ],
+          "a": 0,
+          "exp": "V = p×l×t = 10×8×6 = 480 cm³."
+        },
+        {
+          "q": "Sebuah balok berukuran 12 cm × 7 cm × 5 cm. Volumenya adalah ...",
+          "opts": [
+            "420 cm³",
+            "470 cm³",
+            "370 cm³",
+            "358 cm²"
+          ],
+          "a": 0,
+          "exp": "V = p×l×t = 12×7×5 = 420 cm³."
+        },
+        {
+          "q": "Sebuah balok berukuran 9 cm × 5 cm × 4 cm. Volumenya adalah ...",
+          "opts": [
+            "180 cm³",
+            "230 cm³",
+            "130 cm³",
+            "202 cm²"
+          ],
+          "a": 0,
+          "exp": "V = p×l×t = 9×5×4 = 180 cm³."
+        },
+        {
+          "q": "Sebuah balok berukuran 14 cm × 6 cm × 5 cm. Volumenya adalah ...",
+          "opts": [
+            "420 cm³",
+            "470 cm³",
+            "370 cm³",
+            "368 cm²"
+          ],
+          "a": 0,
+          "exp": "V = p×l×t = 14×6×5 = 420 cm³."
+        },
+        {
+          "q": "Sebuah balok berukuran 8 cm × 8 cm × 10 cm. Volumenya adalah ...",
+          "opts": [
+            "640 cm³",
+            "690 cm³",
+            "590 cm³",
+            "448 cm²"
+          ],
+          "a": 0,
+          "exp": "V = p×l×t = 8×8×10 = 640 cm³."
+        },
+        {
+          "q": "Sebuah tabung berjari-jari 7 cm dan tinggi 10 cm. Volume tabung (π≈3,14) adalah ...",
+          "opts": [
+            "1538.6 cm³",
+            "1638.6 cm³",
+            "1438.6 cm³",
+            "439.6 cm²"
+          ],
+          "a": 0,
+          "exp": "V = πr²t = 3,14×7²×10 = 1538.6 cm³."
+        },
+        {
+          "q": "Sebuah tabung berjari-jari 14 cm dan tinggi 8 cm. Volume tabung (π≈3,14) adalah ...",
+          "opts": [
+            "4923.52 cm³",
+            "5023.52 cm³",
+            "4823.52 cm³",
+            "703.36 cm²"
+          ],
+          "a": 0,
+          "exp": "V = πr²t = 3,14×14²×8 = 4923.52 cm³."
+        },
+        {
+          "q": "Sebuah tabung berjari-jari 10 cm dan tinggi 12 cm. Volume tabung (π≈3,14) adalah ...",
+          "opts": [
+            "3768.0 cm³",
+            "3868.0 cm³",
+            "3668.0 cm³",
+            "753.6 cm²"
+          ],
+          "a": 0,
+          "exp": "V = πr²t = 3,14×10²×12 = 3768.0 cm³."
+        },
+        {
+          "q": "Sebuah tabung berjari-jari 6 cm dan tinggi 15 cm. Volume tabung (π≈3,14) adalah ...",
+          "opts": [
+            "1695.6 cm³",
+            "1795.6 cm³",
+            "1595.6 cm³",
+            "565.2 cm²"
+          ],
+          "a": 0,
+          "exp": "V = πr²t = 3,14×6²×15 = 1695.6 cm³."
+        },
+        {
+          "q": "Sebuah tabung berjari-jari 8 cm dan tinggi 9 cm. Volume tabung (π≈3,14) adalah ...",
+          "opts": [
+            "1808.64 cm³",
+            "1908.64 cm³",
+            "1708.64 cm³",
+            "452.16 cm²"
+          ],
+          "a": 0,
+          "exp": "V = πr²t = 3,14×8²×9 = 1808.64 cm³."
+        },
+        {
+          "q": "Rataan (mean) dari data [60, 70, 80, 90, 100] adalah ...",
+          "opts": [
+            "80.0",
+            "81.0",
+            "79.0",
+            "82.0"
+          ],
+          "a": 0,
+          "exp": "Mean = jumlah data / banyak data = 400/5 = 80.0."
+        },
+        {
+          "q": "Rataan (mean) dari data [4, 6, 8, 6, 10, 12] adalah ...",
+          "opts": [
+            "7.67",
+            "8.67",
+            "6.67",
+            "9.67"
+          ],
+          "a": 0,
+          "exp": "Mean = jumlah data / banyak data = 46/6 = 7.67."
+        },
+        {
+          "q": "Rataan (mean) dari data [3, 3, 5, 7, 9] adalah ...",
+          "opts": [
+            "5.4",
+            "6.4",
+            "4.4",
+            "7.4"
+          ],
+          "a": 0,
+          "exp": "Mean = jumlah data / banyak data = 27/5 = 5.4."
+        },
+        {
+          "q": "Rataan (mean) dari data [12, 15, 15, 18, 21, 21, 21] adalah ...",
+          "opts": [
+            "17.57",
+            "18.57",
+            "16.57",
+            "19.57"
+          ],
+          "a": 0,
+          "exp": "Mean = jumlah data / banyak data = 123/7 = 17.57."
+        },
+        {
+          "q": "Rataan (mean) dari data [7, 8, 9, 10, 11] adalah ...",
+          "opts": [
+            "9.0",
+            "10.0",
+            "8.0",
+            "11.0"
+          ],
+          "a": 0,
+          "exp": "Mean = jumlah data / banyak data = 45/5 = 9.0."
+        },
+        {
+          "q": "Median dari data [2, 5, 7, 9, 11] adalah ...",
+          "opts": [
+            "7",
+            "8.0",
+            "6.0",
+            "2"
+          ],
+          "a": 0,
+          "exp": "Median = nilai tengah data tersusun = 7."
+        },
+        {
+          "q": "Median dari data [1, 3, 3, 4, 10, 12] adalah ...",
+          "opts": [
+            "3.5",
+            "4.5",
+            "2.5",
+            "1"
+          ],
+          "a": 0,
+          "exp": "Median = nilai tengah data tersusun = 3.5."
+        },
+        {
+          "q": "Median dari data [8, 9, 10, 10, 12] adalah ...",
+          "opts": [
+            "10",
+            "11.0",
+            "9.0",
+            "8"
+          ],
+          "a": 0,
+          "exp": "Median = nilai tengah data tersusun = 10."
+        },
+        {
+          "q": "Median dari data [5, 6, 7, 8, 9, 10] adalah ...",
+          "opts": [
+            "7.5",
+            "8.5",
+            "6.5",
+            "5"
+          ],
+          "a": 0,
+          "exp": "Median = nilai tengah data tersusun = 7.5."
+        },
+        {
+          "q": "Median dari data [15, 16, 18, 20, 22] adalah ...",
+          "opts": [
+            "18",
+            "19.0",
+            "17.0",
+            "15"
+          ],
+          "a": 0,
+          "exp": "Median = nilai tengah data tersusun = 18."
+        },
+        {
+          "q": "Sebuah dadu enam sisi dilambungkan sekali. Peluang muncul bilangan genap adalah ...",
+          "opts": [
+            "1/2",
+            "1/3",
+            "2/3",
+            "1/6"
+          ],
+          "a": 0,
+          "exp": "Bilangan genap pada dadu: {2,4,6} → 3 dari 6, sehingga 3/6 = 1/2."
+        },
+        {
+          "q": "Dari kotak berisi 4 bola merah dan 2 bola biru diambil satu bola acak. Peluang terambil bola merah adalah ...",
+          "opts": [
+            "2/3",
+            "1/3",
+            "1/2",
+            "3/4"
+          ],
+          "a": 0,
+          "exp": "Total 6 bola, merah 4 → 4/6 = 2/3."
+        },
+        {
+          "q": "Dalam satu kelas terdapat 12 siswa laki-laki dan 18 siswa perempuan. Jika dipilih satu siswa acak, peluang terpilih perempuan adalah ...",
+          "opts": [
+            "3/5",
+            "2/5",
+            "1/2",
+            "5/6"
+          ],
+          "a": 0,
+          "exp": "Total 30 siswa, perempuan 18 → 18/30 = 3/5."
+        },
+        {
+          "q": "Sebuah koin setimbang dilempar 1 kali. Peluang muncul gambar adalah ...",
+          "opts": [
+            "1/2",
+            "1/3",
+            "1/4",
+            "1"
+          ],
+          "a": 0,
+          "exp": "Koin: dua sisi setimbang → peluang 1/2."
+        },
+        {
+          "q": "Dari angka 1–10, diambil satu angka acak. Peluang terambil bilangan prima adalah ...",
+          "opts": [
+            "4/10",
+            "5/10",
+            "3/10",
+            "6/10"
+          ],
+          "a": 1,
+          "exp": "Bilangan prima 1–10: {2,3,5,7}. Itu 4 dari 10 → 4/10 = 2/5 = 0,4 (opsi paling dekat 5/10 salah)."
+        },
+        {
+          "q": "Diketahui fungsi linier y = 2x + 3. Nilai y saat x = 5 adalah ...",
+          "opts": [
+            "13",
+            "14",
+            "12",
+            "5"
+          ],
+          "a": 0,
+          "exp": "Substitusi: y = 2(5)+3 = 13."
+        },
+        {
+          "q": "Diketahui fungsi linier y = 3x + 2. Nilai y saat x = 4 adalah ...",
+          "opts": [
+            "14",
+            "15",
+            "13",
+            "5"
+          ],
+          "a": 0,
+          "exp": "Substitusi: y = 3(4)+2 = 14."
+        },
+        {
+          "q": "Diketahui fungsi linier y = 1x + -2. Nilai y saat x = 6 adalah ...",
+          "opts": [
+            "4",
+            "5",
+            "3",
+            "-1"
+          ],
+          "a": 0,
+          "exp": "Substitusi: y = 1(6)+-2 = 4."
+        },
+        {
+          "q": "Diketahui fungsi linier y = 4x + 1. Nilai y saat x = 3 adalah ...",
+          "opts": [
+            "13",
+            "14",
+            "12",
+            "5"
+          ],
+          "a": 0,
+          "exp": "Substitusi: y = 4(3)+1 = 13."
+        },
+        {
+          "q": "Diketahui fungsi linier y = 5x + -1. Nilai y saat x = 2 adalah ...",
+          "opts": [
+            "9",
+            "10",
+            "8",
+            "4"
+          ],
+          "a": 0,
+          "exp": "Substitusi: y = 5(2)+-1 = 9."
+        },
+        {
+          "q": "Barisan aritmetika dengan suku pertama a=3 dan beda d=5. Suku ke-10 adalah ...",
+          "opts": [
+            "48",
+            "50",
+            "46",
+            "8"
+          ],
+          "a": 0,
+          "exp": "Un = a + (n−1)d = 3 + (10−1)×5 = 48."
+        },
+        {
+          "q": "Barisan aritmetika dengan suku pertama a=7 dan beda d=4. Suku ke-12 adalah ...",
+          "opts": [
+            "51",
+            "53",
+            "49",
+            "11"
+          ],
+          "a": 0,
+          "exp": "Un = a + (n−1)d = 7 + (12−1)×4 = 51."
+        },
+        {
+          "q": "Barisan aritmetika dengan suku pertama a=10 dan beda d=-2. Suku ke-8 adalah ...",
+          "opts": [
+            "-4",
+            "-2",
+            "-6",
+            "8"
+          ],
+          "a": 0,
+          "exp": "Un = a + (n−1)d = 10 + (8−1)×-2 = -4."
+        },
+        {
+          "q": "Barisan aritmetika dengan suku pertama a=2 dan beda d=3. Suku ke-15 adalah ...",
+          "opts": [
+            "44",
+            "46",
+            "42",
+            "5"
+          ],
+          "a": 0,
+          "exp": "Un = a + (n−1)d = 2 + (15−1)×3 = 44."
+        },
+        {
+          "q": "Barisan aritmetika dengan suku pertama a=5 dan beda d=5. Suku ke-9 adalah ...",
+          "opts": [
+            "45",
+            "47",
+            "43",
+            "10"
+          ],
+          "a": 0,
+          "exp": "Un = a + (n−1)d = 5 + (9−1)×5 = 45."
+        },
+        {
+          "q": "Sebuah kendaraan bergerak dengan kecepatan 60 km/jam selama 2 jam. Jarak yang ditempuh adalah ...",
+          "opts": [
+            "120 km",
+            "130 km",
+            "110 km",
+            "62 km"
+          ],
+          "a": 0,
+          "exp": "s = v×t = 60×2 = 120 km."
+        },
+        {
+          "q": "Sebuah kendaraan bergerak dengan kecepatan 45 km/jam selama 3 jam. Jarak yang ditempuh adalah ...",
+          "opts": [
+            "135 km",
+            "145 km",
+            "125 km",
+            "48 km"
+          ],
+          "a": 0,
+          "exp": "s = v×t = 45×3 = 135 km."
+        },
+        {
+          "q": "Sebuah kendaraan bergerak dengan kecepatan 72 km/jam selama 1.5 jam. Jarak yang ditempuh adalah ...",
+          "opts": [
+            "108.0 km",
+            "118.0 km",
+            "98.0 km",
+            "73.5 km"
+          ],
+          "a": 0,
+          "exp": "s = v×t = 72×1.5 = 108.0 km."
+        },
+        {
+          "q": "Sebuah kendaraan bergerak dengan kecepatan 80 km/jam selama 2.5 jam. Jarak yang ditempuh adalah ...",
+          "opts": [
+            "200.0 km",
+            "210.0 km",
+            "190.0 km",
+            "82.5 km"
+          ],
+          "a": 0,
+          "exp": "s = v×t = 80×2.5 = 200.0 km."
+        },
+        {
+          "q": "Sebuah kendaraan bergerak dengan kecepatan 50 km/jam selama 4 jam. Jarak yang ditempuh adalah ...",
+          "opts": [
+            "200 km",
+            "210 km",
+            "190 km",
+            "54 km"
+          ],
+          "a": 0,
+          "exp": "s = v×t = 50×4 = 200 km."
+        }
+      ]
+    },
+    "Bahasa Indonesia • Prediksi 2025": {
+      "tag": "Bahasa Indonesia",
+      "qs": [
+        {
+          "q": "Manakah penulisan kata yang benar sesuai EYD?",
+          "opts": [
+            "aktivitas",
+            "aktifitas",
+            "Aktifitas",
+            "Aktivitas"
+          ],
+          "a": 0,
+          "exp": "Bentuk baku: 'aktivitas'. Variasi 'aktifitas' tidak baku menurut KBBI."
+        },
+        {
+          "q": "Manakah penulisan kata yang benar sesuai EYD?",
+          "opts": [
+            "risiko",
+            "resiko",
+            "Resiko",
+            "Risiko"
+          ],
+          "a": 0,
+          "exp": "Bentuk baku: 'risiko'. Variasi 'resiko' tidak baku menurut KBBI."
+        },
+        {
+          "q": "Manakah penulisan kata yang benar sesuai EYD?",
+          "opts": [
+            "izin",
+            "ijin",
+            "Ijin",
+            "Izin"
+          ],
+          "a": 0,
+          "exp": "Bentuk baku: 'izin'. Variasi 'ijin' tidak baku menurut KBBI."
+        },
+        {
+          "q": "Manakah penulisan kata yang benar sesuai EYD?",
+          "opts": [
+            "jadwal",
+            "jadual",
+            "Jadual",
+            "Jadwal"
+          ],
+          "a": 0,
+          "exp": "Bentuk baku: 'jadwal'. Variasi 'jadual' tidak baku menurut KBBI."
+        },
+        {
+          "q": "Manakah penulisan kata yang benar sesuai EYD?",
+          "opts": [
+            "kualitas",
+            "kwalitas",
+            "Kwalitas",
+            "Kualitas"
+          ],
+          "a": 0,
+          "exp": "Bentuk baku: 'kualitas'. Variasi 'kwalitas' tidak baku menurut KBBI."
+        },
+        {
+          "q": "Manakah penulisan kata yang benar sesuai EYD?",
+          "opts": [
+            "praktik",
+            "praktek",
+            "Praktek",
+            "Praktik"
+          ],
+          "a": 0,
+          "exp": "Bentuk baku: 'praktik'. Variasi 'praktek' tidak baku menurut KBBI."
+        },
+        {
+          "q": "Manakah penulisan kata yang benar sesuai EYD?",
+          "opts": [
+            "apotek",
+            "apotik",
+            "Apotik",
+            "Apotek"
+          ],
+          "a": 0,
+          "exp": "Bentuk baku: 'apotek'. Variasi 'apotik' tidak baku menurut KBBI."
+        },
+        {
+          "q": "Manakah penulisan kata yang benar sesuai EYD?",
+          "opts": [
+            "atlet",
+            "atlit",
+            "Atlit",
+            "Atlet"
+          ],
+          "a": 0,
+          "exp": "Bentuk baku: 'atlet'. Variasi 'atlit' tidak baku menurut KBBI."
+        },
+        {
+          "q": "Manakah penulisan kata yang benar sesuai EYD?",
+          "opts": [
+            "utang",
+            "hutang",
+            "Hutang",
+            "Utang"
+          ],
+          "a": 0,
+          "exp": "Bentuk baku: 'utang'. Variasi 'hutang' tidak baku menurut KBBI."
+        },
+        {
+          "q": "Manakah penulisan kata yang benar sesuai EYD?",
+          "opts": [
+            "analisis",
+            "analisa",
+            "Analisa",
+            "Analisis"
+          ],
+          "a": 0,
+          "exp": "Bentuk baku: 'analisis'. Variasi 'analisa' tidak baku menurut KBBI."
+        },
+        {
+          "q": "Manakah penulisan kata yang benar sesuai EYD?",
+          "opts": [
+            "respons",
+            "respon",
+            "Respon",
+            "Respons"
+          ],
+          "a": 0,
+          "exp": "Bentuk baku: 'respons'. Variasi 'respon' tidak baku menurut KBBI."
+        },
+        {
+          "q": "Manakah penulisan kata yang benar sesuai EYD?",
+          "opts": [
+            "subjek",
+            "subyek",
+            "Subyek",
+            "Subjek"
+          ],
+          "a": 0,
+          "exp": "Bentuk baku: 'subjek'. Variasi 'subyek' tidak baku menurut KBBI."
+        },
+        {
+          "q": "Manakah penulisan kata yang benar sesuai EYD?",
+          "opts": [
+            "objek",
+            "obyek",
+            "Obyek",
+            "Objek"
+          ],
+          "a": 0,
+          "exp": "Bentuk baku: 'objek'. Variasi 'obyek' tidak baku menurut KBBI."
+        },
+        {
+          "q": "Manakah penulisan kata yang benar sesuai EYD?",
+          "opts": [
+            "hakikat",
+            "hakikat",
+            "Hakikat",
+            "Hakikat"
+          ],
+          "a": 0,
+          "exp": "Bentuk baku: 'hakikat'. Variasi 'hakikat' tidak baku menurut KBBI."
+        },
+        {
+          "q": "Manakah penulisan kata yang benar sesuai EYD?",
+          "opts": [
+            "sekadar",
+            "sekedar",
+            "Sekedar",
+            "Sekadar"
+          ],
+          "a": 0,
+          "exp": "Bentuk baku: 'sekadar'. Variasi 'sekedar' tidak baku menurut KBBI."
+        },
+        {
+          "q": "Manakah penulisan kata yang benar sesuai EYD?",
+          "opts": [
+            "telepon",
+            "telpon",
+            "Telpon",
+            "Telepon"
+          ],
+          "a": 0,
+          "exp": "Bentuk baku: 'telepon'. Variasi 'telpon' tidak baku menurut KBBI."
+        },
+        {
+          "q": "Manakah penulisan kata yang benar sesuai EYD?",
+          "opts": [
+            "kualitas",
+            "kualitas",
+            "Kualitas",
+            "Kualitas"
+          ],
+          "a": 0,
+          "exp": "Bentuk baku: 'kualitas'. Variasi 'kualitas' tidak baku menurut KBBI."
+        },
+        {
+          "q": "Manakah penulisan kata yang benar sesuai EYD?",
+          "opts": [
+            "memfasilitasi",
+            "memfasilitasi",
+            "Memfasilitasi",
+            "Memfasilitasi"
+          ],
+          "a": 0,
+          "exp": "Bentuk baku: 'memfasilitasi'. Variasi 'memfasilitasi' tidak baku menurut KBBI."
+        },
+        {
+          "q": "Manakah penulisan kata yang benar sesuai EYD?",
+          "opts": [
+            "praktikum",
+            "praktikum",
+            "Praktikum",
+            "Praktikum"
+          ],
+          "a": 0,
+          "exp": "Bentuk baku: 'praktikum'. Variasi 'praktikum' tidak baku menurut KBBI."
+        },
+        {
+          "q": "Manakah penulisan kata yang benar sesuai EYD?",
+          "opts": [
+            "kepercayaan",
+            "kepercayaan",
+            "Kepercayaan",
+            "Kepercayaan"
+          ],
+          "a": 0,
+          "exp": "Bentuk baku: 'kepercayaan'. Variasi 'kepercayaan' tidak baku menurut KBBI."
+        },
+        {
+          "q": "Kalimat yang tepat penulisan huruf kapital/tanda bacanya adalah ...",
+          "opts": [
+            "Pak Budi berasal dari Yogyakarta.",
+            "pak budi berasal dari yogyakarta.",
+            "Pak  Budi  berasal  dari  Yogyakarta.",
+            "Pak budi berasal dari yogyakarta."
+          ],
+          "a": 0,
+          "exp": "Gunakan huruf kapital pada nama orang, gelar jabatan ketika diikuti nama, nama tempat, judul, dan awal kalimat."
+        },
+        {
+          "q": "Kalimat yang tepat penulisan huruf kapital/tanda bacanya adalah ...",
+          "opts": [
+            "Besok, Rani pergi ke Kota Bandung.",
+            "besok, rani pergi ke kota bandung.",
+            "Besok,  Rani  pergi  ke  Kota  Bandung.",
+            "Besok, rani pergi ke kota bandung."
+          ],
+          "a": 0,
+          "exp": "Gunakan huruf kapital pada nama orang, gelar jabatan ketika diikuti nama, nama tempat, judul, dan awal kalimat."
+        },
+        {
+          "q": "Kalimat yang tepat penulisan huruf kapital/tanda bacanya adalah ...",
+          "opts": [
+            "Kita akan merayakan Hari Kemerdekaan Republik Indonesia.",
+            "kita akan merayakan hari kemerdekaan republik indonesia.",
+            "Kita  akan  merayakan  Hari  Kemerdekaan  Republik  Indonesia.",
+            "Kita akan merayakan hari kemerdekaan republik indonesia."
+          ],
+          "a": 0,
+          "exp": "Gunakan huruf kapital pada nama orang, gelar jabatan ketika diikuti nama, nama tempat, judul, dan awal kalimat."
+        },
+        {
+          "q": "Kalimat yang tepat penulisan huruf kapital/tanda bacanya adalah ...",
+          "opts": [
+            "Pada bulan Mei, mereka mengunjungi Candi Borobudur.",
+            "pada bulan mei, mereka mengunjungi candi borobudur.",
+            "Pada  bulan  Mei,  mereka  mengunjungi  Candi  Borobudur.",
+            "Pada bulan mei, mereka mengunjungi candi borobudur."
+          ],
+          "a": 0,
+          "exp": "Gunakan huruf kapital pada nama orang, gelar jabatan ketika diikuti nama, nama tempat, judul, dan awal kalimat."
+        },
+        {
+          "q": "Kalimat yang tepat penulisan huruf kapital/tanda bacanya adalah ...",
+          "opts": [
+            "Presiden menyampaikan pidato pada Senin pagi.",
+            "presiden menyampaikan pidato pada senin pagi.",
+            "Presiden  menyampaikan  pidato  pada  Senin  pagi.",
+            "Presiden menyampaikan pidato pada senin pagi."
+          ],
+          "a": 0,
+          "exp": "Gunakan huruf kapital pada nama orang, gelar jabatan ketika diikuti nama, nama tempat, judul, dan awal kalimat."
+        },
+        {
+          "q": "Kalimat yang tepat penulisan huruf kapital/tanda bacanya adalah ...",
+          "opts": [
+            "Kak Risa membeli buku 'Laskar Pelangi' di Gramedia.",
+            "kak risa membeli buku 'laskar pelangi' di gramedia.",
+            "Kak  Risa  membeli  buku  'Laskar  Pelangi'  di  Gramedia.",
+            "Kak risa membeli buku 'laskar pelangi' di gramedia."
+          ],
+          "a": 0,
+          "exp": "Gunakan huruf kapital pada nama orang, gelar jabatan ketika diikuti nama, nama tempat, judul, dan awal kalimat."
+        },
+        {
+          "q": "Kalimat yang tepat penulisan huruf kapital/tanda bacanya adalah ...",
+          "opts": [
+            "Universitas Gadjah Mada berada di Sleman, DIY.",
+            "universitas gadjah mada berada di sleman, diy.",
+            "Universitas  Gadjah  Mada  berada  di  Sleman,  DIY.",
+            "Universitas gadjah mada berada di sleman, diy."
+          ],
+          "a": 0,
+          "exp": "Gunakan huruf kapital pada nama orang, gelar jabatan ketika diikuti nama, nama tempat, judul, dan awal kalimat."
+        },
+        {
+          "q": "Kalimat yang tepat penulisan huruf kapital/tanda bacanya adalah ...",
+          "opts": [
+            "Sungai Musi berada di Palembang, Sumatera Selatan.",
+            "sungai musi berada di palembang, sumatera selatan.",
+            "Sungai  Musi  berada  di  Palembang,  Sumatera  Selatan.",
+            "Sungai musi berada di palembang, sumatera selatan."
+          ],
+          "a": 0,
+          "exp": "Gunakan huruf kapital pada nama orang, gelar jabatan ketika diikuti nama, nama tempat, judul, dan awal kalimat."
+        },
+        {
+          "q": "Kalimat yang tepat penulisan huruf kapital/tanda bacanya adalah ...",
+          "opts": [
+            "Wali Kota Surabaya menerima tamu dari Jepang.",
+            "wali kota surabaya menerima tamu dari jepang.",
+            "Wali  Kota  Surabaya  menerima  tamu  dari  Jepang.",
+            "Wali kota surabaya menerima tamu dari jepang."
+          ],
+          "a": 0,
+          "exp": "Gunakan huruf kapital pada nama orang, gelar jabatan ketika diikuti nama, nama tempat, judul, dan awal kalimat."
+        },
+        {
+          "q": "Kalimat yang tepat penulisan huruf kapital/tanda bacanya adalah ...",
+          "opts": [
+            "Bulan Ramadan tiba pada bulan Maret tahun ini.",
+            "bulan ramadan tiba pada bulan maret tahun ini.",
+            "Bulan  Ramadan  tiba  pada  bulan  Maret  tahun  ini.",
+            "Bulan ramadan tiba pada bulan maret tahun ini."
+          ],
+          "a": 0,
+          "exp": "Gunakan huruf kapital pada nama orang, gelar jabatan ketika diikuti nama, nama tempat, judul, dan awal kalimat."
+        },
+        {
+          "q": "Kalimat manakah yang efektif?",
+          "opts": [
+            "Para siswa itu sedang berlatih di lapangan.",
+            "Para siswa-siswa itu sedang berlatih di lapangan.",
+            "Para siswa itu sedang berlatih di lapangan.",
+            "PARA SISWA-SISWA ITU SEDANG BERLATIH DI LAPANGAN."
+          ],
+          "a": 0,
+          "exp": "Kalimat efektif bersifat hemat, tepat, dan logis; tidak ada pleonasme dan susunan S-P-O-K jelas."
+        },
+        {
+          "q": "Kalimat manakah yang efektif?",
+          "opts": [
+            "Hujan yang turun menyebabkan banjir.",
+            "Dengan adanya hujan yang turun menyebabkan banjir.",
+            "Hujan yg turun menyebabkan banjir.",
+            "DENGAN ADANYA HUJAN YANG TURUN MENYEBABKAN BANJIR."
+          ],
+          "a": 0,
+          "exp": "Kalimat efektif bersifat hemat, tepat, dan logis; tidak ada pleonasme dan susunan S-P-O-K jelas."
+        },
+        {
+          "q": "Kalimat manakah yang efektif?",
+          "opts": [
+            "Menurut saya, acara ini menarik.",
+            "Saya pribadi merasa menurut saya acara ini menarik.",
+            "Menurut saya, acara ini menarik.",
+            "SAYA PRIBADI MERASA MENURUT SAYA ACARA INI MENARIK."
+          ],
+          "a": 0,
+          "exp": "Kalimat efektif bersifat hemat, tepat, dan logis; tidak ada pleonasme dan susunan S-P-O-K jelas."
+        },
+        {
+          "q": "Kalimat manakah yang efektif?",
+          "opts": [
+            "Rapat akan dilaksanakan di mana?",
+            "Dimana rapat akan dilaksanakan?",
+            "Rapat akan dilaksanakan di mana?",
+            "DIMANA RAPAT AKAN DILAKSANAKAN?"
+          ],
+          "a": 0,
+          "exp": "Kalimat efektif bersifat hemat, tepat, dan logis; tidak ada pleonasme dan susunan S-P-O-K jelas."
+        },
+        {
+          "q": "Kalimat manakah yang efektif?",
+          "opts": [
+            "Ia merupakan ketua kelas.",
+            "Ia adalah merupakan ketua kelas.",
+            "Ia merupakan ketua kelas.",
+            "IA ADALAH MERUPAKAN KETUA KELAS."
+          ],
+          "a": 0,
+          "exp": "Kalimat efektif bersifat hemat, tepat, dan logis; tidak ada pleonasme dan susunan S-P-O-K jelas."
+        },
+        {
+          "q": "Kalimat manakah yang efektif?",
+          "opts": [
+            "Setiap hari ia bangun pagi.",
+            "Setiap harinya ia selalu bangun pagi.",
+            "Setiap hari ia bangun pagi.",
+            "SETIAP HARINYA IA SELALU BANGUN PAGI."
+          ],
+          "a": 0,
+          "exp": "Kalimat efektif bersifat hemat, tepat, dan logis; tidak ada pleonasme dan susunan S-P-O-K jelas."
+        },
+        {
+          "q": "Kalimat manakah yang efektif?",
+          "opts": [
+            "Ketika bel berbunyi, kami masuk.",
+            "Pada saat ketika bel berbunyi kami masuk.",
+            "Ketika bel berbunyi, kami masuk.",
+            "PADA SAAT KETIKA BEL BERBUNYI KAMI MASUK."
+          ],
+          "a": 0,
+          "exp": "Kalimat efektif bersifat hemat, tepat, dan logis; tidak ada pleonasme dan susunan S-P-O-K jelas."
+        },
+        {
+          "q": "Kalimat manakah yang efektif?",
+          "opts": [
+            "Para siswa diharapkan hadir tepat waktu.",
+            "Bagi para siswa diharapkan hadir tepat waktu.",
+            "Para siswa diharapkan hadir tepat waktu.",
+            "BAGI PARA SISWA DIHARAPKAN HADIR TEPAT WAKTU."
+          ],
+          "a": 0,
+          "exp": "Kalimat efektif bersifat hemat, tepat, dan logis; tidak ada pleonasme dan susunan S-P-O-K jelas."
+        },
+        {
+          "q": "Kalimat manakah yang efektif?",
+          "opts": [
+            "Masalah ini harus segera diselesaikan.",
+            "Yang mana masalah ini harus segera diselesaikan.",
+            "Masalah ini harus segera diselesaikan.",
+            "YANG MANA MASALAH INI HARUS SEGERA DISELESAIKAN."
+          ],
+          "a": 0,
+          "exp": "Kalimat efektif bersifat hemat, tepat, dan logis; tidak ada pleonasme dan susunan S-P-O-K jelas."
+        },
+        {
+          "q": "Kalimat manakah yang efektif?",
+          "opts": [
+            "Harga tiket sangat mahal.",
+            "Harga tiket yang mahal sekali.",
+            "Harga tiket sangat mahal.",
+            "HARGA TIKET YANG MAHAL SEKALI."
+          ],
+          "a": 0,
+          "exp": "Kalimat efektif bersifat hemat, tepat, dan logis; tidak ada pleonasme dan susunan S-P-O-K jelas."
+        },
+        {
+          "q": "Kalimat manakah yang efektif?",
+          "opts": [
+            "Hadirin dimohon berdiri.",
+            "Para hadirin dimohon untuk berdiri.",
+            "Hadirin dimohon berdiri.",
+            "PARA HADIRIN DIMOHON UNTUK BERDIRI."
+          ],
+          "a": 0,
+          "exp": "Kalimat efektif bersifat hemat, tepat, dan logis; tidak ada pleonasme dan susunan S-P-O-K jelas."
+        },
+        {
+          "q": "Kalimat manakah yang efektif?",
+          "opts": [
+            "Dia tidak hadir.",
+            "Dia tidak hadir karena tidak datang.",
+            "Dia tidak hadir.",
+            "DIA TIDAK HADIR KARENA TIDAK DATANG."
+          ],
+          "a": 0,
+          "exp": "Kalimat efektif bersifat hemat, tepat, dan logis; tidak ada pleonasme dan susunan S-P-O-K jelas."
+        },
+        {
+          "q": "Kalimat manakah yang efektif?",
+          "opts": [
+            "Tujuan rapat ini membahas program.",
+            "Adapun tujuan rapat ini adalah untuk membahas program.",
+            "Tujuan rapat ini membahas program.",
+            "ADAPUN TUJUAN RAPAT INI ADALAH UNTUK MEMBAHAS PROGRAM."
+          ],
+          "a": 0,
+          "exp": "Kalimat efektif bersifat hemat, tepat, dan logis; tidak ada pleonasme dan susunan S-P-O-K jelas."
+        },
+        {
+          "q": "Kalimat manakah yang efektif?",
+          "opts": [
+            "Kegiatan tersebut merupakan program tahunan.",
+            "Kegiatan tersebut adalah merupakan program tahunan.",
+            "Kegiatan tersebut merupakan program tahunan.",
+            "KEGIATAN TERSEBUT ADALAH MERUPAKAN PROGRAM TAHUNAN."
+          ],
+          "a": 0,
+          "exp": "Kalimat efektif bersifat hemat, tepat, dan logis; tidak ada pleonasme dan susunan S-P-O-K jelas."
+        },
+        {
+          "q": "Kalimat manakah yang efektif?",
+          "opts": [
+            "Anak itu menangis karena sakit perut.",
+            "Anak itu menangis karena sakit perut yang dialaminya.",
+            "Anak itu menangis karena sakit perut.",
+            "ANAK ITU MENANGIS KARENA SAKIT PERUT YANG DIALAMINYA."
+          ],
+          "a": 0,
+          "exp": "Kalimat efektif bersifat hemat, tepat, dan logis; tidak ada pleonasme dan susunan S-P-O-K jelas."
+        },
+        {
+          "q": "Bacalah paragraf berikut!\nIndonesia memiliki kekayaan hayati yang melimpah. Hutan tropis menyediakan beragam flora dan fauna. Kekayaan ini harus dijaga melalui pengelolaan yang berkelanjutan.\nGagasan utama paragraf tersebut adalah ...",
+          "opts": [
+            "Indonesia memiliki kekayaan hayati yang melimpah.",
+            "Kalimat kedua merupakan contoh",
+            "Paragraf membahas kesehatan lingkungan",
+            "Penulis mengajak pembaca untuk tidak boros"
+          ],
+          "a": 0,
+          "exp": "Gagasan utama biasanya terdapat pada kalimat utama yang menjiwai seluruh paragraf."
+        },
+        {
+          "q": "Bacalah paragraf berikut!\nSampah plastik menjadi masalah serius di kota-kota besar. Kurangnya pengelolaan dan kebiasaan membuang sampah sembarangan memperparah keadaan. Edukasi masyarakat perlu ditingkatkan.\nGagasan utama paragraf tersebut adalah ...",
+          "opts": [
+            "Sampah plastik menjadi masalah serius di kota-kota besar.",
+            "Kalimat kedua merupakan contoh",
+            "Paragraf membahas kesehatan lingkungan",
+            "Penulis mengajak pembaca untuk tidak boros"
+          ],
+          "a": 0,
+          "exp": "Gagasan utama biasanya terdapat pada kalimat utama yang menjiwai seluruh paragraf."
+        },
+        {
+          "q": "Bacalah paragraf berikut!\nLiterasi digital penting dimiliki siswa. Dengan literasi digital, siswa mampu memilah informasi yang valid. Hal ini mencegah penyebaran hoaks.\nGagasan utama paragraf tersebut adalah ...",
+          "opts": [
+            "Literasi digital penting dimiliki siswa.",
+            "Kalimat kedua merupakan contoh",
+            "Paragraf membahas kesehatan lingkungan",
+            "Penulis mengajak pembaca untuk tidak boros"
+          ],
+          "a": 0,
+          "exp": "Gagasan utama biasanya terdapat pada kalimat utama yang menjiwai seluruh paragraf."
+        },
+        {
+          "q": "Bacalah paragraf berikut!\nTransportasi umum yang nyaman mendorong orang meninggalkan kendaraan pribadi. Dampaknya, kemacetan berkurang dan polusi menurun.\nGagasan utama paragraf tersebut adalah ...",
+          "opts": [
+            "Transportasi umum yang nyaman mendorong orang meninggalkan kendaraan pribadi.",
+            "Kalimat kedua merupakan contoh",
+            "Paragraf membahas kesehatan lingkungan",
+            "Penulis mengajak pembaca untuk tidak boros"
+          ],
+          "a": 0,
+          "exp": "Gagasan utama biasanya terdapat pada kalimat utama yang menjiwai seluruh paragraf."
+        },
+        {
+          "q": "Bacalah paragraf berikut!\nMenjaga kesehatan gigi harus dibiasakan sejak kecil. Menyikat gigi dua kali sehari dan memeriksa ke dokter gigi setiap enam bulan sangat dianjurkan.\nGagasan utama paragraf tersebut adalah ...",
+          "opts": [
+            "Menjaga kesehatan gigi harus dibiasakan sejak kecil.",
+            "Kalimat kedua merupakan contoh",
+            "Paragraf membahas kesehatan lingkungan",
+            "Penulis mengajak pembaca untuk tidak boros"
+          ],
+          "a": 0,
+          "exp": "Gagasan utama biasanya terdapat pada kalimat utama yang menjiwai seluruh paragraf."
+        },
+        {
+          "q": "Bacalah paragraf berikut!\nIndonesia memiliki kekayaan hayati yang melimpah. Hutan tropis menyediakan beragam flora dan fauna. Kekayaan ini harus dijaga melalui pengelolaan yang berkelanjutan.\nKalimat pendukung yang tepat untuk paragraf tersebut adalah ...",
+          "opts": [
+            "Indonesia memiliki kekayaan hayati yang melimpah sehingga harus kita lestarikan.",
+            "Akhirnya semua masalah terselesaikan.",
+            "Oleh karena itu, harga meningkat tajam.",
+            "Dengan demikian, hujan turun deras."
+          ],
+          "a": 0,
+          "exp": "Kalimat pendukung harus relevan dan memperinci gagasan utama."
+        },
+        {
+          "q": "Bacalah paragraf berikut!\nSampah plastik menjadi masalah serius di kota-kota besar. Kurangnya pengelolaan dan kebiasaan membuang sampah sembarangan memperparah keadaan. Edukasi masyarakat perlu ditingkatkan.\nKalimat pendukung yang tepat untuk paragraf tersebut adalah ...",
+          "opts": [
+            "Sampah plastik menjadi masalah serius di kota-kota besar sehingga harus kita lestarikan.",
+            "Akhirnya semua masalah terselesaikan.",
+            "Oleh karena itu, harga meningkat tajam.",
+            "Dengan demikian, hujan turun deras."
+          ],
+          "a": 0,
+          "exp": "Kalimat pendukung harus relevan dan memperinci gagasan utama."
+        },
+        {
+          "q": "Bacalah paragraf berikut!\nLiterasi digital penting dimiliki siswa. Dengan literasi digital, siswa mampu memilah informasi yang valid. Hal ini mencegah penyebaran hoaks.\nKalimat pendukung yang tepat untuk paragraf tersebut adalah ...",
+          "opts": [
+            "Literasi digital penting dimiliki siswa sehingga harus kita lestarikan.",
+            "Akhirnya semua masalah terselesaikan.",
+            "Oleh karena itu, harga meningkat tajam.",
+            "Dengan demikian, hujan turun deras."
+          ],
+          "a": 0,
+          "exp": "Kalimat pendukung harus relevan dan memperinci gagasan utama."
+        },
+        {
+          "q": "Bacalah paragraf berikut!\nTransportasi umum yang nyaman mendorong orang meninggalkan kendaraan pribadi. Dampaknya, kemacetan berkurang dan polusi menurun.\nKalimat pendukung yang tepat untuk paragraf tersebut adalah ...",
+          "opts": [
+            "Transportasi umum yang nyaman mendorong orang meninggalkan kendaraan pribadi sehingga harus kita lestarikan.",
+            "Akhirnya semua masalah terselesaikan.",
+            "Oleh karena itu, harga meningkat tajam.",
+            "Dengan demikian, hujan turun deras."
+          ],
+          "a": 0,
+          "exp": "Kalimat pendukung harus relevan dan memperinci gagasan utama."
+        },
+        {
+          "q": "Bacalah paragraf berikut!\nMenjaga kesehatan gigi harus dibiasakan sejak kecil. Menyikat gigi dua kali sehari dan memeriksa ke dokter gigi setiap enam bulan sangat dianjurkan.\nKalimat pendukung yang tepat untuk paragraf tersebut adalah ...",
+          "opts": [
+            "Menjaga kesehatan gigi harus dibiasakan sejak kecil sehingga harus kita lestarikan.",
+            "Akhirnya semua masalah terselesaikan.",
+            "Oleh karena itu, harga meningkat tajam.",
+            "Dengan demikian, hujan turun deras."
+          ],
+          "a": 0,
+          "exp": "Kalimat pendukung harus relevan dan memperinci gagasan utama."
+        },
+        {
+          "q": "Manakah yang termasuk pernyataan fakta?",
+          "opts": [
+            "Monumen Nasional berada di Jakarta Pusat.",
+            "Monumen Nasional adalah tempat paling indah di dunia.",
+            "Monumen Nasional berada pada Jakarta Pusat.",
+            "MONUMEN NASIONAL ADALAH TEMPAT PALING INDAH DI DUNIA."
+          ],
+          "a": 0,
+          "exp": "Fakta dapat dibuktikan kebenarannya; opini bersifat penilaian/pendapat."
+        },
+        {
+          "q": "Manakah yang termasuk pernyataan fakta?",
+          "opts": [
+            "Gunung Bromo terletak di Jawa Timur.",
+            "Gunung Bromo adalah gunung paling menakjubkan.",
+            "Gunung Bromo terletak pada Jawa Timur.",
+            "GUNUNG BROMO ADALAH GUNUNG PALING MENAKJUBKAN."
+          ],
+          "a": 0,
+          "exp": "Fakta dapat dibuktikan kebenarannya; opini bersifat penilaian/pendapat."
+        },
+        {
+          "q": "Manakah yang termasuk pernyataan fakta?",
+          "opts": [
+            "Suhu air mendidih pada tekanan 1 atm adalah 100°C.",
+            "Air mendidih adalah fenomena paling hebat.",
+            "Suhu air mendidih pada tekanan 1 atm adalah 100°C.",
+            "AIR MENDIDIH ADALAH FENOMENA PALING HEBAT."
+          ],
+          "a": 0,
+          "exp": "Fakta dapat dibuktikan kebenarannya; opini bersifat penilaian/pendapat."
+        },
+        {
+          "q": "Manakah yang termasuk pernyataan fakta?",
+          "opts": [
+            "Candi Borobudur merupakan warisan dunia UNESCO.",
+            "Borobudur adalah candi terindah di Nusantara.",
+            "Candi Borobudur merupakan warisan dunia UNESCO.",
+            "BOROBUDUR ADALAH CANDI TERINDAH DI NUSANTARA."
+          ],
+          "a": 0,
+          "exp": "Fakta dapat dibuktikan kebenarannya; opini bersifat penilaian/pendapat."
+        },
+        {
+          "q": "Manakah yang termasuk pernyataan fakta?",
+          "opts": [
+            "Jumlah provinsi di Indonesia saat ini berjumlah lebih dari 30.",
+            "Provinsi di Indonesia seharusnya ditambah lagi.",
+            "Jumlah provinsi pada Indonesia saat ini berjumlah lebih dari 30.",
+            "PROVINSI DI INDONESIA SEHARUSNYA DITAMBAH LAGI."
+          ],
+          "a": 0,
+          "exp": "Fakta dapat dibuktikan kebenarannya; opini bersifat penilaian/pendapat."
+        },
+        {
+          "q": "Unsur penting dalam teks iklan yang baik adalah ...",
+          "opts": [
+            "ajakan/penawaran, informasi produk, dan kejelasan kontak",
+            "Bahasa bertele-tele agar menarik",
+            "Kalimat pasif yang panjang",
+            "Menghindari gambar dan slogan"
+          ],
+          "a": 0,
+          "exp": "Iklan harus memuat ajakan/penawaran, informasi produk/jasa, kelebihan, dan kontak."
+        },
+        {
+          "q": "Kalimat slogan yang tepat adalah ...",
+          "opts": [
+            "Bersih itu sehat!",
+            "Jangan membuang sampah sembarangan jika tidak mau sakit perut nanti!",
+            "Kebersihan mungkin penting bagi sebagian orang.",
+            "Ayo lah bersihkan yaa kadang-kadang."
+          ],
+          "a": 0,
+          "exp": "Slogan singkat, padat, mudah diingat, dan persuasif."
+        },
+        {
+          "q": "Struktur surat dinas yang benar adalah ...",
+          "opts": [
+            "Kop surat, nomor/tanggal, perihal, lampiran (bila ada), salam pembuka, isi, penutup, tanda tangan",
+            "Nomor, salam penutup, isi, kop surat, tanda tangan",
+            "Kop surat, tanda tangan, isi, salam pembuka",
+            "Isi, salam, tanda tangan, kop surat"
+          ],
+          "a": 0,
+          "exp": "Surat dinas memiliki sistematika baku mulai dari kop hingga tanda tangan pejabat."
+        },
+        {
+          "q": "Informasi yang termasuk bagian 'isi' pada pengumuman adalah ...",
+          "opts": [
+            "waktu, tempat, kegiatan",
+            "kop pengumuman",
+            "nama lembaga",
+            "tanda tangan penanggung jawab"
+          ],
+          "a": 0,
+          "exp": "Isi pengumuman memuat inti informasi: apa, kapan, di mana."
+        },
+        {
+          "q": "Kalimat persuasif yang tepat adalah ...",
+          "opts": [
+            "Mari kurangi penggunaan plastik sekali pakai demi lingkungan yang lebih bersih.",
+            "Plastik sekali pakai kadang digunakan orang.",
+            "Plastik itu ada di mana-mana.",
+            "Kita memakai plastik setiap hari."
+          ],
+          "a": 0,
+          "exp": "Kalimat persuasif mengandung ajakan yang sopan dan jelas."
+        },
+        {
+          "q": "Kata sapaan yang tepat dalam surat resmi adalah ...",
+          "opts": [
+            "Yth. Bapak/Ibu",
+            "Hai bro",
+            "Gaes",
+            "Woy"
+          ],
+          "a": 0,
+          "exp": "Gunakan sapaan formal seperti 'Yth.' dalam surat resmi."
+        },
+        {
+          "q": "Kalimat efektif untuk isi undangan rapat adalah ...",
+          "opts": [
+            "Rapat dilaksanakan pada Senin, 9 September 2025, pukul 09.00 WIB di Ruang OSIS.",
+            "Kami mengundang ya nanti rapat kira-kira hari Senin jam 9-an di ruangan OSIS.",
+            "Mohon untuk pada hadir rapat OSIS ya.",
+            "Rapat yang akan dilaksanakan yaitu pada hari Senin akan dilaksanakan."
+          ],
+          "a": 0,
+          "exp": "Informasi harus jelas: hari/tanggal, waktu, tempat."
+        },
+        {
+          "q": "Bagian penutup pidato biasanya berisi ...",
+          "opts": [
+            "ucapan terima kasih dan permohonan maaf",
+            "data statistik",
+            "daftar pustaka",
+            "kata pengantar"
+          ],
+          "a": 0,
+          "exp": "Penutup memuat apresiasi dan harapan serta salam penutup."
+        },
+        {
+          "q": "Ciri teks prosedur adalah ...",
+          "opts": [
+            "memuat tujuan dan langkah-langkah berurutan",
+            "menyajikan konflik dan penyelesaian",
+            "menguraikan latar dan tokoh",
+            "berisi ungkapan perasaan penulis"
+          ],
+          "a": 0,
+          "exp": "Teks prosedur menjelaskan cara melakukan sesuatu."
+        },
+        {
+          "q": "Kalimat perintah yang santun adalah ...",
+          "opts": [
+            "Tolong matikan lampu sebelum keluar kelas.",
+            "Matikan lampu!",
+            "Lampunya kok belum dimatikan sih?",
+            "Kamu kenapa ga matiin lampu?"
+          ],
+          "a": 0,
+          "exp": "Gunakan penanda kesantunan seperti 'tolong', 'silakan'."
+        },
+        {
+          "q": "Ungkapan 'laut wajahnya tenang' merupakan majas ...",
+          "opts": [
+            "metafora",
+            "personifikasi",
+            "hiperbola",
+            "litotes"
+          ],
+          "a": 0,
+          "exp": "Metafora membandingkan dua hal tanpa kata pembanding."
+        },
+        {
+          "q": "Kalimat 'angin berbisik di sela daun' menggunakan majas ...",
+          "opts": [
+            "personifikasi",
+            "metafora",
+            "sinekdoke",
+            "simile"
+          ],
+          "a": 0,
+          "exp": "Personifikasi memberi sifat manusia pada benda mati."
+        },
+        {
+          "q": "Diksi yang tepat untuk menggantikan kata 'jelek' dalam teks ilmiah adalah ...",
+          "opts": [
+            "kurang baik",
+            "jeleeeek",
+            "parah banget",
+            "busuk"
+          ],
+          "a": 0,
+          "exp": "Teks ilmiah memakai pilihan kata baku dan formal."
+        },
+        {
+          "q": "Rima yang sama pada akhir baris disebut ...",
+          "opts": [
+            "rima akhir",
+            "rima awal",
+            "asonansi",
+            "aliterasi"
+          ],
+          "a": 0,
+          "exp": "Rima akhir: persamaan bunyi pada akhir baris puisi."
+        },
+        {
+          "q": "Ciri pantun yang benar adalah ...",
+          "opts": [
+            "bersajak a-b-a-b, 4 baris tiap bait, baris 1–2 sampiran, 3–4 isi",
+            "bersajak a-a-a-a, 8 baris, semua isi",
+            "bersajak bebas, 3 baris, semua sampiran",
+            "bersajak a-b-b-a, 2 baris, hanya isi"
+          ],
+          "a": 0,
+          "exp": "Pantun memiliki pola khas dan jumlah baris serta suku kata tertentu."
+        },
+        {
+          "q": "Isi puisi 'Aku' Chairil Anwar yang dominan adalah ...",
+          "opts": [
+            "semangat perjuangan dan eksistensi diri",
+            "kisah kepahlawanan sejarah",
+            "teknik menulis surat",
+            "penjelasan ilmiah"
+          ],
+          "a": 0,
+          "exp": "Puisi 'Aku' menonjolkan tekad dan perlawanan."
+        },
+        {
+          "q": "Kalimat yang mengandung majas hiperbola adalah ...",
+          "opts": [
+            "Tangisnya menggelegar membelah malam.",
+            "Ia berjalan seperti kura-kura.",
+            "Hatinya sekeras batu.",
+            "Air itu jernih seperti kaca."
+          ],
+          "a": 0,
+          "exp": "Hiperbola adalah gaya bahasa berlebihan."
+        },
+        {
+          "q": "Makna konotatif kata 'merah' pada frasa 'lampu merah' adalah ...",
+          "opts": [
+            "berhenti",
+            "bahaya",
+            "marah",
+            "warna murni"
+          ],
+          "a": 0,
+          "exp": "Dalam konteks lalu lintas, lampu merah bermakna 'berhenti'."
+        },
+        {
+          "q": "Kata baku untuk 'karir' adalah ...",
+          "opts": [
+            "karier",
+            "karir",
+            "carrier",
+            "kariernya"
+          ],
+          "a": 0,
+          "exp": "Bentuk baku menurut KBBI: 'karier'."
+        },
+        {
+          "q": "Kalimat yang tepat sebagai amanat sebuah fabel adalah ...",
+          "opts": [
+            "Jangan sombong karena kelebihanmu bisa menjadi kelemahanmu.",
+            "Kelinci itu cepat.",
+            "Kura-kura hewan lambat.",
+            "Cerita ini tentang lomba lari."
+          ],
+          "a": 0,
+          "exp": "Amanat berisi pesan/nasihat yang dapat diambil pembaca."
+        },
+        {
+          "q": "Ringkaslah informasi utama paragraf berikut!\nTeknologi finansial memudahkan transaksi non-tunai. Namun, keamanan data harus dijaga agar pengguna merasa terlindungi.\nRingkasan paling tepat adalah ...",
+          "opts": [
+            "Teknologi finansial memudahkan transaksi non-tunai.",
+            "Paragraf membahas banyak hal tanpa fokus.",
+            "Penulis menolak semua gagasan.",
+            "Tidak ada informasi penting dalam paragraf."
+          ],
+          "a": 0,
+          "exp": "Ringkasan memuat inti informasi dengan kalimat lebih padat."
+        },
+        {
+          "q": "Ringkaslah informasi utama paragraf berikut!\nVegetasi mangrove berperan menahan abrasi. Rehabilitasi kawasan pesisir perlu didorong untuk menjaga ekosistem.\nRingkasan paling tepat adalah ...",
+          "opts": [
+            "Vegetasi mangrove berperan menahan abrasi.",
+            "Paragraf membahas banyak hal tanpa fokus.",
+            "Penulis menolak semua gagasan.",
+            "Tidak ada informasi penting dalam paragraf."
+          ],
+          "a": 0,
+          "exp": "Ringkasan memuat inti informasi dengan kalimat lebih padat."
+        },
+        {
+          "q": "Ringkaslah informasi utama paragraf berikut!\nOlahraga teratur meningkatkan kebugaran. Disiplin dan pola makan seimbang menjadi kunci keberhasilan.\nRingkasan paling tepat adalah ...",
+          "opts": [
+            "Olahraga teratur meningkatkan kebugaran.",
+            "Paragraf membahas banyak hal tanpa fokus.",
+            "Penulis menolak semua gagasan.",
+            "Tidak ada informasi penting dalam paragraf."
+          ],
+          "a": 0,
+          "exp": "Ringkasan memuat inti informasi dengan kalimat lebih padat."
+        },
+        {
+          "q": "Ringkaslah informasi utama paragraf berikut!\nPerpustakaan digital memperluas akses bacaan. Literasi informasi penting agar pengguna mampu menilai keandalan sumber.\nRingkasan paling tepat adalah ...",
+          "opts": [
+            "Perpustakaan digital memperluas akses bacaan.",
+            "Paragraf membahas banyak hal tanpa fokus.",
+            "Penulis menolak semua gagasan.",
+            "Tidak ada informasi penting dalam paragraf."
+          ],
+          "a": 0,
+          "exp": "Ringkasan memuat inti informasi dengan kalimat lebih padat."
+        },
+        {
+          "q": "Ringkaslah informasi utama paragraf berikut!\nUrban farming membantu pemenuhan sayuran di kota. Keterlibatan warga menentukan keberlangsungan program.\nRingkasan paling tepat adalah ...",
+          "opts": [
+            "Urban farming membantu pemenuhan sayuran di kota.",
+            "Paragraf membahas banyak hal tanpa fokus.",
+            "Penulis menolak semua gagasan.",
+            "Tidak ada informasi penting dalam paragraf."
+          ],
+          "a": 0,
+          "exp": "Ringkasan memuat inti informasi dengan kalimat lebih padat."
+        },
+        {
+          "q": "Lengkapilah kalimat berikut dengan konjungsi yang tepat!\nIa rajin belajar, ... ia berhasil meraih juara kelas.",
+          "opts": [
+            "sehingga",
+            "dan",
+            "atau",
+            "karena"
+          ],
+          "a": 0,
+          "exp": "Pilih konjungsi antarkalimat yang paling sesuai makna hubungan."
+        },
+        {
+          "q": "Lengkapilah kalimat berikut dengan konjungsi yang tepat!\nHarga cabai naik, ... permintaan tetap tinggi.",
+          "opts": [
+            "namun",
+            "dan",
+            "atau",
+            "karena"
+          ],
+          "a": 0,
+          "exp": "Pilih konjungsi antarkalimat yang paling sesuai makna hubungan."
+        },
+        {
+          "q": "Lengkapilah kalimat berikut dengan konjungsi yang tepat!\nCuaca cerah, ... pertandingan tetap dilaksanakan.",
+          "opts": [
+            "maka",
+            "dan",
+            "atau",
+            "karena"
+          ],
+          "a": 0,
+          "exp": "Pilih konjungsi antarkalimat yang paling sesuai makna hubungan."
+        },
+        {
+          "q": "Lengkapilah kalimat berikut dengan konjungsi yang tepat!\nDia tidak belajar, ... nilainya tetap bagus.",
+          "opts": [
+            "tetapi",
+            "dan",
+            "atau",
+            "karena"
+          ],
+          "a": 0,
+          "exp": "Pilih konjungsi antarkalimat yang paling sesuai makna hubungan."
+        },
+        {
+          "q": "Lengkapilah kalimat berikut dengan konjungsi yang tepat!\nKami sudah berlatih, ... hasilnya memuaskan.",
+          "opts": [
+            "hingga",
+            "dan",
+            "atau",
+            "karena"
+          ],
+          "a": 0,
+          "exp": "Pilih konjungsi antarkalimat yang paling sesuai makna hubungan."
+        },
+        {
+          "q": "Sinonim yang tepat untuk kata 'adil' adalah ...",
+          "opts": [
+            "berpihak",
+            "netral",
+            "seimbang",
+            "bijak"
+          ],
+          "a": 3,
+          "exp": "Sinonim adalah kata yang memiliki makna mirip/sepadan."
+        },
+        {
+          "q": "Sinonim yang tepat untuk kata 'konflik' adalah ...",
+          "opts": [
+            "pertentangan",
+            "pertemanan",
+            "permainan",
+            "perubahan"
+          ],
+          "a": 0,
+          "exp": "Sinonim adalah kata yang memiliki makna mirip/sepadan."
+        },
+        {
+          "q": "Sinonim yang tepat untuk kata 'mandiri' adalah ...",
+          "opts": [
+            "bergantung",
+            "otonom",
+            "malas",
+            "santai"
+          ],
+          "a": 1,
+          "exp": "Sinonim adalah kata yang memiliki makna mirip/sepadan."
+        },
+        {
+          "q": "Sinonim yang tepat untuk kata 'relevan' adalah ...",
+          "opts": [
+            "terkait",
+            "jauh",
+            "longgar",
+            "lebih"
+          ],
+          "a": 0,
+          "exp": "Sinonim adalah kata yang memiliki makna mirip/sepadan."
+        },
+        {
+          "q": "Sinonim yang tepat untuk kata 'prioritas' adalah ...",
+          "opts": [
+            "pilihan",
+            "utama",
+            "cadangan",
+            "sekunder"
+          ],
+          "a": 1,
+          "exp": "Sinonim adalah kata yang memiliki makna mirip/sepadan."
+        },
+        {
+          "q": "Antonim yang tepat dari kata 'optimistis' adalah ...",
+          "opts": [
+            "pesimistis",
+            "keras",
+            "ramah",
+            "ceria"
+          ],
+          "a": 0,
+          "exp": "Antonim adalah lawan makna."
+        },
+        {
+          "q": "Antonim yang tepat dari kata 'mahal' adalah ...",
+          "opts": [
+            "murah",
+            "gratis",
+            "berat",
+            "tinggi"
+          ],
+          "a": 0,
+          "exp": "Antonim adalah lawan makna."
+        },
+        {
+          "q": "Antonim yang tepat dari kata 'sementara' adalah ...",
+          "opts": [
+            "permanen",
+            "sebentar",
+            "lama",
+            "singkat"
+          ],
+          "a": 0,
+          "exp": "Antonim adalah lawan makna."
+        },
+        {
+          "q": "Antonim yang tepat dari kata 'rumit' adalah ...",
+          "opts": [
+            "sederhana",
+            "sulit",
+            "aneh",
+            "baru"
+          ],
+          "a": 0,
+          "exp": "Antonim adalah lawan makna."
+        },
+        {
+          "q": "Antonim yang tepat dari kata 'tepat' adalah ...",
+          "opts": [
+            "keliru",
+            "pas",
+            "benar",
+            "cermat"
+          ],
+          "a": 0,
+          "exp": "Antonim adalah lawan makna."
+        }
+      ]
+    },
+    "Bahasa Inggris • Prediksi 2025": {
+      "tag": "Bahasa Inggris",
+      "qs": [
+        {
+          "q": "Rani usually ___ (go) to school by bicycle.",
+          "opts": [
+            "goes",
+            "go",
+            "is going",
+            "went"
+          ],
+          "a": 0,
+          "exp": "Simple present: third person singular takes -s → goes."
+        },
+        {
+          "q": "Listen! The birds ___ (sing) in the garden.",
+          "opts": [
+            "are singing",
+            "sing",
+            "sang",
+            "will sing"
+          ],
+          "a": 0,
+          "exp": "Action happening now → present continuous: are singing."
+        },
+        {
+          "q": "My father ___ (buy) this laptop last year.",
+          "opts": [
+            "bought",
+            "buys",
+            "is buying",
+            "has bought"
+          ],
+          "a": 0,
+          "exp": "Past time signal 'last year' → simple past: bought."
+        },
+        {
+          "q": "I think it ___ (rain) tomorrow.",
+          "opts": [
+            "will rain",
+            "rains",
+            "is raining",
+            "rained"
+          ],
+          "a": 0,
+          "exp": "Prediction → will rain."
+        },
+        {
+          "q": "She ___ (not/like) spicy food.",
+          "opts": [
+            "doesn't like",
+            "don't like",
+            "isn't like",
+            "didn't like"
+          ],
+          "a": 0,
+          "exp": "Negative simple present (she) → doesn't like."
+        },
+        {
+          "q": "Right now, they ___ (play) badminton.",
+          "opts": [
+            "are playing",
+            "play",
+            "played",
+            "will play"
+          ],
+          "a": 0,
+          "exp": "Now → present continuous: are playing."
+        },
+        {
+          "q": "We ___ (be) happy yesterday.",
+          "opts": [
+            "were",
+            "are",
+            "was",
+            "will be"
+          ],
+          "a": 0,
+          "exp": "Past plural of be → were."
+        },
+        {
+          "q": "The sun ___ (rise) in the east.",
+          "opts": [
+            "rises",
+            "is rising",
+            "rose",
+            "will rise"
+          ],
+          "a": 0,
+          "exp": "General fact → simple present: rises."
+        },
+        {
+          "q": "Dina ___ (finish) her homework two hours ago.",
+          "opts": [
+            "finished",
+            "finishes",
+            "is finishing",
+            "has finished"
+          ],
+          "a": 0,
+          "exp": "Signal 'ago' → simple past: finished."
+        },
+        {
+          "q": "Be quiet! The baby ___ (sleep).",
+          "opts": [
+            "is sleeping",
+            "sleeps",
+            "slept",
+            "will sleep"
+          ],
+          "a": 0,
+          "exp": "At the moment → is sleeping."
+        },
+        {
+          "q": "Next week, we ___ (visit) the museum.",
+          "opts": [
+            "will visit",
+            "visited",
+            "visit",
+            "are visit"
+          ],
+          "a": 0,
+          "exp": "Plan/prediction → will visit."
+        },
+        {
+          "q": "He ___ (not/come) to the party last night.",
+          "opts": [
+            "didn't come",
+            "doesn't come",
+            "isn't coming",
+            "hasn't come"
+          ],
+          "a": 0,
+          "exp": "Past negative → didn't come."
+        },
+        {
+          "q": "Water ___ (boil) at 100°C.",
+          "opts": [
+            "boils",
+            "is boiling",
+            "boil",
+            "boiled"
+          ],
+          "a": 0,
+          "exp": "Scientific fact → simple present: boils."
+        },
+        {
+          "q": "Look! The cat ___ (chase) the mouse.",
+          "opts": [
+            "is chasing",
+            "chases",
+            "chased",
+            "will chase"
+          ],
+          "a": 0,
+          "exp": "Now → present continuous: is chasing."
+        },
+        {
+          "q": "They ___ (live) in Jakarta since 2019.",
+          "opts": [
+            "have lived",
+            "lived",
+            "live",
+            "are living"
+          ],
+          "a": 0,
+          "exp": "Since + time point → present perfect: have lived."
+        },
+        {
+          "q": "I ___ (never/see) that movie before.",
+          "opts": [
+            "have never seen",
+            "never saw",
+            "am never seeing",
+            "never see"
+          ],
+          "a": 0,
+          "exp": "Experience until now → present perfect."
+        },
+        {
+          "q": "By 8 p.m., she ___ (finish) her assignment.",
+          "opts": [
+            "will have finished",
+            "finished",
+            "has finished",
+            "was finishing"
+          ],
+          "a": 0,
+          "exp": "By + future time → future perfect."
+        },
+        {
+          "q": "When I was a child, I ___ (play) in this field.",
+          "opts": [
+            "used to play",
+            "use to play",
+            "am used to play",
+            "was play"
+          ],
+          "a": 0,
+          "exp": "Past habit → used to play."
+        },
+        {
+          "q": "The train ___ (arrive) before we reached the station.",
+          "opts": [
+            "had arrived",
+            "arrived",
+            "has arrived",
+            "was arriving"
+          ],
+          "a": 0,
+          "exp": "Past perfect to show earlier past action → had arrived."
+        },
+        {
+          "q": "She ___ (study) for two hours when I called her.",
+          "opts": [
+            "had been studying",
+            "was studying",
+            "studied",
+            "has been studying"
+          ],
+          "a": 0,
+          "exp": "Duration up to past point → past perfect continuous."
+        },
+        {
+          "q": "The synonym of 'purchase' is ...",
+          "opts": [
+            "buy",
+            "sell",
+            "borrow",
+            "lend"
+          ],
+          "a": 0,
+          "exp": "Purchase = buy."
+        },
+        {
+          "q": "The antonym of 'noisy' is ...",
+          "opts": [
+            "quiet",
+            "crowded",
+            "loud",
+            "busy"
+          ],
+          "a": 0,
+          "exp": "Antonym of noisy: quiet."
+        },
+        {
+          "q": "Which word best completes the collocation: 'make a ___'?",
+          "opts": [
+            "decision",
+            "homework",
+            "mistake",
+            "house"
+          ],
+          "a": 0,
+          "exp": "Common collocation: make a decision."
+        },
+        {
+          "q": "Choose the synonym of 'assist'.",
+          "opts": [
+            "help",
+            "hinder",
+            "delay",
+            "avoid"
+          ],
+          "a": 0,
+          "exp": "Assist = help."
+        },
+        {
+          "q": "The antonym of 'ancient' is ...",
+          "opts": [
+            "modern",
+            "old",
+            "historic",
+            "traditional"
+          ],
+          "a": 0,
+          "exp": "Ancient ↔ modern."
+        },
+        {
+          "q": "Which is correct: 'strong ___'?",
+          "opts": [
+            "coffee",
+            "rain",
+            "light",
+            "wind"
+          ],
+          "a": 0,
+          "exp": "Common collocation: strong coffee."
+        },
+        {
+          "q": "'Rapid' is closest in meaning to ...",
+          "opts": [
+            "fast",
+            "slow",
+            "late",
+            "small"
+          ],
+          "a": 0,
+          "exp": "Rapid = fast."
+        },
+        {
+          "q": "The antonym of 'victory' is ...",
+          "opts": [
+            "defeat",
+            "win",
+            "success",
+            "reward"
+          ],
+          "a": 0,
+          "exp": "Victory ↔ defeat."
+        },
+        {
+          "q": "Choose the word that fits: 'take ___ of' (meaning: use).",
+          "opts": [
+            "advantage",
+            "attention",
+            "place",
+            "care"
+          ],
+          "a": 0,
+          "exp": "Take advantage of = use."
+        },
+        {
+          "q": "'Reliable' means ...",
+          "opts": [
+            "can be trusted",
+            "easy to break",
+            "very cheap",
+            "hard to find"
+          ],
+          "a": 0,
+          "exp": "Reliable = can be trusted."
+        },
+        {
+          "q": "The synonym of 'begin' is ...",
+          "opts": [
+            "start",
+            "finish",
+            "end",
+            "close"
+          ],
+          "a": 0,
+          "exp": "Begin = start."
+        },
+        {
+          "q": "Which phrase is natural: 'do the ___'?",
+          "opts": [
+            "dishes",
+            "job",
+            "party",
+            "sleep"
+          ],
+          "a": 0,
+          "exp": "Do the dishes is a fixed phrase."
+        },
+        {
+          "q": "The antonym of 'scarce' is ...",
+          "opts": [
+            "abundant",
+            "rare",
+            "tiny",
+            "absent"
+          ],
+          "a": 0,
+          "exp": "Scarce ↔ abundant."
+        },
+        {
+          "q": "'Improve' is closest in meaning to ...",
+          "opts": [
+            "enhance",
+            "reduce",
+            "ignore",
+            "refuse"
+          ],
+          "a": 0,
+          "exp": "Improve = enhance."
+        },
+        {
+          "q": "Choose the correct collocation: 'heavy ___'.",
+          "opts": [
+            "traffic",
+            "tea",
+            "music",
+            "bread"
+          ],
+          "a": 0,
+          "exp": "Heavy traffic is common."
+        },
+        {
+          "q": "A: Would you like some tea?\nB: ...",
+          "opts": [
+            "Yes, please.",
+            "No, I don't.",
+            "I am yes.",
+            "Tea is hot."
+          ],
+          "a": 0,
+          "exp": "Polite acceptance: Yes, please."
+        },
+        {
+          "q": "A: I'm sorry I'm late.\nB: ...",
+          "opts": [
+            "It's okay.",
+            "You are late.",
+            "Go now.",
+            "I late too."
+          ],
+          "a": 0,
+          "exp": "Accepting apology: It's okay."
+        },
+        {
+          "q": "A: Congratulations on your achievement!\nB: ...",
+          "opts": [
+            "Thank you.",
+            "I don't think so.",
+            "Never mind.",
+            "Go ahead."
+          ],
+          "a": 0,
+          "exp": "Respond to congratulations: Thank you."
+        },
+        {
+          "q": "A: May I borrow your pen?\nB: ...",
+          "opts": [
+            "Sure, here you are.",
+            "You mayn't.",
+            "Pen is blue.",
+            "I borrowing."
+          ],
+          "a": 0,
+          "exp": "Giving permission: Sure, here you are."
+        },
+        {
+          "q": "A: What do you think of my new haircut?\nB: ...",
+          "opts": [
+            "It looks great!",
+            "I think cut.",
+            "You is good.",
+            "No hair."
+          ],
+          "a": 0,
+          "exp": "Compliment: It looks great!"
+        },
+        {
+          "q": "A: Could you open the window?\nB: ...",
+          "opts": [
+            "No problem.",
+            "You can.",
+            "Window open.",
+            "Not I."
+          ],
+          "a": 0,
+          "exp": "Agreeing to a request: No problem."
+        },
+        {
+          "q": "A: I'm not feeling well today.\nB: ...",
+          "opts": [
+            "Get well soon.",
+            "Why?",
+            "You are sick.",
+            "I don't care."
+          ],
+          "a": 0,
+          "exp": "Expressing sympathy: Get well soon."
+        },
+        {
+          "q": "A: Thank you for your help.\nB: ...",
+          "opts": [
+            "You're welcome.",
+            "No, thanks.",
+            "I don't help.",
+            "Help me."
+          ],
+          "a": 0,
+          "exp": "Responding to thanks: You're welcome."
+        },
+        {
+          "q": "A: Let's go to the library.\nB: ...",
+          "opts": [
+            "Good idea.",
+            "Go library.",
+            "You go.",
+            "Library big."
+          ],
+          "a": 0,
+          "exp": "Accepting suggestion: Good idea."
+        },
+        {
+          "q": "A: Excuse me, where is the post office?\nB: ...",
+          "opts": [
+            "It's on Jalan Merdeka.",
+            "Post office yes.",
+            "Go straight.",
+            "There post."
+          ],
+          "a": 0,
+          "exp": "Giving directions: It's on Jalan Merdeka."
+        },
+        {
+          "q": "Read the text.\nNOTICE: Keep the door closed at all times.\nWhat should people do?",
+          "opts": [
+            "Keep the door closed.",
+            "Open the door.",
+            "Lock the door.",
+            "Paint the door."
+          ],
+          "a": 0,
+          "exp": "Identify the key information stated in the functional text."
+        },
+        {
+          "q": "Read the text.\nANNOUNCEMENT: School will be closed on Friday for a national holiday.\nWhen will the school be closed?",
+          "opts": [
+            "On Friday.",
+            "On Saturday.",
+            "Today.",
+            "Every day."
+          ],
+          "a": 0,
+          "exp": "Identify the key information stated in the functional text."
+        },
+        {
+          "q": "Read the text.\nLABEL: Store in a cool, dry place. Do not expose to sunlight.\nWhere should we store the product?",
+          "opts": [
+            "In a cool, dry place.",
+            "In hot sunlight.",
+            "In the bathroom.",
+            "Near the stove."
+          ],
+          "a": 0,
+          "exp": "Identify the key information stated in the functional text."
+        },
+        {
+          "q": "Read the text.\nWARNING: Wet floor. Walk carefully.\nWhy should we walk carefully?",
+          "opts": [
+            "The floor is wet.",
+            "It is dark.",
+            "There are stairs.",
+            "It is noisy."
+          ],
+          "a": 0,
+          "exp": "Identify the key information stated in the functional text."
+        },
+        {
+          "q": "Read the text.\nPOSTER: Join the Clean-Up Day! Sunday, 7 a.m., City Park.\nWhat is the event?",
+          "opts": [
+            "Clean-Up Day.",
+            "Sports Day.",
+            "Music Festival.",
+            "Job Fair."
+          ],
+          "a": 0,
+          "exp": "Identify the key information stated in the functional text."
+        },
+        {
+          "q": "Read the text.\nNOTICE: No food or drink in the computer room.\nWhat is forbidden?",
+          "opts": [
+            "Eating or drinking.",
+            "Using a computer.",
+            "Talking.",
+            "Sitting."
+          ],
+          "a": 0,
+          "exp": "Identify the key information stated in the functional text."
+        },
+        {
+          "q": "Read the text.\nSIGN: Please queue here.\nWhat should people do?",
+          "opts": [
+            "Stand in line.",
+            "Run fast.",
+            "Sit down.",
+            "Go away."
+          ],
+          "a": 0,
+          "exp": "Identify the key information stated in the functional text."
+        },
+        {
+          "q": "Read the text.\nADVERTISEMENT: 50% discount for students. Show your ID.\nWho gets the discount?",
+          "opts": [
+            "Students.",
+            "Teachers.",
+            "Parents.",
+            "Children under 5."
+          ],
+          "a": 0,
+          "exp": "Identify the key information stated in the functional text."
+        },
+        {
+          "q": "Read the text.\nGREETING CARD: 'Happy Graduation! Wishing you success.'\nWhat is the purpose of the card?",
+          "opts": [
+            "To congratulate.",
+            "To invite.",
+            "To warn.",
+            "To complain."
+          ],
+          "a": 0,
+          "exp": "Identify the key information stated in the functional text."
+        },
+        {
+          "q": "Read the text.\nSCHEDULE: Bus to Bandung departs at 09.00, 12.00, 15.00.\nWhen does the bus depart?",
+          "opts": [
+            "09.00, 12.00, 15.00.",
+            "Every hour.",
+            "At night only.",
+            "Never."
+          ],
+          "a": 0,
+          "exp": "Identify the key information stated in the functional text."
+        },
+        {
+          "q": "Read the passage.\nRudi loves reading science books. Every Saturday, he visits the public library to borrow new books. He hopes to become a scientist one day.\nWhat does Rudi usually do on Saturdays?",
+          "opts": [
+            "Visit the library.",
+            "Play football.",
+            "Go to the market.",
+            "Study at school."
+          ],
+          "a": 0,
+          "exp": "Focus on explicit information stated in the passage."
+        },
+        {
+          "q": "Read the passage.\nSita planted some chili seeds in her backyard. She waters them every morning. After two months, the plants start to produce chilies.\nWhy do the plants start to produce chilies?",
+          "opts": [
+            "They have grown for two months.",
+            "They are in the shade.",
+            "They were not watered.",
+            "They were cut down."
+          ],
+          "a": 0,
+          "exp": "Focus on explicit information stated in the passage."
+        },
+        {
+          "q": "Read the passage.\nThe school held a charity event to help flood victims. Students sold snacks and drinks. The money was donated to the victims.\nWhat was the purpose of the event?",
+          "opts": [
+            "To help flood victims.",
+            "To celebrate a birthday.",
+            "To buy new uniforms.",
+            "To build a park."
+          ],
+          "a": 0,
+          "exp": "Focus on explicit information stated in the passage."
+        },
+        {
+          "q": "Read the passage.\nBudi missed the bus this morning. He decided to walk to school. He arrived ten minutes late but promised not to be late again.\nHow did Budi get to school?",
+          "opts": [
+            "He walked.",
+            "He rode a bicycle.",
+            "He took a taxi.",
+            "He got a ride."
+          ],
+          "a": 0,
+          "exp": "Focus on explicit information stated in the passage."
+        },
+        {
+          "q": "Read the passage.\nMaya's family visited the zoo last weekend. Her favorite animals were the giraffes because they were tall and gentle.\nWhich animals did Maya like the most?",
+          "opts": [
+            "Giraffes.",
+            "Lions.",
+            "Elephants.",
+            "Monkeys."
+          ],
+          "a": 0,
+          "exp": "Focus on explicit information stated in the passage."
+        },
+        {
+          "q": "Read the passage.\nTono practices the guitar every day. He wants to join the school's music club and perform at the annual concert.\nWhat is Tono's goal?",
+          "opts": [
+            "To perform at the annual concert.",
+            "To buy a new guitar.",
+            "To teach music.",
+            "To stop practicing."
+          ],
+          "a": 0,
+          "exp": "Focus on explicit information stated in the passage."
+        },
+        {
+          "q": "Read the passage.\nLina baked cookies for her friends. She followed the recipe carefully, and the cookies tasted delicious.\nWhy did the cookies taste delicious?",
+          "opts": [
+            "She followed the recipe carefully.",
+            "She added too much salt.",
+            "She burned them.",
+            "She forgot the sugar."
+          ],
+          "a": 0,
+          "exp": "Focus on explicit information stated in the passage."
+        },
+        {
+          "q": "Read the passage.\nThe weather forecast says it will rain this afternoon. Doni brings an umbrella to school to stay dry.\nWhy does Doni bring an umbrella?",
+          "opts": [
+            "It may rain.",
+            "It is very hot.",
+            "It is windy.",
+            "It is snowing."
+          ],
+          "a": 0,
+          "exp": "Focus on explicit information stated in the passage."
+        },
+        {
+          "q": "Read the passage.\nA new library opened near Andi's house. Now he can read more books without going far.\nWhat is the benefit for Andi?",
+          "opts": [
+            "He can read more books easily.",
+            "He can play games there.",
+            "He can buy cheap books.",
+            "He can meet celebrities."
+          ],
+          "a": 0,
+          "exp": "Focus on explicit information stated in the passage."
+        },
+        {
+          "q": "Read the passage.\nSanti recycles plastic bottles and paper. She believes small actions can help protect the environment.\nWhat does Santi do to help the environment?",
+          "opts": [
+            "Recycle bottles and paper.",
+            "Plant trees only.",
+            "Drive a car.",
+            "Use more plastic."
+          ],
+          "a": 0,
+          "exp": "Focus on explicit information stated in the passage."
+        },
+        {
+          "q": "Find the incorrect part: She don't like apples very much.",
+          "opts": [
+            "don't",
+            "like",
+            "apples",
+            "much"
+          ],
+          "a": 0,
+          "exp": "Third person singular → doesn't like."
+        },
+        {
+          "q": "Find the incorrect part: They was playing football yesterday.",
+          "opts": [
+            "was",
+            "playing",
+            "football",
+            "yesterday"
+          ],
+          "a": 0,
+          "exp": "Plural subject → were playing."
+        },
+        {
+          "q": "Find the incorrect part: He is study in the library now.",
+          "opts": [
+            "is",
+            "study",
+            "in",
+            "now"
+          ],
+          "a": 1,
+          "exp": "Be + V-ing → is studying."
+        },
+        {
+          "q": "Find the incorrect part: My brother can to swim fast.",
+          "opts": [
+            "can",
+            "to",
+            "swim",
+            "fast"
+          ],
+          "a": 1,
+          "exp": "Modal + base verb → can swim (no 'to')."
+        },
+        {
+          "q": "Find the incorrect part: There is many students in the class.",
+          "opts": [
+            "is",
+            "many",
+            "students",
+            "class"
+          ],
+          "a": 0,
+          "exp": "'There are' for plural countable."
+        },
+        {
+          "q": "Find the incorrect part: She didn't went to school.",
+          "opts": [
+            "didn't",
+            "went",
+            "to",
+            "school"
+          ],
+          "a": 1,
+          "exp": "After 'didn't' use base verb → didn't go."
+        },
+        {
+          "q": "Find the incorrect part: He has buy a new phone.",
+          "opts": [
+            "has",
+            "buy",
+            "a",
+            "new"
+          ],
+          "a": 1,
+          "exp": "Present perfect uses past participle → has bought."
+        },
+        {
+          "q": "Find the incorrect part: The news are very surprising.",
+          "opts": [
+            "news",
+            "are",
+            "very",
+            "surprising"
+          ],
+          "a": 1,
+          "exp": "'News' is uncountable singular → is."
+        },
+        {
+          "q": "Find the incorrect part: Rani is the most tallest student.",
+          "opts": [
+            "is",
+            "most",
+            "tallest",
+            "student"
+          ],
+          "a": 1,
+          "exp": "Don't double comparative/superlative → the tallest."
+        },
+        {
+          "q": "Find the incorrect part: Let's we go to the park.",
+          "opts": [
+            "Let's",
+            "we",
+            "go",
+            "park"
+          ],
+          "a": 1,
+          "exp": "Use 'Let's go...', not 'Let's we go'."
+        },
+        {
+          "q": "Passive: 'They build the bridge every year.' → The bridge ___ every year.",
+          "opts": [
+            "is built",
+            "was built",
+            "has built",
+            "is building"
+          ],
+          "a": 0,
+          "exp": "Simple present passive: is built."
+        },
+        {
+          "q": "Passive: 'The chef cooked the meal.' → The meal ___ by the chef.",
+          "opts": [
+            "was cooked",
+            "is cooked",
+            "were cooked",
+            "has cooked"
+          ],
+          "a": 0,
+          "exp": "Simple past passive: was cooked."
+        },
+        {
+          "q": "Conditional type 1: If it ___ (rain), we will stay at home.",
+          "opts": [
+            "rains",
+            "rained",
+            "is raining",
+            "will rain"
+          ],
+          "a": 0,
+          "exp": "Type 1: If + present, will + V1."
+        },
+        {
+          "q": "Conditional type 2: If I ___ (have) more time, I would read more books.",
+          "opts": [
+            "had",
+            "have",
+            "will have",
+            "has"
+          ],
+          "a": 0,
+          "exp": "Type 2: If + past, would + V1."
+        },
+        {
+          "q": "Reported speech: He said, 'I am tired.' → He said that he ___ tired.",
+          "opts": [
+            "was",
+            "is",
+            "were",
+            "has been"
+          ],
+          "a": 0,
+          "exp": "Backshift: am → was."
+        },
+        {
+          "q": "Reported speech: She said, 'I will call you.' → She said that she ___ me.",
+          "opts": [
+            "would call",
+            "will call",
+            "called",
+            "had call"
+          ],
+          "a": 0,
+          "exp": "Will → would in reported speech."
+        },
+        {
+          "q": "Relative clause: The girl ___ won the prize is my sister.",
+          "opts": [
+            "who",
+            "which",
+            "where",
+            "whom"
+          ],
+          "a": 0,
+          "exp": "For people as subject → who."
+        },
+        {
+          "q": "Relative clause: This is the place ___ we met.",
+          "opts": [
+            "where",
+            "who",
+            "whom",
+            "which"
+          ],
+          "a": 0,
+          "exp": "Place → where."
+        },
+        {
+          "q": "Question tag: You are coming, ___?",
+          "opts": [
+            "aren't you",
+            "are you",
+            "do you",
+            "don't you"
+          ],
+          "a": 0,
+          "exp": "Affirmative statement → negative tag: aren't you?"
+        },
+        {
+          "q": "Question tag: She doesn't like tea, ___?",
+          "opts": [
+            "does she",
+            "doesn't she",
+            "is she",
+            "isn't she"
+          ],
+          "a": 0,
+          "exp": "Negative statement → positive tag: does she?"
+        },
+        {
+          "q": "We need ___ umbrella because it's raining.",
+          "opts": [
+            "an",
+            "a",
+            "the",
+            "—"
+          ],
+          "a": 0,
+          "exp": "Vowel sound → an umbrella."
+        },
+        {
+          "q": "___ of the students in my class are Indonesian.",
+          "opts": [
+            "Most",
+            "Much",
+            "Many",
+            "A"
+          ],
+          "a": 0,
+          "exp": "'Most of the students' is correct for majority."
+        },
+        {
+          "q": "My house is ___ than yours.",
+          "opts": [
+            "bigger",
+            "biggest",
+            "more big",
+            "as big"
+          ],
+          "a": 0,
+          "exp": "Comparative: bigger."
+        },
+        {
+          "q": "She is the ___ student in the class.",
+          "opts": [
+            "smartest",
+            "smarter",
+            "most smart",
+            "more smart"
+          ],
+          "a": 0,
+          "exp": "Superlative: the smartest."
+        },
+        {
+          "q": "The cat is hiding ___ the table.",
+          "opts": [
+            "under",
+            "on",
+            "into",
+            "across"
+          ],
+          "a": 0,
+          "exp": "Preposition of place: under."
+        },
+        {
+          "q": "This book is ___ interesting that I can't stop reading.",
+          "opts": [
+            "so",
+            "such",
+            "too",
+            "very"
+          ],
+          "a": 0,
+          "exp": "So + adjective: so interesting."
+        },
+        {
+          "q": "Could you pass ___ the salt, please?",
+          "opts": [
+            "me",
+            "to me",
+            "I",
+            "mine"
+          ],
+          "a": 0,
+          "exp": "Double object with 'pass me the salt'."
+        },
+        {
+          "q": "I prefer tea ___ coffee.",
+          "opts": [
+            "to",
+            "than",
+            "with",
+            "for"
+          ],
+          "a": 0,
+          "exp": "Prefer A to B."
+        },
+        {
+          "q": "There isn't ___ sugar left.",
+          "opts": [
+            "any",
+            "some",
+            "many",
+            "a few"
+          ],
+          "a": 0,
+          "exp": "Negative + any."
+        },
+        {
+          "q": "This is the man ___ car was stolen.",
+          "opts": [
+            "whose",
+            "who",
+            "whom",
+            "which"
+          ],
+          "a": 0,
+          "exp": "Possessive relative pronoun: whose."
+        },
+        {
+          "q": "He has lived here ___ 2018.",
+          "opts": [
+            "since",
+            "for",
+            "from",
+            "by"
+          ],
+          "a": 0,
+          "exp": "Since + point in time."
+        },
+        {
+          "q": "The movie was ___ that we watched it twice.",
+          "opts": [
+            "so good",
+            "such good",
+            "too good",
+            "very good"
+          ],
+          "a": 0,
+          "exp": "So + adjective: so good."
+        },
+        {
+          "q": "Let's ___ a photo together.",
+          "opts": [
+            "take",
+            "make",
+            "do",
+            "build"
+          ],
+          "a": 0,
+          "exp": "Take a photo is the correct collocation."
+        },
+        {
+          "q": "I look forward to ___ from you soon.",
+          "opts": [
+            "hearing",
+            "hear",
+            "to hear",
+            "heard"
+          ],
+          "a": 0,
+          "exp": "Look forward to + V-ing → hearing."
+        },
+        {
+          "q": "My phone battery is low. I need to ___ it.",
+          "opts": [
+            "charge",
+            "fill",
+            "load",
+            "top"
+          ],
+          "a": 0,
+          "exp": "Charge a battery."
+        }
+      ]
+    },
+    "IPA • Prediksi 2025": {
+      "tag": "IPA",
+      "qs": [
+        {
+          "q": "Sebuah mobil bergerak 72 km/jam. Kecepatannya dalam m/s adalah ...",
+          "opts": [
+            "20",
+            "18",
+            "25",
+            "15"
+          ],
+          "a": 0,
+          "exp": "72 km/jam = 72.000 m / 3.600 s = 20 m/s."
+        },
+        {
+          "q": "Gaya 50 N bekerja pada benda bermassa 10 kg. Percepatannya ...",
+          "opts": [
+            "5 m/s²",
+            "10 m/s²",
+            "2 m/s²",
+            "0,5 m/s²"
+          ],
+          "a": 0,
+          "exp": "F=ma → a=50/10=5 m/s²."
+        },
+        {
+          "q": "Benda 2 kg diangkat setinggi 5 m (g=10). Energi potensialnya ...",
+          "opts": [
+            "100 J",
+            "50 J",
+            "20 J",
+            "10 J"
+          ],
+          "a": 0,
+          "exp": "Ep=mgh=2×10×5=100 J."
+        },
+        {
+          "q": "Daya didefinisikan sebagai ...",
+          "opts": [
+            "usaha per waktu",
+            "gaya per waktu",
+            "energi per gaya",
+            "massa per kecepatan"
+          ],
+          "a": 0,
+          "exp": "P=W/t."
+        },
+        {
+          "q": "Satuan usaha dalam SI adalah ...",
+          "opts": [
+            "Joule (J)",
+            "Watt (W)",
+            "Newton (N)",
+            "Pascal (Pa)"
+          ],
+          "a": 0,
+          "exp": "Usaha dalam Joule."
+        },
+        {
+          "q": "Lampu 40 W menyala 3 jam. Energi yang dipakai ...",
+          "opts": [
+            "432 kJ",
+            "120 kJ",
+            "40 kJ",
+            "4,32 MJ"
+          ],
+          "a": 0,
+          "exp": "E=P×t=40×10^0×(3×3600)=432.000 J=432 kJ."
+        },
+        {
+          "q": "Bunyi tidak dapat merambat melalui ...",
+          "opts": [
+            "vakum",
+            "udara",
+            "air",
+            "besi"
+          ],
+          "a": 0,
+          "exp": "Bunyi perlu medium."
+        },
+        {
+          "q": "Gelombang yang arah rambat sejajar arah getar adalah ...",
+          "opts": [
+            "longitudinal",
+            "transversal",
+            "permukaan",
+            "mekanik"
+          ],
+          "a": 0,
+          "exp": "Contoh: gelombang bunyi."
+        },
+        {
+          "q": "Cermin yang dapat memusatkan cahaya adalah ...",
+          "opts": [
+            "cermin cekung",
+            "cermin cembung",
+            "cermin datar",
+            "kaca datar"
+          ],
+          "a": 0,
+          "exp": "Cermin cekung memfokuskan berkas sejajar."
+        },
+        {
+          "q": "Alat untuk mengukur beda potensial listrik ...",
+          "opts": [
+            "voltmeter",
+            "amperemeter",
+            "ohmmeter",
+            "avometer"
+          ],
+          "a": 0,
+          "exp": "Kh khusus: voltmeter untuk tegangan."
+        },
+        {
+          "q": "Hukum Ohm dinyatakan dengan ...",
+          "opts": [
+            "V=I·R",
+            "I=V·R",
+            "R=V+I",
+            "P=I/R"
+          ],
+          "a": 0,
+          "exp": "Tegangan sebanding arus, V=IR."
+        },
+        {
+          "q": "Jika R=5 Ω dan I=2 A, maka V= ...",
+          "opts": [
+            "10 V",
+            "2,5 V",
+            "7 V",
+            "0,4 V"
+          ],
+          "a": 0,
+          "exp": "V=IR=5×2=10 V."
+        },
+        {
+          "q": "Sifat bayangan cermin datar adalah ...",
+          "opts": [
+            "maya, tegak, sama besar",
+            "nyata, terbalik, diperkecil",
+            "nyata, tegak, diperbesar",
+            "maya, terbalik, diperkecil"
+          ],
+          "a": 0,
+          "exp": "Cermin datar menghasilkan bayangan maya-tegak-sama besar."
+        },
+        {
+          "q": "Lensa cembung berfungsi untuk ...",
+          "opts": [
+            "mengumpulkan cahaya",
+            "menyebarkan cahaya",
+            "memantulkan cahaya",
+            "menyerap cahaya"
+          ],
+          "a": 0,
+          "exp": "Lensa cembung konvergen."
+        },
+        {
+          "q": "Frekuensi berbanding ... dengan periode.",
+          "opts": [
+            "terbalik",
+            "lurus",
+            "sama",
+            "kuadrat"
+          ],
+          "a": 0,
+          "exp": "f = 1/T."
+        },
+        {
+          "q": "Satuan frekuensi adalah ...",
+          "opts": [
+            "Hertz",
+            "Newton",
+            "Pascal",
+            "Joule"
+          ],
+          "a": 0,
+          "exp": "Hz = s⁻¹."
+        },
+        {
+          "q": "Tekanan hidrostatis bertambah besar jika ...",
+          "opts": [
+            "kedalaman bertambah",
+            "massa jenis berkurang",
+            "gravitasi mengecil",
+            "luas permukaan membesar"
+          ],
+          "a": 0,
+          "exp": "P=ρgh → makin dalam makin besar."
+        },
+        {
+          "q": "Benda akan mengapung jika ...",
+          "opts": [
+            "ρ benda < ρ cairan",
+            "ρ benda = ρ cairan",
+            "ρ benda > ρ cairan",
+            "massa benda besar"
+          ],
+          "a": 0,
+          "exp": "Kerapatan lebih kecil dari cairan → apung."
+        },
+        {
+          "q": "Transformator digunakan untuk ...",
+          "opts": [
+            "menaikkan/menurunkan tegangan AC",
+            "mengubah AC ke DC",
+            "menyimpan muatan",
+            "mengukur arus"
+          ],
+          "a": 0,
+          "exp": "Fungsi utamanya step-up/step-down."
+        },
+        {
+          "q": "Satuan daya listrik adalah ...",
+          "opts": [
+            "Watt",
+            "Volt",
+            "Ohm",
+            "Coulomb"
+          ],
+          "a": 0,
+          "exp": "Daya = Watt."
+        },
+        {
+          "q": "Organ utama pertukaran gas pada manusia ...",
+          "opts": [
+            "paru-paru",
+            "jantung",
+            "ginjal",
+            "hati"
+          ],
+          "a": 0,
+          "exp": "Paru-paru untuk difusi O₂/CO₂."
+        },
+        {
+          "q": "Tempat penyerapan nutrisi paling banyak ...",
+          "opts": [
+            "usus halus",
+            "lambung",
+            "usus besar",
+            "mulut"
+          ],
+          "a": 0,
+          "exp": "Vili usus memperluas penyerapan."
+        },
+        {
+          "q": "Enzim pemecah protein di lambung ...",
+          "opts": [
+            "pepsin",
+            "amilase",
+            "lipase",
+            "tripsin"
+          ],
+          "a": 0,
+          "exp": "Pepsin aktif di lambung asam."
+        },
+        {
+          "q": "Fungsi utama ginjal ...",
+          "opts": [
+            "menyaring darah membentuk urin",
+            "memompa darah",
+            "menghasilkan empedu",
+            "mencerna lemak"
+          ],
+          "a": 0,
+          "exp": "Nefron filtrasi-reabsorpsi-augmentasi."
+        },
+        {
+          "q": "Sel darah yang mengangkut oksigen ...",
+          "opts": [
+            "eritrosit",
+            "leukosit",
+            "trombosit",
+            "plasma"
+          ],
+          "a": 0,
+          "exp": "Mengandung hemoglobin."
+        },
+        {
+          "q": "Hubungan saling menguntungkan adalah ...",
+          "opts": [
+            "mutualisme",
+            "parasitisme",
+            "komensalisme",
+            "kompetisi"
+          ],
+          "a": 0,
+          "exp": "Contoh: kerbau-jalak."
+        },
+        {
+          "q": "Urutan rantai makanan yang benar ...",
+          "opts": [
+            "padi → belalang → katak → ular",
+            "padi → katak → belalang → ular",
+            "belalang → padi → katak → ular",
+            "ular → katak → belalang → padi"
+          ],
+          "a": 0,
+          "exp": "Produsen → konsumen I → II → III."
+        },
+        {
+          "q": "Keanekaragaman hayati tingkat gen tampak pada ...",
+          "opts": [
+            "varietas padi",
+            "hutan hujan",
+            "kerajaan plantae",
+            "bioma tundra"
+          ],
+          "a": 0,
+          "exp": "Variasi dalam satu spesies."
+        },
+        {
+          "q": "Respirasi sel menghasilkan ...",
+          "opts": [
+            "energi (ATP)",
+            "oksigen",
+            "protein",
+            "lemak"
+          ],
+          "a": 0,
+          "exp": "ATP dari oksidasi glukosa."
+        },
+        {
+          "q": "Struktur yang menjadi tempat fotosintesis ...",
+          "opts": [
+            "kloroplas",
+            "mitokondria",
+            "ribosom",
+            "lisosom"
+          ],
+          "a": 0,
+          "exp": "Klorofil berada di kloroplas."
+        },
+        {
+          "q": "Bioteknologi tradisional: pembuatan ...",
+          "opts": [
+            "tempe",
+            "insulin rekombinan",
+            "vaksin mRNA",
+            "kloning"
+          ],
+          "a": 0,
+          "exp": "Fermentasi kedelai oleh Rhizopus."
+        },
+        {
+          "q": "Penyakit karena kekurangan insulin ...",
+          "opts": [
+            "diabetes melitus",
+            "anemia",
+            "asma",
+            "hipertensi"
+          ],
+          "a": 0,
+          "exp": "Gula darah tinggi."
+        },
+        {
+          "q": "Sistem pernapasan yang dibantu diafragma ...",
+          "opts": [
+            "pernapasan perut",
+            "pernapasan dada",
+            "kulit",
+            "trakea"
+          ],
+          "a": 0,
+          "exp": "Kontraksi diafragma menurun."
+        },
+        {
+          "q": "Bagian darah untuk pembekuan ...",
+          "opts": [
+            "trombosit",
+            "eritrosit",
+            "leukosit",
+            "plasma"
+          ],
+          "a": 0,
+          "exp": "Platelet membentuk sumbat."
+        },
+        {
+          "q": "Simbiosis komensalisme artinya ...",
+          "opts": [
+            "satu untung, satu netral",
+            "keduanya untung",
+            "satu untung, satu rugi",
+            "keduanya rugi"
+          ],
+          "a": 0,
+          "exp": "Contoh: anggrek di pohon."
+        },
+        {
+          "q": "Fungsi alveolus ...",
+          "opts": [
+            "pertukaran gas",
+            "mencerna makanan",
+            "menyaring darah",
+            "menghasilkan hormon"
+          ],
+          "a": 0,
+          "exp": "Permukaan luas untuk difusi."
+        },
+        {
+          "q": "Organ reproduksi jantan penghasil sperma ...",
+          "opts": [
+            "testis",
+            "ovarium",
+            "rahim",
+            "serviks"
+          ],
+          "a": 0,
+          "exp": "Testis menghasilkan sperma."
+        },
+        {
+          "q": "Faktor biotik dalam ekosistem ...",
+          "opts": [
+            "tumbuhan",
+            "air",
+            "batu",
+            "udara"
+          ],
+          "a": 0,
+          "exp": "Makhluk hidup termasuk biotik."
+        },
+        {
+          "q": "Pencemaran udara banyak disebabkan oleh ...",
+          "opts": [
+            "asap kendaraan",
+            "erosi tanah",
+            "limbah padat",
+            "kebisingan"
+          ],
+          "a": 0,
+          "exp": "Sumber emisi CO/NOx/PM."
+        },
+        {
+          "q": "Tujuan reboisasi adalah ...",
+          "opts": [
+            "memperbaiki hutan gundul",
+            "mengurangi air laut",
+            "meningkatkan polusi",
+            "menambang mineral"
+          ],
+          "a": 0,
+          "exp": "Menanam kembali hutan."
+        },
+        {
+          "q": "Unsur adalah ...",
+          "opts": [
+            "zat tunggal yang tidak dapat diuraikan lagi",
+            "campuran homogen",
+            "senyawa organik",
+            "larutan jenuh"
+          ],
+          "a": 0,
+          "exp": "Definisi unsur."
+        },
+        {
+          "q": "Air (H₂O) termasuk ...",
+          "opts": [
+            "senyawa",
+            "unsur",
+            "campuran",
+            "koloid"
+          ],
+          "a": 0,
+          "exp": "Gabungan H dan O dalam perbandingan tetap."
+        },
+        {
+          "q": "Gula dalam air adalah contoh ...",
+          "opts": [
+            "campuran homogen",
+            "campuran heterogen",
+            "senyawa",
+            "unsur"
+          ],
+          "a": 0,
+          "exp": "Larutan homogen."
+        },
+        {
+          "q": "Perubahan es mencair termasuk perubahan ...",
+          "opts": [
+            "fisika",
+            "kimia",
+            "biologi",
+            "nuklir"
+          ],
+          "a": 0,
+          "exp": "Hanya berubah wujud."
+        },
+        {
+          "q": "Larutan asam mengubah lakmus biru menjadi ...",
+          "opts": [
+            "merah",
+            "biru",
+            "hijau",
+            "tak berubah"
+          ],
+          "a": 0,
+          "exp": "Indikator asam."
+        },
+        {
+          "q": "pH > 7 menunjukkan sifat ...",
+          "opts": [
+            "basa",
+            "asam",
+            "netral",
+            "oksidator"
+          ],
+          "a": 0,
+          "exp": "Basa pH di atas 7."
+        },
+        {
+          "q": "Proses pemisahan minyak bumi ...",
+          "opts": [
+            "destilasi bertingkat",
+            "filtrasi",
+            "sublimasi",
+            "kristalisasi"
+          ],
+          "a": 0,
+          "exp": "Berdasar titik didih fraksi."
+        },
+        {
+          "q": "Gas mulia berada pada golongan ...",
+          "opts": [
+            "18 (VIII A)",
+            "1 (IA)",
+            "17 (VIIA)",
+            "2 (IIA)"
+          ],
+          "a": 0,
+          "exp": "Kolom paling kanan."
+        },
+        {
+          "q": "Rumus garam dapur ...",
+          "opts": [
+            "NaCl",
+            "KCl",
+            "CaCO₃",
+            "HCl"
+          ],
+          "a": 0,
+          "exp": "Natrium klorida."
+        },
+        {
+          "q": "Zat yang mempercepat reaksi tanpa habis ...",
+          "opts": [
+            "katalis",
+            "pelarut",
+            "reaktan",
+            "produk"
+          ],
+          "a": 0,
+          "exp": "Katalis."
+        },
+        {
+          "q": "Larutan elektrolit ...",
+          "opts": [
+            "menghantarkan listrik",
+            "tidak menghantarkan listrik",
+            "selalu netral",
+            "tak punya ion"
+          ],
+          "a": 0,
+          "exp": "Ada ion bergerak."
+        },
+        {
+          "q": "Reaksi pembakaran adalah contoh reaksi ...",
+          "opts": [
+            "eksoterm",
+            "endoterm",
+            "setimbang",
+            "dekomposisi"
+          ],
+          "a": 0,
+          "exp": "Melepaskan kalor."
+        },
+        {
+          "q": "Unsur nomor atom 6 adalah ...",
+          "opts": [
+            "C",
+            "O",
+            "N",
+            "H"
+          ],
+          "a": 0,
+          "exp": "Karbon."
+        },
+        {
+          "q": "Asam asetat terdapat pada ...",
+          "opts": [
+            "cuka",
+            "jeruk",
+            "susu",
+            "garam"
+          ],
+          "a": 0,
+          "exp": "CH₃COOH = cuka."
+        },
+        {
+          "q": "Air kapur keruh jika dialiri CO₂ karena terbentuk ...",
+          "opts": [
+            "CaCO₃",
+            "Na₂CO₃",
+            "CaCl₂",
+            "H₂"
+          ],
+          "a": 0,
+          "exp": "Endapan kalsium karbonat."
+        },
+        {
+          "q": "Pemurnian air berdasarkan perbedaan titik didih ...",
+          "opts": [
+            "destilasi",
+            "filtrasi",
+            "sedimentasi",
+            "adsorpsi"
+          ],
+          "a": 0,
+          "exp": "Distillation."
+        },
+        {
+          "q": "Campuran yang partikel terdispersinya 1–1000 nm ...",
+          "opts": [
+            "koloid",
+            "larutan",
+            "suspensi",
+            "unsur"
+          ],
+          "a": 0,
+          "exp": "Koloid efek Tyndall."
+        },
+        {
+          "q": "Indikator universal menunjukkan spektrum warna sesuai ...",
+          "opts": [
+            "pH larutan",
+            "massa jenis",
+            "titik leleh",
+            "viskositas"
+          ],
+          "a": 0,
+          "exp": "Pengukur keasaman."
+        },
+        {
+          "q": "Logam ringan untuk pesawat terbang ...",
+          "opts": [
+            "Aluminium",
+            "Besi",
+            "Tembaga",
+            "Perak"
+          ],
+          "a": 0,
+          "exp": "Ringan & tahan korosi."
+        },
+        {
+          "q": "Reaksi netralisasi terjadi antara ...",
+          "opts": [
+            "asam dan basa",
+            "basa dan garam",
+            "asam dan garam",
+            "garam dan air"
+          ],
+          "a": 0,
+          "exp": "Membentuk garam + air."
+        },
+        {
+          "q": "Planet terdekat dari Matahari ...",
+          "opts": [
+            "Merkurius",
+            "Venus",
+            "Bumi",
+            "Mars"
+          ],
+          "a": 0,
+          "exp": "Merkurius paling dekat."
+        },
+        {
+          "q": "Gerhana bulan terjadi jika ...",
+          "opts": [
+            "Bumi di antara Matahari dan Bulan",
+            "Bulan di antara Matahari dan Bumi",
+            "Matahari di antara Bumi dan Bulan",
+            "Bulan dan Matahari sejajar ke arah yang sama"
+          ],
+          "a": 0,
+          "exp": "Bayangan Bumi menutupi Bulan."
+        },
+        {
+          "q": "Rotasi Bumi menyebabkan ...",
+          "opts": [
+            "siang dan malam",
+            "pergantian musim",
+            "perbedaan tahun",
+            "pasang surut"
+          ],
+          "a": 0,
+          "exp": "Rotasi → siang malam."
+        },
+        {
+          "q": "Instrumen pengukur kecepatan angin ...",
+          "opts": [
+            "anemometer",
+            "barometer",
+            "higrometer",
+            "seismograf"
+          ],
+          "a": 0,
+          "exp": "Anemometer."
+        },
+        {
+          "q": "Gas rumah kaca utama ...",
+          "opts": [
+            "CO₂",
+            "O₂",
+            "N₂",
+            "H₂"
+          ],
+          "a": 0,
+          "exp": "Karbon dioksida dominan."
+        },
+        {
+          "q": "Kegiatan mengolah sampah menjadi barang bermanfaat ...",
+          "opts": [
+            "daur ulang",
+            "reboisasi",
+            "irigasi",
+            "abrasion"
+          ],
+          "a": 0,
+          "exp": "Recycle."
+        },
+        {
+          "q": "Satuan pokok SI untuk massa ...",
+          "opts": [
+            "kilogram",
+            "gram",
+            "newton",
+            "ton"
+          ],
+          "a": 0,
+          "exp": "Satuan dasar: kg."
+        },
+        {
+          "q": "Ketelitian jangka sorong hingga ...",
+          "opts": [
+            "0,01 cm",
+            "0,1 cm",
+            "1 mm",
+            "1 cm"
+          ],
+          "a": 0,
+          "exp": "Umum 0,01 cm."
+        },
+        {
+          "q": "Benda terapung memiliki berat jenis ...",
+          "opts": [
+            "lebih kecil dari cairan",
+            "lebih besar",
+            "sama",
+            "tak terkait"
+          ],
+          "a": 0,
+          "exp": "ρ benda < ρ cairan."
+        },
+        {
+          "q": "Siklus air yang benar ...",
+          "opts": [
+            "evaporasi → kondensasi → presipitasi → infiltrasi",
+            "presipitasi → evaporasi → kondensasi → infiltrasi",
+            "kondensasi → infiltrasi → evaporasi → presipitasi",
+            "infiltrasi → presipitasi → evaporasi → kondensasi"
+          ],
+          "a": 0,
+          "exp": "Urutan umum siklus air."
+        },
+        {
+          "q": "Organ ekskresi selain ginjal ...",
+          "opts": [
+            "paru-paru",
+            "lambung",
+            "jantung",
+            "limfa"
+          ],
+          "a": 0,
+          "exp": "Mengeluarkan CO₂/uap air."
+        },
+        {
+          "q": "Metamorfosis sempurna terjadi pada ...",
+          "opts": [
+            "kupu-kupu",
+            "kecoa",
+            "belalang",
+            "jangkrik"
+          ],
+          "a": 0,
+          "exp": "Tahap pupa ada pada kupu-kupu."
+        },
+        {
+          "q": "Intensitas cahaya diukur dengan ...",
+          "opts": [
+            "luxmeter",
+            "voltmeter",
+            "ohmmeter",
+            "mikrometer"
+          ],
+          "a": 0,
+          "exp": "Luxmeter."
+        },
+        {
+          "q": "Benda hitam sempurna akan ... radiasi.",
+          "opts": [
+            "menyerap semua",
+            "memantulkan semua",
+            "meneruskan semua",
+            "menghamburkan semua"
+          ],
+          "a": 0,
+          "exp": "Absorber sempurna."
+        },
+        {
+          "q": "Lapisan atmosfer terdekat permukaan Bumi ...",
+          "opts": [
+            "troposfer",
+            "stratosfer",
+            "mesosfer",
+            "termosfer"
+          ],
+          "a": 0,
+          "exp": "Cuaca terjadi di troposfer."
+        },
+        {
+          "q": "Penyebab utama hujan asam ...",
+          "opts": [
+            "SO₂/NOx",
+            "O₂",
+            "CO",
+            "CH₄"
+          ],
+          "a": 0,
+          "exp": "Gas SO₂/NOx membentuk asam."
+        },
+        {
+          "q": "Energi alternatif ramah lingkungan ...",
+          "opts": [
+            "matahari",
+            "batu bara",
+            "minyak bumi",
+            "gas alam"
+          ],
+          "a": 0,
+          "exp": "Surya/air/angin ramah lingkungan."
+        },
+        {
+          "q": "Satuan tekanan ...",
+          "opts": [
+            "Pascal",
+            "Newton",
+            "Joule",
+            "Hertz"
+          ],
+          "a": 0,
+          "exp": "Pa = N/m²."
+        },
+        {
+          "q": "Campuran yang mudah dipisah dengan magnet ...",
+          "opts": [
+            "serbuk besi dan pasir",
+            "gula dan air",
+            "garam dan air",
+            "minyak dan air"
+          ],
+          "a": 0,
+          "exp": "Besinya tertarik magnet."
+        },
+        {
+          "q": "Alat ukur jumlah zat ...",
+          "opts": [
+            "mol",
+            "meter",
+            "candela",
+            "ampere"
+          ],
+          "a": 0,
+          "exp": "Satuan pokok jumlah zat = mol."
+        },
+        {
+          "q": "Kecepatan 60 km/jam sama dengan ... m/s",
+          "opts": [
+            "16.7",
+            "12",
+            "20",
+            "14"
+          ],
+          "a": 0,
+          "exp": "60 km/jam = 60.000/3.600 = 16,7 m/s (≈16,7)."
+        },
+        {
+          "q": "Sebuah motor melaju 20 m/s selama 15 s. Jarak yang ditempuh ...",
+          "opts": [
+            "300 m",
+            "350 m",
+            "250 m",
+            "600 m"
+          ],
+          "a": 0,
+          "exp": "s = v×t = 20×15 = 300 m."
+        },
+        {
+          "q": "Tekanan hidrostatis pada kedalaman 2 m (ρ=1000 kg/m³; g=10) adalah ...",
+          "opts": [
+            "20000 Pa",
+            "10000.0 Pa",
+            "40000 Pa",
+            "1000 Pa"
+          ],
+          "a": 0,
+          "exp": "P = ρgh = 1000×10×2 = 20.000 Pa."
+        },
+        {
+          "q": "Sebuah alat listrik memiliki tegangan 12 V dan arus 2 A. Dayanya ...",
+          "opts": [
+            "24 W",
+            "12.0 W",
+            "48 W",
+            "6 W"
+          ],
+          "a": 0,
+          "exp": "P = V×I = 12×2 = 24 W."
+        },
+        {
+          "q": "Tiga hambatan 2 Ω, 3 Ω, 5 Ω disusun seri. Hambatan total ...",
+          "opts": [
+            "10 Ω",
+            "10 Ω",
+            "5 Ω",
+            "2 Ω"
+          ],
+          "a": 0,
+          "exp": "R_total (seri) = R1+R2+R3 = 10 Ω."
+        },
+        {
+          "q": "Hambatan 2 Ω, 3 Ω, dan 6 Ω dipasang paralel. Hambatan pengganti ...",
+          "opts": [
+            "1 Ω",
+            "2 Ω",
+            "3 Ω",
+            "6 Ω"
+          ],
+          "a": 0,
+          "exp": "1/R = 1/2 + 1/3 + 1/6 = 1 → R = 1 Ω."
+        },
+        {
+          "q": "Massa 250 g dengan volume 50 cm³. Massa jenisnya ...",
+          "opts": [
+            "5 g/cm³",
+            "0,5 g/cm³",
+            "250 g/cm³",
+            "0,2 g/cm³"
+          ],
+          "a": 0,
+          "exp": "ρ = m/V = 250 g / 50 cm³ = 5 g/cm³."
+        },
+        {
+          "q": "Benda terapung di air. Gaya ke atas (apung) dibanding berat benda adalah ...",
+          "opts": [
+            "sama besar",
+            "lebih besar",
+            "lebih kecil",
+            "tidak terkait"
+          ],
+          "a": 0,
+          "exp": "Setimbang saat terapung: F_apung = w_benda."
+        },
+        {
+          "q": "Gaya 30 N menarik benda sejauh 5 m. Usaha yang dilakukan ...",
+          "opts": [
+            "150 J",
+            "60 J",
+            "120 J",
+            "15 J"
+          ],
+          "a": 0,
+          "exp": "W = F×s = 30×5 = 150 J."
+        },
+        {
+          "q": "Benda 2 kg bergerak dengan kecepatan 10 m/s. Energi kinetiknya ...",
+          "opts": [
+            "100 J",
+            "50 J",
+            "150 J",
+            "300 J"
+          ],
+          "a": 0,
+          "exp": "Ek = 1/2 m v² = 1/2×2×10² = 100 J."
+        },
+        {
+          "q": "Lup digunakan pada jarak baca 25 cm dengan f = 10 cm. Perbesaran (tanpa akomodasi) kira-kira ...",
+          "opts": [
+            "2,5×",
+            "10×",
+            "0,4×",
+            "4×"
+          ],
+          "a": 0,
+          "exp": "M ≈ Sn/f = 25/10 = 2,5×."
+        },
+        {
+          "q": "Arus 0,5 A melalui hambatan 8 Ω. Beda potensialnya ...",
+          "opts": [
+            "4.0 V",
+            "2 V",
+            "6 V",
+            "10 V"
+          ],
+          "a": 0,
+          "exp": "V = I R = 0,5×8 = 4 V."
+        },
+        {
+          "q": "Air 200 g dipanaskan naik 10°C (c=4,2 J/g°C). Kalor yang dibutuhkan ...",
+          "opts": [
+            "8400 J",
+            "4200 J",
+            "16800 J",
+            "420 J"
+          ],
+          "a": 0,
+          "exp": "Q = m c ΔT = 200×4,2×10 = 8.400 J."
+        },
+        {
+          "q": "Larutan dengan konsentrasi ion H⁺ lebih besar memiliki pH yang ...",
+          "opts": [
+            "lebih kecil",
+            "lebih besar",
+            "sama",
+            "tidak berubah"
+          ],
+          "a": 0,
+          "exp": "pH berbanding terbalik dengan [H⁺]."
+        },
+        {
+          "q": "Pada suhu tetap, jika volume gas diperkecil, tekanannya akan ... (Hukum Boyle)",
+          "opts": [
+            "meningkat",
+            "menurun",
+            "tetap",
+            "hilang"
+          ],
+          "a": 0,
+          "exp": "P ∝ 1/V pada T konstan."
+        },
+        {
+          "q": "Sebuah benda tercelup air volume 0,002 m³. Gaya ke atasnya (g=10; ρ=1000) ...",
+          "opts": [
+            "20 N",
+            "10 N",
+            "100 N",
+            "5 N"
+          ],
+          "a": 0,
+          "exp": "F_a = ρ g V = 1000×10×0,002 = 20 N."
+        },
+        {
+          "q": "Cahaya dari udara ke kaca (n_kaca > n_udara) akan ...",
+          "opts": [
+            "dibelokkan mendekati normal",
+            "dibelokkan menjauhi normal",
+            "tidak dibiaskan",
+            "selalu dipantulkan total"
+          ],
+          "a": 0,
+          "exp": "Indeks lebih besar → sudut bias lebih kecil → mendekati normal."
+        },
+        {
+          "q": "Sebuah mobil menempuh 150 km dengan kecepatan 50 km/jam. Waktu tempuhnya ...",
+          "opts": [
+            "3 jam",
+            "2 jam",
+            "4 jam",
+            "1 jam"
+          ],
+          "a": 0,
+          "exp": "t = s/v = 150/50 = 3 jam."
+        },
+        {
+          "q": "Seseorang menempuh 60 km dalam 1 jam lalu 40 km dalam 2 jam. Kecepatan rata-ratanya ...",
+          "opts": [
+            "33 km/jam",
+            "40 km/jam",
+            "50 km/jam",
+            "45 km/jam"
+          ],
+          "a": 0,
+          "exp": "v̄ = total s / total t = 100/3 ≈ 33 km/jam."
+        },
+        {
+          "q": "Sebuah mesin mengubah 1000 J energi masuk menjadi 800 J energi berguna. Efisiensinya ...",
+          "opts": [
+            "80%",
+            "60%",
+            "75%",
+            "90%"
+          ],
+          "a": 0,
+          "exp": "η = (W_out/W_in)×100% = 800/1000×100% = 80%."
+        }
+      ]
+    },
+    "IPS • Prediksi 2025": {
+      "tag": "IPS",
+      "qs": [
+        {
+          "q": "Indonesia terletak di antara dua benua, yaitu ...",
+          "opts": [
+            "Asia dan Australia",
+            "Asia dan Eropa",
+            "Eropa dan Afrika",
+            "Afrika dan Amerika"
+          ],
+          "a": 0,
+          "exp": "Letak geografis Indonesia di antara Benua Asia dan Australia."
+        },
+        {
+          "q": "Garis lintang 0° disebut ...",
+          "opts": [
+            "Khatulistiwa",
+            "Meridian",
+            "Tropis",
+            "Bujur"
+          ],
+          "a": 0,
+          "exp": "Lintang 0° adalah garis khatulistiwa."
+        },
+        {
+          "q": "Ilmu yang mempelajari peta disebut ...",
+          "opts": [
+            "Kartografi",
+            "Topografi",
+            "Geologi",
+            "Astronomi"
+          ],
+          "a": 0,
+          "exp": "Kartografi = ilmu tentang peta."
+        },
+        {
+          "q": "Bencana alam yang sering terjadi akibat pertemuan tiga lempeng besar di Indonesia adalah ...",
+          "opts": [
+            "gempa bumi",
+            "banjir",
+            "kebakaran hutan",
+            "angin topan"
+          ],
+          "a": 0,
+          "exp": "Indonesia rawan gempa karena pertemuan lempeng."
+        },
+        {
+          "q": "Angin muson barat di Indonesia membawa ...",
+          "opts": [
+            "hujan",
+            "kemarau",
+            "salju",
+            "kabut"
+          ],
+          "a": 0,
+          "exp": "Muson barat membawa hujan (Okt–Maret)."
+        },
+        {
+          "q": "Sumber daya alam yang tidak dapat diperbarui adalah ...",
+          "opts": [
+            "minyak bumi",
+            "air",
+            "udara",
+            "hutan"
+          ],
+          "a": 0,
+          "exp": "Minyak bumi termasuk SDA tidak terbarui."
+        },
+        {
+          "q": "Bentuk muka bumi akibat tenaga endogen adalah ...",
+          "opts": [
+            "gunung api",
+            "delta",
+            "pantai",
+            "dataran banjir"
+          ],
+          "a": 0,
+          "exp": "Endogen: gempa, gunung, lipatan."
+        },
+        {
+          "q": "Hujan yang terjadi karena udara naik di daerah pegunungan adalah ...",
+          "opts": [
+            "hujan orografis",
+            "hujan frontal",
+            "hujan zenithal",
+            "hujan siklonal"
+          ],
+          "a": 0,
+          "exp": "Hujan orografis akibat lereng gunung."
+        },
+        {
+          "q": "Skala pada peta menunjukkan ...",
+          "opts": [
+            "perbandingan jarak peta dengan jarak sebenarnya",
+            "jenis simbol",
+            "ketinggian tempat",
+            "arah mata angin"
+          ],
+          "a": 0,
+          "exp": "Skala = perbandingan jarak peta:sebenarnya."
+        },
+        {
+          "q": "Pulau terbesar di Indonesia adalah ...",
+          "opts": [
+            "Papua",
+            "Kalimantan",
+            "Sumatra",
+            "Jawa"
+          ],
+          "a": 0,
+          "exp": "Papua terluas."
+        },
+        {
+          "q": "Kondisi iklim Indonesia dipengaruhi oleh ...",
+          "opts": [
+            "letak geografis dan astronomis",
+            "letak astronomis saja",
+            "letak geologis saja",
+            "topografi saja"
+          ],
+          "a": 0,
+          "exp": "Lintang rendah & posisi silang benua/samudra."
+        },
+        {
+          "q": "Fenomena El-Nino menyebabkan Indonesia mengalami ...",
+          "opts": [
+            "kemarau panjang",
+            "hujan deras",
+            "banjir",
+            "salju"
+          ],
+          "a": 0,
+          "exp": "El-Nino → curah hujan turun."
+        },
+        {
+          "q": "Fenomena La-Nina menyebabkan Indonesia mengalami ...",
+          "opts": [
+            "hujan lebih banyak",
+            "kemarau panjang",
+            "udara kering",
+            "suhu dingin"
+          ],
+          "a": 0,
+          "exp": "La-Nina → curah hujan meningkat."
+        },
+        {
+          "q": "Alat untuk mengukur curah hujan adalah ...",
+          "opts": [
+            "ombrometer",
+            "higrometer",
+            "anemometer",
+            "barometer"
+          ],
+          "a": 0,
+          "exp": "Ombrometer = penakar hujan."
+        },
+        {
+          "q": "Indonesia memiliki keanekaragaman hayati tinggi karena ...",
+          "opts": [
+            "iklim tropis",
+            "iklim subtropis",
+            "iklim dingin",
+            "iklim gurun"
+          ],
+          "a": 0,
+          "exp": "Iklim tropis mendukung biodiversitas."
+        },
+        {
+          "q": "Jenis tanah subur di Pulau Jawa berasal dari ...",
+          "opts": [
+            "vulkanik",
+            "kapur",
+            "aluvial",
+            "laterit"
+          ],
+          "a": 0,
+          "exp": "Tanah vulkanik sangat subur."
+        },
+        {
+          "q": "Delta terbentuk di ...",
+          "opts": [
+            "muara sungai",
+            "gunung api",
+            "danau",
+            "laut dalam"
+          ],
+          "a": 0,
+          "exp": "Delta terbentuk di muara sungai."
+        },
+        {
+          "q": "Danau buatan disebut ...",
+          "opts": [
+            "waduk",
+            "situ",
+            "embung",
+            "tampungan"
+          ],
+          "a": 0,
+          "exp": "Danau buatan disebut waduk."
+        },
+        {
+          "q": "Alat untuk mengukur arah angin ...",
+          "opts": [
+            "windsock",
+            "barometer",
+            "termometer",
+            "seismograf"
+          ],
+          "a": 0,
+          "exp": "Windsock/wind vane."
+        },
+        {
+          "q": "Jenis hujan yang sering terjadi di daerah tropis pada siang hari ...",
+          "opts": [
+            "hujan zenithal",
+            "hujan frontal",
+            "hujan orografis",
+            "hujan siklonal"
+          ],
+          "a": 0,
+          "exp": "Hujan konveksi (zenithal)."
+        },
+        {
+          "q": "Garis yang menghubungkan tempat dengan tekanan udara sama ...",
+          "opts": [
+            "isobar",
+            "isohips",
+            "isoterm",
+            "isohyet"
+          ],
+          "a": 0,
+          "exp": "Isobar untuk tekanan udara."
+        },
+        {
+          "q": "Samudra yang membatasi Indonesia di sebelah barat ...",
+          "opts": [
+            "Hindia",
+            "Pasifik",
+            "Atlantik",
+            "Arktik"
+          ],
+          "a": 0,
+          "exp": "Sebelah barat = Samudra Hindia."
+        },
+        {
+          "q": "Batas laut wilayah Indonesia adalah ...",
+          "opts": [
+            "12 mil laut",
+            "200 mil laut",
+            "5 mil laut",
+            "50 mil laut"
+          ],
+          "a": 0,
+          "exp": "Wilayah laut 12 mil dari garis pangkal."
+        },
+        {
+          "q": "Zona Ekonomi Eksklusif Indonesia adalah ...",
+          "opts": [
+            "200 mil laut",
+            "12 mil laut",
+            "5 mil laut",
+            "50 mil laut"
+          ],
+          "a": 0,
+          "exp": "ZEE = 200 mil laut."
+        },
+        {
+          "q": "Letusan Gunung Tambora tahun 1815 menyebabkan ...",
+          "opts": [
+            "tahun tanpa musim panas",
+            "tsunami besar",
+            "banjir",
+            "badai"
+          ],
+          "a": 0,
+          "exp": "Debu vulkanik mempengaruhi iklim global."
+        },
+        {
+          "q": "Hukum permintaan menyatakan bahwa jika harga naik, maka jumlah yang diminta ...",
+          "opts": [
+            "turun",
+            "naik",
+            "tetap",
+            "tidak menentu"
+          ],
+          "a": 0,
+          "exp": "Permintaan berbanding terbalik dengan harga."
+        },
+        {
+          "q": "Hukum penawaran menyatakan bahwa jika harga naik, maka jumlah yang ditawarkan ...",
+          "opts": [
+            "naik",
+            "turun",
+            "tetap",
+            "tidak menentu"
+          ],
+          "a": 0,
+          "exp": "Penawaran berbanding lurus dengan harga."
+        },
+        {
+          "q": "Lembaga keuangan yang menghimpun dan menyalurkan dana masyarakat adalah ...",
+          "opts": [
+            "bank",
+            "koperasi",
+            "pasar modal",
+            "leasing"
+          ],
+          "a": 0,
+          "exp": "Bank menghimpun dana dari masyarakat."
+        },
+        {
+          "q": "Badan usaha yang beranggotakan orang dengan prinsip kekeluargaan adalah ...",
+          "opts": [
+            "koperasi",
+            "firma",
+            "CV",
+            "PT"
+          ],
+          "a": 0,
+          "exp": "Koperasi: asas kekeluargaan."
+        },
+        {
+          "q": "Inflasi adalah ...",
+          "opts": [
+            "kenaikan harga barang secara umum dan terus-menerus",
+            "penurunan nilai mata uang",
+            "kenaikan kurs dolar",
+            "deflasi"
+          ],
+          "a": 0,
+          "exp": "Definisi inflasi."
+        },
+        {
+          "q": "Alat pembayaran internasional yang sah adalah ...",
+          "opts": [
+            "valuta asing",
+            "uang rupiah",
+            "cek",
+            "giro"
+          ],
+          "a": 0,
+          "exp": "Valas digunakan dalam perdagangan internasional."
+        },
+        {
+          "q": "Bank sentral di Indonesia adalah ...",
+          "opts": [
+            "Bank Indonesia",
+            "Bank Mandiri",
+            "BRI",
+            "OJK"
+          ],
+          "a": 0,
+          "exp": "BI = bank sentral."
+        },
+        {
+          "q": "Fungsi OJK adalah ...",
+          "opts": [
+            "mengawasi lembaga keuangan",
+            "mencetak uang",
+            "mengatur kurs",
+            "membayar utang negara"
+          ],
+          "a": 0,
+          "exp": "OJK = otoritas jasa keuangan."
+        },
+        {
+          "q": "Tujuan utama pembangunan ekonomi adalah ...",
+          "opts": [
+            "meningkatkan kesejahteraan rakyat",
+            "meningkatkan ekspor",
+            "meningkatkan investasi",
+            "menurunkan inflasi"
+          ],
+          "a": 0,
+          "exp": "Fokus kesejahteraan rakyat."
+        },
+        {
+          "q": "Pasar faktor produksi memperjualbelikan ...",
+          "opts": [
+            "tenaga kerja, tanah, modal",
+            "barang konsumsi",
+            "barang ekspor",
+            "barang impor"
+          ],
+          "a": 0,
+          "exp": "Faktor produksi = tanah, tenaga kerja, modal."
+        },
+        {
+          "q": "Ekonomi kreatif berkembang melalui ...",
+          "opts": [
+            "inovasi dan kreativitas",
+            "eksploitasi SDA",
+            "subsidi pemerintah",
+            "impor barang"
+          ],
+          "a": 0,
+          "exp": "Mengandalkan kreativitas."
+        },
+        {
+          "q": "Indeks harga konsumen digunakan untuk mengukur ...",
+          "opts": [
+            "inflasi",
+            "deflasi",
+            "kurs",
+            "pendapatan"
+          ],
+          "a": 0,
+          "exp": "IHK = inflasi."
+        },
+        {
+          "q": "Kebijakan fiskal terkait dengan ...",
+          "opts": [
+            "penerimaan dan pengeluaran negara",
+            "jumlah uang beredar",
+            "suku bunga",
+            "ekspor impor"
+          ],
+          "a": 0,
+          "exp": "Fiskal = APBN."
+        },
+        {
+          "q": "Kebijakan moneter terkait dengan ...",
+          "opts": [
+            "jumlah uang beredar",
+            "APBN",
+            "subsidi",
+            "perdagangan"
+          ],
+          "a": 0,
+          "exp": "Moneter = uang beredar."
+        },
+        {
+          "q": "Defisit APBN terjadi jika ...",
+          "opts": [
+            "pengeluaran lebih besar dari penerimaan",
+            "penerimaan lebih besar",
+            "seimbang",
+            "surplus"
+          ],
+          "a": 0,
+          "exp": "Defisit = belanja > penerimaan."
+        },
+        {
+          "q": "Ekspor adalah ...",
+          "opts": [
+            "menjual barang ke luar negeri",
+            "membeli barang dari luar negeri",
+            "pertukaran dalam negeri",
+            "membawa barang masuk"
+          ],
+          "a": 0,
+          "exp": "Ekspor = menjual ke luar negeri."
+        },
+        {
+          "q": "Impor adalah ...",
+          "opts": [
+            "membeli barang dari luar negeri",
+            "menjual barang ke luar negeri",
+            "pertukaran dalam negeri",
+            "membawa barang keluar"
+          ],
+          "a": 0,
+          "exp": "Impor = membeli dari luar negeri."
+        },
+        {
+          "q": "Neraca perdagangan dikatakan surplus jika ...",
+          "opts": [
+            "ekspor > impor",
+            "ekspor < impor",
+            "ekspor = impor",
+            "ekspor tidak ada"
+          ],
+          "a": 0,
+          "exp": "Surplus saat ekspor lebih besar."
+        },
+        {
+          "q": "Perusahaan yang modalnya berasal dari saham disebut ...",
+          "opts": [
+            "PT",
+            "CV",
+            "firma",
+            "koperasi"
+          ],
+          "a": 0,
+          "exp": "Perseroan Terbatas."
+        },
+        {
+          "q": "BUMN yang sahamnya dimiliki negara seluruhnya disebut ...",
+          "opts": [
+            "Perum",
+            "Persero",
+            "Koperasi",
+            "Firma"
+          ],
+          "a": 0,
+          "exp": "Perum adalah BUMN murni milik negara."
+        },
+        {
+          "q": "Kegiatan konsumsi adalah ...",
+          "opts": [
+            "menggunakan barang/jasa untuk memenuhi kebutuhan",
+            "membeli barang untuk dijual kembali",
+            "menghasilkan barang",
+            "menjual barang"
+          ],
+          "a": 0,
+          "exp": "Definisi konsumsi."
+        },
+        {
+          "q": "Produsen adalah pihak yang ...",
+          "opts": [
+            "menghasilkan barang/jasa",
+            "membeli barang",
+            "memakai barang",
+            "mengimpor barang"
+          ],
+          "a": 0,
+          "exp": "Produsen menghasilkan."
+        },
+        {
+          "q": "Distribusi adalah kegiatan ...",
+          "opts": [
+            "menyalurkan barang dari produsen ke konsumen",
+            "menghasilkan barang",
+            "memakai barang",
+            "menjual barang ke luar negeri"
+          ],
+          "a": 0,
+          "exp": "Distribusi menyalurkan."
+        },
+        {
+          "q": "Kegiatan ekonomi utama ada ...",
+          "opts": [
+            "produksi, distribusi, konsumsi",
+            "ekspor, impor, perdagangan",
+            "pemasaran, distribusi, konsumsi",
+            "produksi, penawaran, permintaan"
+          ],
+          "a": 0,
+          "exp": "Tiga kegiatan pokok."
+        },
+        {
+          "q": "Tujuan didirikannya ASEAN adalah ...",
+          "opts": [
+            "kerjasama ekonomi dan sosial budaya",
+            "persaingan ekonomi",
+            "dominasi politik",
+            "kerja sama militer"
+          ],
+          "a": 0,
+          "exp": "ASEAN: tujuan ekonomi, sosial, budaya."
+        },
+        {
+          "q": "Tokoh yang dikenal sebagai Bapak Proklamator Indonesia adalah ...",
+          "opts": [
+            "Soekarno dan Hatta",
+            "Soekarno dan Sjahrir",
+            "Hatta dan Tan Malaka",
+            "Soekarno dan Sudirman"
+          ],
+          "a": 0,
+          "exp": "Proklamator: Soekarno-Hatta."
+        },
+        {
+          "q": "Tanggal Proklamasi Kemerdekaan Indonesia adalah ...",
+          "opts": [
+            "17 Agustus 1945",
+            "1 Juni 1945",
+            "28 Oktober 1928",
+            "10 November 1945"
+          ],
+          "a": 0,
+          "exp": "Proklamasi: 17 Agustus 1945."
+        },
+        {
+          "q": "Organisasi pergerakan nasional pertama di Indonesia adalah ...",
+          "opts": [
+            "Budi Utomo",
+            "Sarekat Islam",
+            "Indische Partij",
+            "Muhammadiyah"
+          ],
+          "a": 0,
+          "exp": "Budi Utomo didirikan 1908."
+        },
+        {
+          "q": "Sumpah Pemuda diikrarkan pada tanggal ...",
+          "opts": [
+            "28 Oktober 1928",
+            "20 Mei 1908",
+            "17 Agustus 1945",
+            "1 Juni 1945"
+          ],
+          "a": 0,
+          "exp": "28 Oktober 1928."
+        },
+        {
+          "q": "Tokoh penggagas dasar negara Pancasila adalah ...",
+          "opts": [
+            "Soekarno",
+            "Hatta",
+            "Sjahrir",
+            "Tan Malaka"
+          ],
+          "a": 0,
+          "exp": "Soekarno dalam sidang BPUPKI 1 Juni 1945."
+        },
+        {
+          "q": "Pendudukan Jepang di Indonesia dimulai tahun ...",
+          "opts": [
+            "1942",
+            "1945",
+            "1940",
+            "1939"
+          ],
+          "a": 0,
+          "exp": "Maret 1942 Jepang masuk Indonesia."
+        },
+        {
+          "q": "Lembaga yang dibentuk Jepang untuk mempersiapkan kemerdekaan adalah ...",
+          "opts": [
+            "BPUPKI",
+            "PPKI",
+            "KNIP",
+            "Budi Utomo"
+          ],
+          "a": 0,
+          "exp": "BPUPKI dibentuk 1945."
+        },
+        {
+          "q": "Penyusun naskah proklamasi adalah ...",
+          "opts": [
+            "Soekarno, Hatta, Ahmad Subardjo",
+            "Soekarno, Hatta, Sudirman",
+            "Soekarno, Tan Malaka, Hatta",
+            "Soekarno, Hatta, Moh. Yamin"
+          ],
+          "a": 0,
+          "exp": "Tiga tokoh penyusun naskah proklamasi."
+        },
+        {
+          "q": "Pertempuran Surabaya terjadi pada tanggal ...",
+          "opts": [
+            "10 November 1945",
+            "17 Agustus 1945",
+            "1 Juni 1945",
+            "28 Oktober 1928"
+          ],
+          "a": 0,
+          "exp": "Hari Pahlawan 10 November 1945."
+        },
+        {
+          "q": "Demokrasi liberal di Indonesia berlangsung tahun ...",
+          "opts": [
+            "1950–1959",
+            "1945–1950",
+            "1959–1965",
+            "1966–1998"
+          ],
+          "a": 0,
+          "exp": "Demokrasi Liberal 1950–1959."
+        },
+        {
+          "q": "Demokrasi terpimpin dipimpin oleh ...",
+          "opts": [
+            "Soekarno",
+            "Soeharto",
+            "BJ Habibie",
+            "Megawati"
+          ],
+          "a": 0,
+          "exp": "Soekarno (1959–1965)."
+        },
+        {
+          "q": "Orde Baru dipimpin oleh ...",
+          "opts": [
+            "Soeharto",
+            "Soekarno",
+            "BJ Habibie",
+            "Abdurrahman Wahid"
+          ],
+          "a": 0,
+          "exp": "Soeharto memimpin Orde Baru."
+        },
+        {
+          "q": "Reformasi Indonesia dimulai tahun ...",
+          "opts": [
+            "1998",
+            "1997",
+            "2000",
+            "1999"
+          ],
+          "a": 0,
+          "exp": "Soeharto lengser Mei 1998."
+        },
+        {
+          "q": "Tokoh perumus UUD 1945 adalah ...",
+          "opts": [
+            "BPUPKI dan PPKI",
+            "KNIP",
+            "MPRS",
+            "DPR"
+          ],
+          "a": 0,
+          "exp": "UUD 1945 dirumuskan oleh BPUPKI dan disahkan PPKI."
+        },
+        {
+          "q": "Isi Trikora adalah ...",
+          "opts": [
+            "membebaskan Irian Barat",
+            "membebaskan Timor Timur",
+            "membubarkan RIS",
+            "membentuk MPRS"
+          ],
+          "a": 0,
+          "exp": "Trikora 1961 untuk Irian Barat."
+        },
+        {
+          "q": "Supersemar dikeluarkan pada tanggal ...",
+          "opts": [
+            "11 Maret 1966",
+            "17 Agustus 1945",
+            "20 Mei 1908",
+            "1 Juni 1945"
+          ],
+          "a": 0,
+          "exp": "11 Maret 1966 Soekarno memberi mandat ke Soeharto."
+        },
+        {
+          "q": "Perjanjian Linggarjati diadakan antara Indonesia dan ...",
+          "opts": [
+            "Belanda",
+            "Inggris",
+            "Jepang",
+            "Portugis"
+          ],
+          "a": 0,
+          "exp": "Linggarjati dengan Belanda (1946)."
+        },
+        {
+          "q": "Agresi Militer Belanda II terjadi pada tahun ...",
+          "opts": [
+            "1948",
+            "1947",
+            "1949",
+            "1950"
+          ],
+          "a": 0,
+          "exp": "Agresi II = 19 Desember 1948."
+        },
+        {
+          "q": "Konferensi Asia Afrika di Bandung diadakan tahun ...",
+          "opts": [
+            "1955",
+            "1950",
+            "1960",
+            "1949"
+          ],
+          "a": 0,
+          "exp": "KAA Bandung 1955."
+        },
+        {
+          "q": "Tokoh penting KAA dari Indonesia adalah ...",
+          "opts": [
+            "Ali Sastroamidjojo",
+            "Soekarno",
+            "Hatta",
+            "Sjahrir"
+          ],
+          "a": 0,
+          "exp": "Perdana Menteri Ali Sastroamidjojo."
+        },
+        {
+          "q": "Pertempuran Ambarawa terjadi tahun ...",
+          "opts": [
+            "1945",
+            "1946",
+            "1947",
+            "1948"
+          ],
+          "a": 0,
+          "exp": "Desember 1945."
+        },
+        {
+          "q": "Hari Kebangkitan Nasional diperingati setiap ...",
+          "opts": [
+            "20 Mei",
+            "28 Oktober",
+            "10 November",
+            "17 Agustus"
+          ],
+          "a": 0,
+          "exp": "20 Mei = berdirinya Budi Utomo."
+        },
+        {
+          "q": "Perang Diponegoro berlangsung tahun ...",
+          "opts": [
+            "1825–1830",
+            "1800–1825",
+            "1830–1835",
+            "1810–1820"
+          ],
+          "a": 0,
+          "exp": "Perang Jawa 1825–1830."
+        },
+        {
+          "q": "Tokoh Perang Diponegoro adalah ...",
+          "opts": [
+            "Pangeran Diponegoro",
+            "Sultan Hasanuddin",
+            "Imam Bonjol",
+            "Cut Nyak Dien"
+          ],
+          "a": 0,
+          "exp": "Diponegoro memimpin Perang Jawa."
+        },
+        {
+          "q": "Organisasi ASEAN dibentuk melalui Deklarasi ...",
+          "opts": [
+            "Bangkok",
+            "Jakarta",
+            "Hanoi",
+            "Manila"
+          ],
+          "a": 0,
+          "exp": "ASEAN: Deklarasi Bangkok 1967."
+        },
+        {
+          "q": "Interaksi sosial terjadi jika ada ...",
+          "opts": [
+            "kontak dan komunikasi",
+            "konflik",
+            "perubahan sosial",
+            "perbedaan budaya"
+          ],
+          "a": 0,
+          "exp": "Syarat interaksi: kontak & komunikasi."
+        },
+        {
+          "q": "Proses belajar menjadi anggota masyarakat disebut ...",
+          "opts": [
+            "sosialisasi",
+            "akulturasi",
+            "asimilasi",
+            "difusi"
+          ],
+          "a": 0,
+          "exp": "Sosialisasi internalisasi nilai & norma."
+        },
+        {
+          "q": "Pihak yang pertama kali memberi pengaruh nilai kepada anak ...",
+          "opts": [
+            "keluarga",
+            "sekolah",
+            "teman sebaya",
+            "media massa"
+          ],
+          "a": 0,
+          "exp": "Keluarga adalah agen sosialisasi utama."
+        },
+        {
+          "q": "Norma yang bersumber dari Tuhan adalah ...",
+          "opts": [
+            "agama",
+            "moral",
+            "adat",
+            "hukum"
+          ],
+          "a": 0,
+          "exp": "Norma agama berasal dari ajaran agama."
+        },
+        {
+          "q": "Norma yang bersumber dari hati nurani adalah ...",
+          "opts": [
+            "moral",
+            "agama",
+            "adat",
+            "hukum"
+          ],
+          "a": 0,
+          "exp": "Norma moral dari hati nurani."
+        },
+        {
+          "q": "Sanksi paling tegas diberikan oleh norma ...",
+          "opts": [
+            "hukum",
+            "adat",
+            "moral",
+            "agama"
+          ],
+          "a": 0,
+          "exp": "Norma hukum memiliki sanksi tegas & memaksa."
+        },
+        {
+          "q": "Lembaga sosial yang mengatur kekuasaan ...",
+          "opts": [
+            "politik",
+            "ekonomi",
+            "pendidikan",
+            "keluarga"
+          ],
+          "a": 0,
+          "exp": "Lembaga politik mengatur kekuasaan dan pemerintahan."
+        },
+        {
+          "q": "Contoh perilaku menyimpang ...",
+          "opts": [
+            "mencuri",
+            "gotong royong",
+            "menolong",
+            "membuang sampah pada tempatnya"
+          ],
+          "a": 0,
+          "exp": "Mencuri melanggar norma."
+        },
+        {
+          "q": "Fungsi lembaga pendidikan ...",
+          "opts": [
+            "mentransmisikan budaya",
+            "mengatur transaksi",
+            "mengelola kekuasaan",
+            "menetapkan hukum"
+          ],
+          "a": 0,
+          "exp": "Sekolah mentransmisikan nilai/pengetahuan."
+        },
+        {
+          "q": "Proses saling mempengaruhi budaya karena kontak berkepanjangan ...",
+          "opts": [
+            "akulturasi",
+            "asimilasi",
+            "difusi",
+            "enkulturasi"
+          ],
+          "a": 0,
+          "exp": "Akulturasi: perpaduan tanpa hilangkan budaya asli."
+        },
+        {
+          "q": "Penyerapan unsur budaya asing ke budaya sendiri melalui proses ...",
+          "opts": [
+            "difusi",
+            "asimilasi",
+            "akulturasi",
+            "sosialisasi"
+          ],
+          "a": 0,
+          "exp": "Difusi budaya = penyebaran unsur budaya."
+        },
+        {
+          "q": "Globalisasi menyebabkan dunia menjadi ...",
+          "opts": [
+            "tanpa batas",
+            "tertutup",
+            "terisolasi",
+            "terpecah"
+          ],
+          "a": 0,
+          "exp": "Borderless world."
+        },
+        {
+          "q": "Media massa merupakan agen ...",
+          "opts": [
+            "sosialisasi sekunder",
+            "sosialisasi primer",
+            "kontrol sosial formal",
+            "kontrol sosial informal"
+          ],
+          "a": 0,
+          "exp": "Media → sosialisasi sekunder."
+        },
+        {
+          "q": "Bentuk kontrol sosial informal ...",
+          "opts": [
+            "teguran dari teman",
+            "putusan pengadilan",
+            "peraturan pemerintah",
+            "sanksi pidana"
+          ],
+          "a": 0,
+          "exp": "Informal via keluarga/teman/masyarakat."
+        },
+        {
+          "q": "Faktor pendorong perubahan sosial ...",
+          "opts": [
+            "penemuan baru",
+            "keterisolasian",
+            "pranata yang kaku",
+            "pendidikan rendah"
+          ],
+          "a": 0,
+          "exp": "Inovasi & pendidikan tinggi → perubahan."
+        },
+        {
+          "q": "Faktor penghambat perubahan sosial ...",
+          "opts": [
+            "adat yang kuat",
+            "komunikasi lancar",
+            "pendidikan tinggi",
+            "terbuka terhadap hal baru"
+          ],
+          "a": 0,
+          "exp": "Adat kuat menghambat perubahan."
+        },
+        {
+          "q": "Konflik sosial dapat berdampak ...",
+          "opts": [
+            "disintegrasi sosial",
+            "solidaritas meningkat",
+            "inovasi kebijakan",
+            "semua benar"
+          ],
+          "a": 3,
+          "exp": "Konflik berdampak negatif/positif tergantung konteks."
+        },
+        {
+          "q": "Bentuk akomodasi berupa pihak ketiga menengahi ...",
+          "opts": [
+            "mediasi",
+            "arbitrase",
+            "kompromi",
+            "toleransi"
+          ],
+          "a": 0,
+          "exp": "Mediasi: pihak ketiga tidak punya kewenangan memutus."
+        },
+        {
+          "q": "Arbitrase adalah ...",
+          "opts": [
+            "penyelesaian konflik melalui pihak ketiga yang berwenang memutus",
+            "penyelesaian secara damai tanpa pihak ketiga",
+            "penyelesaian dengan kekerasan",
+            "penghindaran"
+          ],
+          "a": 0,
+          "exp": "Arbiter berwenang memberi keputusan."
+        },
+        {
+          "q": "Mobilitas sosial vertikal naik berarti ...",
+          "opts": [
+            "perubahan status ke tingkat lebih tinggi",
+            "perubahan status ke tingkat lebih rendah",
+            "perpindahan status setara",
+            "tidak ada perubahan status"
+          ],
+          "a": 0,
+          "exp": "Vertikal naik = naik strata."
+        },
+        {
+          "q": "Stratifikasi sosial artinya ...",
+          "opts": [
+            "pelapisan masyarakat",
+            "perubahan kebudayaan",
+            "penyebaran budaya",
+            "hubungan antarindividu"
+          ],
+          "a": 0,
+          "exp": "Pelapisan berdasar status/kelas."
+        },
+        {
+          "q": "Stereotip adalah ...",
+          "opts": [
+            "pelabelan umum terhadap kelompok",
+            "peniruan perilaku",
+            "pemberian sanksi",
+            "kerja sama spontan"
+          ],
+          "a": 0,
+          "exp": "Generalized belief sering menyederhanakan."
+        },
+        {
+          "q": "Primordialisme adalah ...",
+          "opts": [
+            "kesetiaan berlebihan pada kelompok asal",
+            "pembauran budaya",
+            "pemisahan agama & negara",
+            "persaingan ekonomi"
+          ],
+          "a": 0,
+          "exp": "Loyalitas sempit pada suku/daerah/agama."
+        },
+        {
+          "q": "Etnosentrisme adalah ...",
+          "opts": [
+            "menganggap kebudayaan sendiri paling benar",
+            "menghargai semua budaya",
+            "menolak budaya sendiri",
+            "menerima budaya lain"
+          ],
+          "a": 0,
+          "exp": "Etnosentrisme memandang budaya lain lebih rendah."
+        },
+        {
+          "q": "Pluralitas masyarakat Indonesia berarti ...",
+          "opts": [
+            "keberagaman sosial budaya",
+            "keseragaman sosial budaya",
+            "ketunggalan identitas",
+            "ketiadaan konflik"
+          ],
+          "a": 0,
+          "exp": "Indonesia majemuk: suku, agama, bahasa."
+        }
+      ]
+    }
+  }
+};
+
+function downloadPack(name) {
+  const blob = new Blob([JSON.stringify({jadwal:data.jadwal,todo:data.todo,packs:{[name]:data.packs[name]}},null,2)], {type:"application/json"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = name + ".json";
+  a.click();
+}
+
+function downloadAll() {
+  const blob = new Blob([JSON.stringify(data,null,2)], {type:"application/json"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "Prediksi2025_5Mapel_Gabungan.json";
+  a.click();
+}
+
+function formatJSON() {
+  document.getElementById("jsonArea").value = JSON.stringify(data,null,2);
+}
+
+function copyJSON() {
+  navigator.clipboard.writeText(document.getElementById("jsonArea").value);
+  alert("JSON disalin!");
+}
+
+formatJSON();
+</script>
+</body>
+</html>
